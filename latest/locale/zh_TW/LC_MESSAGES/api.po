@@ -266,6 +266,10 @@ msgid ""
 ">>> req\n"
 "<Response [200]>"
 msgstr ""
+">>> import requests\n"
+">>> req = requests.request('GET', 'https://httpbin.org/get')\n"
+">>> req\n"
+"<Response [200]>"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.head:1
@@ -400,6 +404,10 @@ msgid ""
 ">>> s.get('https://httpbin.org/get')\n"
 "<Response [200]>"
 msgstr ""
+">>> import requests\n"
+">>> s = requests.Session()\n"
+">>> s.get('https://httpbin.org/get')\n"
+"<Response [200]>"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
 #: of requests.sessions.Session:12
@@ -413,6 +421,9 @@ msgid ""
 "...     s.get('https://httpbin.org/get')\n"
 "<Response [200]>"
 msgstr ""
+">>> with requests.Session() as s:\n"
+"...     s.get('https://httpbin.org/get')\n"
+"<Response [200]>"
 
 #: ../../../docstring of requests.Session.auth:1
 msgid ""
@@ -765,6 +776,10 @@ msgid ""
 ">>> req.prepare()\n"
 "<PreparedRequest [GET]>"
 msgstr ""
+">>> import requests\n"
+">>> req = requests.Request('GET', 'https://httpbin.org/get')\n"
+">>> req.prepare()\n"
+"<PreparedRequest [GET]>"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
 #: of requests.models.RequestHooksMixin.deregister_hook:1
@@ -1027,6 +1042,15 @@ msgid ""
 ">>> s.send(r)\n"
 "<Response [200]>"
 msgstr ""
+">>> import requests\n"
+">>> req = requests.Request('GET', 'https://httpbin.org/get')\n"
+">>> r = req.prepare()\n"
+">>> r\n"
+"<PreparedRequest [GET]>\n"
+"\n"
+">>> s = requests.Session()\n"
+">>> s.send(r)\n"
+"<Response [200]>"
 
 #: ../../../docstring of requests.PreparedRequest.body:1
 msgid "request body to send to the server."
@@ -1209,6 +1233,10 @@ msgid ""
 ">>> a = requests.adapters.HTTPAdapter(max_retries=3)\n"
 ">>> s.mount('http://', a)"
 msgstr ""
+">>> import requests\n"
+">>> s = requests.Session()\n"
+">>> a = requests.adapters.HTTPAdapter(max_retries=3)\n"
+">>> s.mount('http://', a)"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
 #: of requests.adapters.HTTPAdapter.add_headers:1
@@ -1925,6 +1953,13 @@ msgid ""
 ">>> requests.codes['\\o/']\n"
 "200"
 msgstr ""
+">>> import requests\n"
+">>> requests.codes['temporary_redirect']\n"
+"307\n"
+">>> requests.codes.teapot\n"
+"418\n"
+">>> requests.codes['\\o/']\n"
+"200"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:15
