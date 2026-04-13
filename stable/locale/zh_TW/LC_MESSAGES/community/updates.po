@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../../HISTORY.md:2
 msgid "Release History"
-msgstr ""
+msgstr "發行歷史"
 
 #: ../../../../HISTORY.md:5
 msgid "dev"

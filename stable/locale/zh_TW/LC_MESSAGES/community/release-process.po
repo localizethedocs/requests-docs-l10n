@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../community/release-process.rst:2
 msgid "Release Process and Rules"
-msgstr ""
+msgstr "發行過程與規則"
 
 #: ../../../community/release-process.rst:6
 msgid ""

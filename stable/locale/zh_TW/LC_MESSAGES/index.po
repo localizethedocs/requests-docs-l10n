@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../../index.rst:-1
 msgid "License Badge"
-msgstr ""
+msgstr "授權條款徽章"
 
 #: ../../../index.rst:-1
 msgid "Wheel Support Badge"
@@ -45,11 +45,11 @@ msgstr ""
 msgid ""
 "**Requests** is an elegant and simple HTTP library for Python, built for "
 "human beings."
-msgstr ""
+msgstr "**Requests** 是一個優雅而簡單的 Python HTTP 程式庫，專為人類設計。"
 
 #: ../../../index.rst:32
 msgid "**Behold, the power of Requests**::"
-msgstr ""
+msgstr "**請看，這就是 Requests 的力量**：\\ ::"
 
 #: ../../../index.rst:34
 msgid ""
@@ -65,6 +65,17 @@ msgid ""
 ">>> r.json()\n"
 "{'private_gists': 419, 'total_private_repos': 77, ...}"
 msgstr ""
+">>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))\n"
+">>> r.status_code\n"
+"200\n"
+">>> r.headers['content-type']\n"
+"'application/json; charset=utf8'\n"
+">>> r.encoding\n"
+"'utf-8'\n"
+">>> r.text\n"
+"'{\"type\":\"User\"...'\n"
+">>> r.json()\n"
+"{'private_gists': 419, 'total_private_repos': 77, ...}"
 
 #: ../../../index.rst:46
 msgid "See `similar code, sans Requests <https://gist.github.com/973705>`_."
@@ -104,7 +115,7 @@ msgstr ""
 
 #: ../../../index.rst:63
 msgid "Automatic Content Decoding"
-msgstr ""
+msgstr "自動內容解碼"
 
 #: ../../../index.rst:64
 msgid "Basic/Digest Authentication"
@@ -116,7 +127,7 @@ msgstr ""
 
 #: ../../../index.rst:66
 msgid "Automatic Decompression"
-msgstr ""
+msgstr "自動解壓縮"
 
 #: ../../../index.rst:67
 msgid "Unicode Response Bodies"
@@ -128,7 +139,7 @@ msgstr ""
 
 #: ../../../index.rst:69
 msgid "Multipart File Uploads"
-msgstr ""
+msgstr "多部份檔案上傳"
 
 #: ../../../index.rst:70
 msgid "Streaming Downloads"
@@ -144,7 +155,7 @@ msgstr ""
 
 #: ../../../index.rst:73
 msgid "``.netrc`` Support"
-msgstr ""
+msgstr "``.netrc`` 支援"
 
 #: ../../../index.rst:75
 msgid "Requests officially supports Python 3.9+, and runs great on PyPy."
@@ -152,7 +163,7 @@ msgstr ""
 
 #: ../../../index.rst:79
 msgid "The User Guide"
-msgstr ""
+msgstr "使用者指南"
 
 #: ../../../index.rst:81
 msgid ""
@@ -163,7 +174,7 @@ msgstr ""
 
 #: ../../../index.rst:95
 msgid "The Community Guide"
-msgstr ""
+msgstr "社群指南"
 
 #: ../../../index.rst:97
 msgid ""
@@ -173,7 +184,7 @@ msgstr ""
 
 #: ../../../index.rst:116
 msgid "The API Documentation / Guide"
-msgstr ""
+msgstr "API 文件/指南"
 
 #: ../../../index.rst:118
 msgid ""
@@ -183,7 +194,7 @@ msgstr ""
 
 #: ../../../index.rst:128
 msgid "The Contributor Guide"
-msgstr ""
+msgstr "貢獻者指南"
 
 #: ../../../index.rst:130
 msgid ""
