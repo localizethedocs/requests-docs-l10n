@@ -1,0 +1,4112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) MMXVIX. A Kenneth Reitz Project
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../community/updates.rst:5
+msgid "Community Updates"
+msgstr ""
+
+#: ../../../community/updates.rst:7
+msgid ""
+"If you'd like to stay up to date on the community and development of "
+"Requests, there are several options:"
+msgstr ""
+
+#: ../../../community/updates.rst:12
+msgid "GitHub"
+msgstr ""
+
+#: ../../../community/updates.rst:14
+msgid ""
+"The best way to track the development of Requests is through `the GitHub "
+"repo <https://github.com/psf/requests>`_."
+msgstr ""
+
+#: ../../../../HISTORY.md:2
+msgid "Release History"
+msgstr ""
+
+#: ../../../../HISTORY.md:5
+msgid "dev"
+msgstr ""
+
+#: ../../../../HISTORY.md:7
+msgid "\\[Short description of non-trivial change.\\]"
+msgstr ""
+
+#: ../../../../HISTORY.md:10
+msgid "2.33.1 (2026-03-30)"
+msgstr ""
+
+#: ../../../../HISTORY.md:12
+msgid ""
+"**Bugfixes** - Fixed test cleanup for CVE-2026-25645 to avoid leaving "
+"unnecessary"
+msgstr ""
+
+#: ../../../../HISTORY.md:14
+msgid "files in the tmp directory. (#7305)"
+msgstr ""
+
+#: ../../../../HISTORY.md:15
+msgid "Fixed Content-Type header parsing for malformed values. (#7309)"
+msgstr ""
+
+#: ../../../../HISTORY.md:16
+msgid "Improved error consistency for malformed header values. (#7308)"
+msgstr ""
+
+#: ../../../../HISTORY.md:19
+msgid "2.33.0 (2026-03-25)"
+msgstr ""
+
+#: ../../../../HISTORY.md:21
+msgid ""
+"**Announcements** - 📣 Requests is adding inline types. If you have a typed "
+"code base that uses Requests, please take a look at #7271. Give it a try, "
+"and report any gaps or feedback you may have in the issue. 📣"
+msgstr ""
+
+#: ../../../../HISTORY.md:26
+msgid ""
+"**Security** - CVE-2026-25645 ``requests.utils.extract_zipped_paths`` now "
+"extracts"
+msgstr ""
+
+#: ../../../../HISTORY.md:28
+msgid ""
+"contents to a non-deterministic location to prevent malicious file "
+"replacement. This does not affect default usage of Requests, only "
+"applications calling the utility function directly."
+msgstr ""
+
+#: ../../../../HISTORY.md:32
+msgid ""
+"**Improvements** - Migrated to a PEP 517 build system using setuptools. "
+"(#7012)"
+msgstr ""
+
+#: ../../../../HISTORY.md:35
+msgid "**Bugfixes** - Fixed an issue where an empty netrc entry could cause"
+msgstr ""
+
+#: ../../../../HISTORY.md:37
+msgid ""
+"malformed authentication to be applied to Requests on Python 3.11+. (#7205)"
+msgstr ""
+
+#: ../../../../HISTORY.md:40
+msgid ""
+"**Deprecations** - Dropped support for Python 3.9 following its end of "
+"support. (#7196)"
+msgstr ""
+
+#: ../../../../HISTORY.md:43 ../../../../HISTORY.md:141
+msgid "**Documentation** - Various typo fixes and doc improvements."
+msgstr ""
+
+#: ../../../../HISTORY.md:48
+msgid "2.32.5 (2025-08-18)"
+msgstr ""
+
+#: ../../../../HISTORY.md:50 ../../../../HISTORY.md:208
+#: ../../../../HISTORY.md:241 ../../../../HISTORY.md:255
+#: ../../../../HISTORY.md:279 ../../../../HISTORY.md:319
+#: ../../../../HISTORY.md:353 ../../../../HISTORY.md:403
+#: ../../../../HISTORY.md:434 ../../../../HISTORY.md:442
+#: ../../../../HISTORY.md:464 ../../../../HISTORY.md:485
+#: ../../../../HISTORY.md:527 ../../../../HISTORY.md:535
+#: ../../../../HISTORY.md:547 ../../../../HISTORY.md:561
+#: ../../../../HISTORY.md:668 ../../../../HISTORY.md:676
+#: ../../../../HISTORY.md:684 ../../../../HISTORY.md:715
+#: ../../../../HISTORY.md:753 ../../../../HISTORY.md:761
+#: ../../../../HISTORY.md:771 ../../../../HISTORY.md:784
+#: ../../../../HISTORY.md:806 ../../../../HISTORY.md:837
+#: ../../../../HISTORY.md:857 ../../../../HISTORY.md:875
+#: ../../../../HISTORY.md:919 ../../../../HISTORY.md:929
+#: ../../../../HISTORY.md:951 ../../../../HISTORY.md:980
+#: ../../../../HISTORY.md:1011 ../../../../HISTORY.md:1035
+#: ../../../../HISTORY.md:1043 ../../../../HISTORY.md:1051
+#: ../../../../HISTORY.md:1069 ../../../../HISTORY.md:1095
+#: ../../../../HISTORY.md:1110 ../../../../HISTORY.md:1145
+#: ../../../../HISTORY.md:1169 ../../../../HISTORY.md:1192
+#: ../../../../HISTORY.md:1209 ../../../../HISTORY.md:1269
+#: ../../../../HISTORY.md:1287 ../../../../HISTORY.md:1301
+msgid "**Bugfixes**"
+msgstr ""
+
+#: ../../../../HISTORY.md:52
+msgid ""
+"The SSLContext caching feature originally introduced in 2.32.0 has created a "
+"new class of issues in Requests that have had negative impact across a "
+"number of use cases. The Requests team has decided to revert this feature as "
+"long term maintenance of it is proving to be unsustainable in its current "
+"iteration."
+msgstr ""
+
+#: ../../../../HISTORY.md:57
+msgid ""
+"**Deprecations** - Added support for Python 3.14. - Dropped support for "
+"Python 3.8 following its end of support."
+msgstr ""
+
+#: ../../../../HISTORY.md:62
+msgid "2.32.4 (2025-06-10)"
+msgstr ""
+
+#: ../../../../HISTORY.md:64
+msgid ""
+"**Security** - CVE-2024-47081 Fixed an issue where a maliciously crafted URL "
+"and trusted"
+msgstr ""
+
+#: ../../../../HISTORY.md:66
+msgid ""
+"environment will retrieve credentials for the wrong hostname/machine from a "
+"netrc file."
+msgstr ""
+
+#: ../../../../HISTORY.md:69
+msgid "**Improvements** - Numerous documentation improvements"
+msgstr ""
+
+#: ../../../../HISTORY.md:72
+msgid ""
+"**Deprecations** - Added support for pypy 3.11 for Linux and macOS. - "
+"Dropped support for pypy 3.9 following its end of support."
+msgstr ""
+
+#: ../../../../HISTORY.md:78
+msgid "2.32.3 (2024-05-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:80
+msgid ""
+"**Bugfixes** - Fixed bug breaking the ability to specify custom SSLContexts "
+"in sub-classes of"
+msgstr ""
+
+#: ../../../../HISTORY.md:82
+msgid "HTTPAdapter. (#6716)"
+msgstr ""
+
+#: ../../../../HISTORY.md:83
+msgid ""
+"Fixed issue where Requests started failing to run on Python versions "
+"compiled without the `ssl` module. (#6724)"
+msgstr ""
+
+#: ../../../../HISTORY.md:87
+msgid "2.32.2 (2024-05-21)"
+msgstr ""
+
+#: ../../../../HISTORY.md:89
+msgid ""
+"**Deprecations** - To provide a more stable migration for custom "
+"HTTPAdapters impacted"
+msgstr ""
+
+#: ../../../../HISTORY.md:91
+msgid ""
+"by the CVE changes in 2.32.0, we've renamed `_get_connection` to a new "
+"public API, `get_connection_with_tls_context`. Existing custom HTTPAdapters "
+"will need to migrate their code to use this new API. `get_connection` is "
+"considered deprecated in all versions of Requests>=2.32.0."
+msgstr ""
+
+#: ../../../../HISTORY.md:96
+msgid ""
+"A minimal (2-line) example has been provided in the linked PR to ease "
+"migration, but we strongly urge users to evaluate if their custom adapter is "
+"subject to the same issue described in CVE-2024-35195. (#6710)"
+msgstr ""
+
+#: ../../../../HISTORY.md:101
+msgid "2.32.1 (2024-05-20)"
+msgstr ""
+
+#: ../../../../HISTORY.md:103
+msgid "**Bugfixes** - Add missing test certs to the sdist distributed on PyPI."
+msgstr ""
+
+#: ../../../../HISTORY.md:108
+msgid "2.32.0 (2024-05-20)"
+msgstr ""
+
+#: ../../../../HISTORY.md:110
+msgid ""
+"**Security** - Fixed an issue where setting `verify=False` on the first "
+"request from a"
+msgstr ""
+
+#: ../../../../HISTORY.md:112
+msgid ""
+"Session will cause subsequent requests to the _same origin_ to also ignore "
+"cert verification, regardless of the value of `verify`. (https://github.com/"
+"psf/requests/security/advisories/GHSA-9wx4-h78v-vm56)"
+msgstr ""
+
+#: ../../../../HISTORY.md:116
+msgid ""
+"**Improvements** - `verify=True` now reuses a global SSLContext which should "
+"improve"
+msgstr ""
+
+#: ../../../../HISTORY.md:118
+msgid ""
+"request time variance between first and subsequent requests. It should also "
+"minimize certificate load time on Windows systems when using a Python "
+"version built with OpenSSL 3.x. (#6667)"
+msgstr ""
+
+#: ../../../../HISTORY.md:121
+msgid ""
+"Requests now supports optional use of character detection (`chardet` or "
+"`charset_normalizer`) when repackaged or vendored. This enables `pip` and "
+"other projects to minimize their vendoring surface area. The `Response."
+"text()` and `apparent_encoding` APIs will default to `utf-8` if neither "
+"library is present. (#6702)"
+msgstr ""
+
+#: ../../../../HISTORY.md:127
+msgid ""
+"**Bugfixes** - Fixed bug in length detection where emoji length was "
+"incorrectly"
+msgstr ""
+
+#: ../../../../HISTORY.md:129
+msgid "calculated in the request content-length. (#6589)"
+msgstr ""
+
+#: ../../../../HISTORY.md:130
+msgid "Fixed deserialization bug in JSONDecodeError. (#6629)"
+msgstr ""
+
+#: ../../../../HISTORY.md:131
+msgid ""
+"Fixed bug where an extra leading `/` (path separator) could lead urllib3 to "
+"unnecessarily reparse the request URI. (#6644)"
+msgstr ""
+
+#: ../../../../HISTORY.md:134 ../../../../HISTORY.md:227
+#: ../../../../HISTORY.md:302 ../../../../HISTORY.md:343
+#: ../../../../HISTORY.md:373 ../../../../HISTORY.md:420
+#: ../../../../HISTORY.md:457
+msgid "**Deprecations**"
+msgstr ""
+
+#: ../../../../HISTORY.md:136
+msgid "Requests has officially added support for CPython 3.12 (#6503)"
+msgstr ""
+
+#: ../../../../HISTORY.md:137
+msgid "Requests has officially added support for PyPy 3.9 and 3.10 (#6641)"
+msgstr ""
+
+#: ../../../../HISTORY.md:138
+msgid "Requests has officially dropped support for CPython 3.7 (#6642)"
+msgstr ""
+
+#: ../../../../HISTORY.md:139
+msgid "Requests has officially dropped support for PyPy 3.7 and 3.8 (#6641)"
+msgstr ""
+
+#: ../../../../HISTORY.md:144
+msgid ""
+"**Packaging** - Requests has started adopting some modern packaging "
+"practices."
+msgstr ""
+
+#: ../../../../HISTORY.md:146
+msgid ""
+"The source files for the projects (formerly `requests`) is now located in "
+"`src/requests` in the Requests sdist. (#6506)"
+msgstr ""
+
+#: ../../../../HISTORY.md:148
+msgid ""
+"Starting in Requests 2.33.0, Requests will migrate to a PEP 517 build system "
+"using `hatchling`. This should not impact the average user, but extremely "
+"old versions of packaging utilities may have issues with the new packaging "
+"format."
+msgstr ""
+
+#: ../../../../HISTORY.md:154
+msgid "2.31.0 (2023-05-22)"
+msgstr ""
+
+#: ../../../../HISTORY.md:156
+msgid ""
+"**Security** - Versions of Requests between v2.3.0 and v2.30.0 are "
+"vulnerable to potential"
+msgstr ""
+
+#: ../../../../HISTORY.md:158
+msgid ""
+"forwarding of `Proxy-Authorization` headers to destination servers when "
+"following HTTPS redirects."
+msgstr ""
+
+#: ../../../../HISTORY.md:161
+msgid ""
+"When proxies are defined with user info (`https://user:pass@proxy:8080`), "
+"Requests will construct a `Proxy-Authorization` header that is attached to "
+"the request to authenticate with the proxy."
+msgstr ""
+
+#: ../../../../HISTORY.md:165
+msgid ""
+"In cases where Requests receives a redirect response, it previously "
+"reattached the `Proxy-Authorization` header incorrectly, resulting in the "
+"value being sent through the tunneled connection to the destination server. "
+"Users who rely on defining their proxy credentials in the URL are *strongly* "
+"encouraged to upgrade to Requests 2.31.0+ to prevent unintentional leakage "
+"and rotate their proxy credentials once the change has been fully deployed."
+msgstr ""
+
+#: ../../../../HISTORY.md:172
+msgid ""
+"Users who do not use a proxy or do not supply their proxy credentials "
+"through the user information portion of their proxy URL are not subject to "
+"this vulnerability."
+msgstr ""
+
+#: ../../../../HISTORY.md:176
+msgid ""
+"Full details can be read in our [Github Security Advisory](https://github."
+"com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q) and "
+"[CVE-2023-32681](https://nvd.nist.gov/vuln/detail/CVE-2023-32681)."
+msgstr ""
+
+#: ../../../../HISTORY.md:181
+msgid "2.30.0 (2023-05-03)"
+msgstr ""
+
+#: ../../../../HISTORY.md:183
+msgid "**Dependencies** - ⚠️ Added support for urllib3 2.0. ⚠️"
+msgstr ""
+
+#: ../../../../HISTORY.md:186
+msgid ""
+"This may contain minor breaking changes so we advise careful testing and "
+"reviewing https://urllib3.readthedocs.io/en/latest/v2-migration-guide.html "
+"prior to upgrading."
+msgstr ""
+
+#: ../../../../HISTORY.md:190
+msgid "Users who wish to stay on urllib3 1.x can pin to `urllib3<2`."
+msgstr ""
+
+#: ../../../../HISTORY.md:193
+msgid "2.29.0 (2023-04-26)"
+msgstr ""
+
+#: ../../../../HISTORY.md:195 ../../../../HISTORY.md:215
+#: ../../../../HISTORY.md:232 ../../../../HISTORY.md:263
+#: ../../../../HISTORY.md:311 ../../../../HISTORY.md:365
+#: ../../../../HISTORY.md:382 ../../../../HISTORY.md:399
+#: ../../../../HISTORY.md:472 ../../../../HISTORY.md:510
+#: ../../../../HISTORY.md:522 ../../../../HISTORY.md:555
+#: ../../../../HISTORY.md:571 ../../../../HISTORY.md:579
+#: ../../../../HISTORY.md:587 ../../../../HISTORY.md:595
+#: ../../../../HISTORY.md:661 ../../../../HISTORY.md:692
+#: ../../../../HISTORY.md:818 ../../../../HISTORY.md:869
+#: ../../../../HISTORY.md:914 ../../../../HISTORY.md:1155
+#: ../../../../HISTORY.md:1202 ../../../../HISTORY.md:1243
+msgid "**Improvements**"
+msgstr ""
+
+#: ../../../../HISTORY.md:197
+msgid ""
+"Requests now defers chunked requests to the urllib3 implementation to "
+"improve standardization. (#6226)"
+msgstr ""
+
+#: ../../../../HISTORY.md:199
+msgid ""
+"Requests relaxes header component requirements to support bytes/str "
+"subclasses. (#6356)"
+msgstr ""
+
+#: ../../../../HISTORY.md:202
+msgid "2.28.2 (2023-01-12)"
+msgstr ""
+
+#: ../../../../HISTORY.md:204 ../../../../HISTORY.md:219
+#: ../../../../HISTORY.md:324 ../../../../HISTORY.md:358
+#: ../../../../HISTORY.md:369 ../../../../HISTORY.md:407
+#: ../../../../HISTORY.md:415 ../../../../HISTORY.md:427
+#: ../../../../HISTORY.md:453 ../../../../HISTORY.md:502
+#: ../../../../HISTORY.md:515 ../../../../HISTORY.md:540
+msgid "**Dependencies**"
+msgstr ""
+
+#: ../../../../HISTORY.md:206
+msgid "Requests now supports charset\\_normalizer 3.x. (#6261)"
+msgstr ""
+
+#: ../../../../HISTORY.md:210
+msgid ""
+"Updated MissingSchema exception to suggest https scheme rather than http. "
+"(#6188)"
+msgstr ""
+
+#: ../../../../HISTORY.md:213
+msgid "2.28.1 (2022-06-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:217
+msgid ""
+"Speed optimization in `iter_content` with transition to `yield from`. (#6170)"
+msgstr ""
+
+#: ../../../../HISTORY.md:221
+msgid "Added support for chardet 5.0.0 (#6179)"
+msgstr ""
+
+#: ../../../../HISTORY.md:222
+msgid "Added support for charset-normalizer 2.1.0 (#6169)"
+msgstr ""
+
+#: ../../../../HISTORY.md:225
+msgid "2.28.0 (2022-06-09)"
+msgstr ""
+
+#: ../../../../HISTORY.md:229
+msgid "⚠️ Requests has officially dropped support for Python 2.7. ⚠️ (#6091)"
+msgstr ""
+
+#: ../../../../HISTORY.md:230
+msgid ""
+"Requests has officially dropped support for Python 3.6 (including pypy3.6). "
+"(#6091)"
+msgstr ""
+
+#: ../../../../HISTORY.md:234
+msgid ""
+"Wrap JSON parsing issues in Request's JSONDecodeError for payloads without "
+"an encoding to make `json()` API consistent. (#6097)"
+msgstr ""
+
+#: ../../../../HISTORY.md:236
+msgid ""
+"Parse header components consistently, raising an InvalidHeader error in all "
+"invalid cases. (#6154)"
+msgstr ""
+
+#: ../../../../HISTORY.md:238
+msgid "Added provisional 3.11 support with current beta build. (#6155)"
+msgstr ""
+
+#: ../../../../HISTORY.md:239
+msgid "Requests got a makeover and we decided to paint it black. (#6095)"
+msgstr ""
+
+#: ../../../../HISTORY.md:243
+msgid ""
+"Fixed bug where setting `CURL_CA_BUNDLE` to an empty string would disable "
+"cert verification. All Requests 2.x versions before 2.28.0 are affected. "
+"(#6074)"
+msgstr ""
+
+#: ../../../../HISTORY.md:245
+msgid ""
+"Fixed urllib3 exception leak, wrapping `urllib3.exceptions.SSLError` with "
+"`requests.exceptions.SSLError` for `content` and `iter_content`. (#6057)"
+msgstr ""
+
+#: ../../../../HISTORY.md:247
+msgid ""
+"Fixed issue where invalid Windows registry entries caused proxy resolution "
+"to raise an exception rather than ignoring the entry. (#6149)"
+msgstr ""
+
+#: ../../../../HISTORY.md:249
+msgid ""
+"Fixed issue where entire payload could be included in the error message for "
+"JSONDecodeError. (#6036)"
+msgstr ""
+
+#: ../../../../HISTORY.md:253
+msgid "2.27.1 (2022-01-05)"
+msgstr ""
+
+#: ../../../../HISTORY.md:257
+msgid ""
+"Fixed parsing issue that resulted in the `auth` component being dropped from "
+"proxy URLs. (#6028)"
+msgstr ""
+
+#: ../../../../HISTORY.md:261
+msgid "2.27.0 (2022-01-03)"
+msgstr ""
+
+#: ../../../../HISTORY.md:265
+msgid "Officially added support for Python 3.10. (#5928)"
+msgstr ""
+
+#: ../../../../HISTORY.md:267
+msgid ""
+"Added a `requests.exceptions.JSONDecodeError` to unify JSON exceptions "
+"between Python 2 and 3. This gets raised in the `response.json()` method, "
+"and is backwards compatible as it inherits from previously thrown "
+"exceptions. Can be caught from `requests.exceptions.RequestException` as "
+"well. (#5856)"
+msgstr ""
+
+#: ../../../../HISTORY.md:272
+msgid ""
+"Improved error text for misnamed `InvalidSchema` and `MissingSchema` "
+"exceptions. This is a temporary fix until exceptions can be renamed (Schema-"
+">Scheme). (#6017)"
+msgstr ""
+
+#: ../../../../HISTORY.md:276
+msgid ""
+"Improved proxy parsing for proxy URLs missing a scheme. This will address "
+"recent changes to `urlparse` in Python 3.9+. (#5917)"
+msgstr ""
+
+#: ../../../../HISTORY.md:281
+msgid ""
+"Fixed defect in `extract_zipped_paths` which could result in an infinite "
+"loop for some paths. (#5851)"
+msgstr ""
+
+#: ../../../../HISTORY.md:284
+msgid ""
+"Fixed handling for `AttributeError` when calculating length of files "
+"obtained by `Tarfile.extractfile()`. (#5239)"
+msgstr ""
+
+#: ../../../../HISTORY.md:287
+msgid ""
+"Fixed urllib3 exception leak, wrapping `urllib3.exceptions.InvalidHeader` "
+"with `requests.exceptions.InvalidHeader`. (#5914)"
+msgstr ""
+
+#: ../../../../HISTORY.md:290
+msgid ""
+"Fixed bug where two Host headers were sent for chunked requests. (#5391)"
+msgstr ""
+
+#: ../../../../HISTORY.md:292
+msgid ""
+"Fixed regression in Requests 2.26.0 where `Proxy-Authorization` was "
+"incorrectly stripped from all requests sent with `Session.send`. (#5924)"
+msgstr ""
+
+#: ../../../../HISTORY.md:295
+msgid ""
+"Fixed performance regression in 2.26.0 for hosts with a large number of "
+"proxies available in the environment. (#5924)"
+msgstr ""
+
+#: ../../../../HISTORY.md:298
+msgid ""
+"Fixed idna exception leak, wrapping `UnicodeError` with `requests.exceptions."
+"InvalidURL` for URLs with a leading dot (.) in the domain. (#5414)"
+msgstr ""
+
+#: ../../../../HISTORY.md:304
+msgid ""
+"Requests support for Python 2.7 and 3.6 will be ending in 2022. While we "
+"don't have exact dates, Requests 2.27.x is likely to be the last release "
+"series providing support."
+msgstr ""
+
+#: ../../../../HISTORY.md:309
+msgid "2.26.0 (2021-07-13)"
+msgstr ""
+
+#: ../../../../HISTORY.md:313
+msgid ""
+"Requests now supports Brotli compression, if either the `brotli` or "
+"`brotlicffi` package is installed. (#5783)"
+msgstr ""
+
+#: ../../../../HISTORY.md:316
+msgid ""
+"`Session.send` now correctly resolves proxy configurations from both the "
+"Session and Request. Behavior now matches `Session.request`. (#5681)"
+msgstr ""
+
+#: ../../../../HISTORY.md:321
+msgid ""
+"Fixed a race condition in zip extraction when using Requests in parallel "
+"from zip archive. (#5707)"
+msgstr ""
+
+#: ../../../../HISTORY.md:326
+msgid ""
+"Instead of `chardet`, use the MIT-licensed `charset_normalizer` for Python3 "
+"to remove license ambiguity for projects bundling requests. If `chardet` is "
+"already installed on your machine it will be used instead of "
+"`charset_normalizer` to keep backwards compatibility. (#5797)"
+msgstr ""
+
+#: ../../../../HISTORY.md:331
+msgid ""
+"You can also install `chardet` while installing requests by specifying "
+"`[use_chardet_on_py3]` extra as follows:"
+msgstr ""
+
+#: ../../../../HISTORY.md:334
+msgid "```shell pip install \"requests[use_chardet_on_py3]\" ```"
+msgstr ""
+
+#: ../../../../HISTORY.md:338
+msgid "Python2 still depends upon the `chardet` module."
+msgstr ""
+
+#: ../../../../HISTORY.md:340
+msgid ""
+"Requests now supports `idna` 3.x on Python 3. `idna` 2.x will continue to be "
+"used on Python 2 installations. (#5711)"
+msgstr ""
+
+#: ../../../../HISTORY.md:345
+msgid ""
+"The `requests[security]` extra has been converted to a no-op install. "
+"PyOpenSSL is no longer the recommended secure option for Requests. (#5867)"
+msgstr ""
+
+#: ../../../../HISTORY.md:348
+msgid "Requests has officially dropped support for Python 3.5. (#5867)"
+msgstr ""
+
+#: ../../../../HISTORY.md:351
+msgid "2.25.1 (2020-12-16)"
+msgstr ""
+
+#: ../../../../HISTORY.md:355
+msgid ""
+"Requests now treats `application/json` as `utf8` by default. Resolving "
+"inconsistencies between `r.text` and `r.json` output. (#5673)"
+msgstr ""
+
+#: ../../../../HISTORY.md:360
+msgid "Requests now supports chardet v4.x."
+msgstr ""
+
+#: ../../../../HISTORY.md:363
+msgid "2.25.0 (2020-11-11)"
+msgstr ""
+
+#: ../../../../HISTORY.md:367
+msgid "Added support for NETRC environment variable. (#5643)"
+msgstr ""
+
+#: ../../../../HISTORY.md:371
+msgid "Requests now supports urllib3 v1.26."
+msgstr ""
+
+#: ../../../../HISTORY.md:375
+msgid ""
+"Requests v2.25.x will be the last release series with support for Python 3.5."
+msgstr ""
+
+#: ../../../../HISTORY.md:376
+msgid ""
+"The `requests[security]` extra is officially deprecated and will be removed "
+"in Requests v2.26.0."
+msgstr ""
+
+#: ../../../../HISTORY.md:380
+msgid "2.24.0 (2020-06-17)"
+msgstr ""
+
+#: ../../../../HISTORY.md:384
+msgid ""
+"pyOpenSSL TLS implementation is now only used if Python either doesn't have "
+"an `ssl` module or doesn't support SNI. Previously pyOpenSSL was "
+"unconditionally used if available. This applies even if pyOpenSSL is "
+"installed via the `requests[security]` extra (#5443)"
+msgstr ""
+
+#: ../../../../HISTORY.md:390
+msgid ""
+"Redirect resolution should now only occur when `allow_redirects` is True. "
+"(#5492)"
+msgstr ""
+
+#: ../../../../HISTORY.md:393
+msgid ""
+"No longer perform unnecessary Content-Length calculation for requests that "
+"won't use it. (#5496)"
+msgstr ""
+
+#: ../../../../HISTORY.md:397
+msgid "2.23.0 (2020-02-19)"
+msgstr ""
+
+#: ../../../../HISTORY.md:401
+msgid "Remove defunct reference to `prefetch` in Session `__attrs__` (#5110)"
+msgstr ""
+
+#: ../../../../HISTORY.md:405
+msgid ""
+"Requests no longer outputs password in basic auth usage warning. (#5099)"
+msgstr ""
+
+#: ../../../../HISTORY.md:409
+msgid ""
+"Pinning for `chardet` and `idna` now uses major version instead of minor. "
+"This hopefully reduces the need for releases every time a dependency is "
+"updated."
+msgstr ""
+
+#: ../../../../HISTORY.md:413
+msgid "2.22.0 (2019-05-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:417
+msgid ""
+"Requests now supports urllib3 v1.25.2. (note: 1.25.0 and 1.25.1 are "
+"incompatible)"
+msgstr ""
+
+#: ../../../../HISTORY.md:422
+msgid "Requests has officially stopped support for Python 3.4."
+msgstr ""
+
+#: ../../../../HISTORY.md:425
+msgid "2.21.0 (2018-12-10)"
+msgstr ""
+
+#: ../../../../HISTORY.md:429
+msgid "Requests now supports idna v2.8."
+msgstr ""
+
+#: ../../../../HISTORY.md:432
+msgid "2.20.1 (2018-11-08)"
+msgstr ""
+
+#: ../../../../HISTORY.md:436
+msgid ""
+"Fixed bug with unintended Authorization header stripping for redirects using "
+"default ports (http/80, https/443)."
+msgstr ""
+
+#: ../../../../HISTORY.md:440
+msgid "2.20.0 (2018-10-18)"
+msgstr ""
+
+#: ../../../../HISTORY.md:444
+msgid ""
+"Content-Type header parsing is now case-insensitive (e.g. charset=utf8 v "
+"Charset=utf8)."
+msgstr ""
+
+#: ../../../../HISTORY.md:446
+msgid ""
+"Fixed exception leak where certain redirect urls would raise uncaught "
+"urllib3 exceptions."
+msgstr ""
+
+#: ../../../../HISTORY.md:448
+msgid ""
+"Requests removes Authorization header from requests redirected from https to "
+"http on the same hostname. (CVE-2018-18074)"
+msgstr ""
+
+#: ../../../../HISTORY.md:450
+msgid ""
+"`should_bypass_proxies` now handles URIs without hostnames (e.g. files)."
+msgstr ""
+
+#: ../../../../HISTORY.md:455
+msgid "Requests now supports urllib3 v1.24."
+msgstr ""
+
+#: ../../../../HISTORY.md:459
+msgid "Requests has officially stopped support for Python 2.6."
+msgstr ""
+
+#: ../../../../HISTORY.md:462
+msgid "2.19.1 (2018-06-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:466
+msgid ""
+"Fixed issue where status\\_codes.py's `init` function failed trying to "
+"append to a `__doc__` value of `None`."
+msgstr ""
+
+#: ../../../../HISTORY.md:470
+msgid "2.19.0 (2018-06-12)"
+msgstr ""
+
+#: ../../../../HISTORY.md:474
+msgid ""
+"Warn user about possible slowdown when using cryptography version &lt; 1.3.4"
+msgstr ""
+
+#: ../../../../HISTORY.md:476
+msgid ""
+"Check for invalid host in proxy URL, before forwarding request to adapter."
+msgstr ""
+
+#: ../../../../HISTORY.md:478
+msgid "Fragments are now properly maintained across redirects. (RFC7231 7.1.2)"
+msgstr ""
+
+#: ../../../../HISTORY.md:480
+msgid "Removed use of cgi module to expedite library load time."
+msgstr ""
+
+#: ../../../../HISTORY.md:481
+msgid "Added support for SHA-256 and SHA-512 digest auth algorithms."
+msgstr ""
+
+#: ../../../../HISTORY.md:482
+msgid "Minor performance improvement to `Request.content`."
+msgstr ""
+
+#: ../../../../HISTORY.md:483
+msgid "Migrate to using collections.abc for 3.7 compatibility."
+msgstr ""
+
+#: ../../../../HISTORY.md:487
+msgid ""
+"Parsing empty `Link` headers with `parse_header_links()` no longer return "
+"one bogus entry."
+msgstr ""
+
+#: ../../../../HISTORY.md:489
+msgid ""
+"Fixed issue where loading the default certificate bundle from a zip archive "
+"would raise an `IOError`."
+msgstr ""
+
+#: ../../../../HISTORY.md:491
+msgid ""
+"Fixed issue with unexpected `ImportError` on windows system which do not "
+"support `winreg` module."
+msgstr ""
+
+#: ../../../../HISTORY.md:493
+msgid ""
+"DNS resolution in proxy bypass no longer includes the username and password "
+"in the request. This also fixes the issue of DNS queries failing on macOS."
+msgstr ""
+
+#: ../../../../HISTORY.md:496
+msgid "Properly normalize adapter prefixes for url comparison."
+msgstr ""
+
+#: ../../../../HISTORY.md:497
+msgid ""
+"Passing `None` as a file pointer to the `files` param no longer raises an "
+"exception."
+msgstr ""
+
+#: ../../../../HISTORY.md:499
+msgid ""
+"Calling `copy` on a `RequestsCookieJar` will now preserve the cookie policy "
+"correctly."
+msgstr ""
+
+#: ../../../../HISTORY.md:504
+msgid "We now support idna v2.7."
+msgstr ""
+
+#: ../../../../HISTORY.md:505
+msgid "We now support urllib3 v1.23."
+msgstr ""
+
+#: ../../../../HISTORY.md:508
+msgid "2.18.4 (2017-08-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:512
+msgid ""
+"Error messages for invalid headers now include the header name for easier "
+"debugging"
+msgstr ""
+
+#: ../../../../HISTORY.md:517
+msgid "We now support idna v2.6."
+msgstr ""
+
+#: ../../../../HISTORY.md:520
+msgid "2.18.3 (2017-08-02)"
+msgstr ""
+
+#: ../../../../HISTORY.md:524
+msgid ""
+"Running `$ python -m requests.help` now includes the installed version of "
+"idna."
+msgstr ""
+
+#: ../../../../HISTORY.md:529
+msgid ""
+"Fixed issue where Requests would raise `ConnectionError` instead of "
+"`SSLError` when encountering SSL problems when using urllib3 v1.22."
+msgstr ""
+
+#: ../../../../HISTORY.md:533
+msgid "2.18.2 (2017-07-25)"
+msgstr ""
+
+#: ../../../../HISTORY.md:537
+msgid ""
+"`requests.help` no longer fails on Python 2.6 due to the absence of `ssl."
+"OPENSSL_VERSION_NUMBER`."
+msgstr ""
+
+#: ../../../../HISTORY.md:542
+msgid "We now support urllib3 v1.22."
+msgstr ""
+
+#: ../../../../HISTORY.md:545
+msgid "2.18.1 (2017-06-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:549
+msgid ""
+"Fix an error in the packaging whereby the `*.whl` contained incorrect data "
+"that regressed the fix in v2.17.3."
+msgstr ""
+
+#: ../../../../HISTORY.md:553
+msgid "2.18.0 (2017-06-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:557
+msgid ""
+"`Response` is now a context manager, so can be used directly in a `with` "
+"statement without first having to be wrapped by `contextlib.closing()`."
+msgstr ""
+
+#: ../../../../HISTORY.md:563
+msgid "Resolve installation failure if multiprocessing is not available"
+msgstr ""
+
+#: ../../../../HISTORY.md:564
+msgid ""
+"Resolve tests crash if multiprocessing is not able to determine the number "
+"of CPU cores"
+msgstr ""
+
+#: ../../../../HISTORY.md:566
+msgid "Resolve error swallowing in utils set\\_environ generator"
+msgstr ""
+
+#: ../../../../HISTORY.md:569
+msgid "2.17.3 (2017-05-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:573 ../../../../HISTORY.md:581
+#: ../../../../HISTORY.md:589
+msgid ""
+"Improved `packages` namespace identity support, for monkeypatching libraries."
+msgstr ""
+
+#: ../../../../HISTORY.md:577
+msgid "2.17.2 (2017-05-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:585
+msgid "2.17.1 (2017-05-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:593
+msgid "2.17.0 (2017-05-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:597
+msgid "Removal of the 301 redirect cache. This improves thread-safety."
+msgstr ""
+
+#: ../../../../HISTORY.md:600
+msgid "2.16.5 (2017-05-28)"
+msgstr ""
+
+#: ../../../../HISTORY.md:602
+msgid "Improvements to `$ python -m requests.help`."
+msgstr ""
+
+#: ../../../../HISTORY.md:605
+msgid "2.16.4 (2017-05-27)"
+msgstr ""
+
+#: ../../../../HISTORY.md:607
+msgid ""
+"Introduction of the `$ python -m requests.help` command, for debugging with "
+"maintainers!"
+msgstr ""
+
+#: ../../../../HISTORY.md:611
+msgid "2.16.3 (2017-05-27)"
+msgstr ""
+
+#: ../../../../HISTORY.md:613 ../../../../HISTORY.md:619
+msgid ""
+"Further restored the `requests.packages` namespace for compatibility reasons."
+msgstr ""
+
+#: ../../../../HISTORY.md:617
+msgid "2.16.2 (2017-05-27)"
+msgstr ""
+
+#: ../../../../HISTORY.md:622
+msgid "No code modification (noted below) should be necessary any longer."
+msgstr ""
+
+#: ../../../../HISTORY.md:625
+msgid "2.16.1 (2017-05-27)"
+msgstr ""
+
+#: ../../../../HISTORY.md:627
+msgid "Restored the `requests.packages` namespace for compatibility reasons."
+msgstr ""
+
+#: ../../../../HISTORY.md:629
+msgid "Bugfix for `urllib3` version parsing."
+msgstr ""
+
+#: ../../../../HISTORY.md:631
+msgid ""
+"**Note**: code that was written to import against the `requests.packages` "
+"namespace previously will have to import code that rests at this module-"
+"level now."
+msgstr ""
+
+#: ../../../../HISTORY.md:635
+msgid "For example:"
+msgstr ""
+
+#: ../../../../HISTORY.md:637
+msgid "from requests.packages.urllib3.poolmanager import PoolManager"
+msgstr ""
+
+#: ../../../../HISTORY.md:639
+msgid "Will need to be re-written to be:"
+msgstr ""
+
+#: ../../../../HISTORY.md:641
+msgid "from requests.packages import urllib3 urllib3.poolmanager.PoolManager"
+msgstr ""
+
+#: ../../../../HISTORY.md:644
+msgid "Or, even better:"
+msgstr ""
+
+#: ../../../../HISTORY.md:646
+msgid "from urllib3.poolmanager import PoolManager"
+msgstr ""
+
+#: ../../../../HISTORY.md:649
+msgid "2.16.0 (2017-05-26)"
+msgstr ""
+
+#: ../../../../HISTORY.md:651
+msgid "Unvendor ALL the things!"
+msgstr ""
+
+#: ../../../../HISTORY.md:654
+msgid "2.15.1 (2017-05-26)"
+msgstr ""
+
+#: ../../../../HISTORY.md:656
+msgid "Everyone makes mistakes."
+msgstr ""
+
+#: ../../../../HISTORY.md:659
+msgid "2.15.0 (2017-05-26)"
+msgstr ""
+
+#: ../../../../HISTORY.md:663
+msgid ""
+"Introduction of the `Response.next` property, for getting the next "
+"`PreparedResponse` from a redirect chain (when `allow_redirects=False`)."
+msgstr ""
+
+#: ../../../../HISTORY.md:666
+msgid "Internal refactoring of `__version__` module."
+msgstr ""
+
+#: ../../../../HISTORY.md:670
+msgid ""
+"Restored once-optional parameter for `requests.utils.get_environ_proxies()`."
+msgstr ""
+
+#: ../../../../HISTORY.md:674
+msgid "2.14.2 (2017-05-10)"
+msgstr ""
+
+#: ../../../../HISTORY.md:678
+msgid ""
+"Changed a less-than to an equal-to and an or in the dependency markers to "
+"widen compatibility with older setuptools releases."
+msgstr ""
+
+#: ../../../../HISTORY.md:682
+msgid "2.14.1 (2017-05-09)"
+msgstr ""
+
+#: ../../../../HISTORY.md:686
+msgid ""
+"Changed the dependency markers to widen compatibility with older pip "
+"releases."
+msgstr ""
+
+#: ../../../../HISTORY.md:690
+msgid "2.14.0 (2017-05-09)"
+msgstr ""
+
+#: ../../../../HISTORY.md:694
+msgid ""
+"It is now possible to pass `no_proxy` as a key to the `proxies` dictionary "
+"to provide handling similar to the `NO_PROXY` environment variable."
+msgstr ""
+
+#: ../../../../HISTORY.md:697
+msgid ""
+"When users provide invalid paths to certificate bundle files or directories "
+"Requests now raises `IOError`, rather than failing at the time of the HTTPS "
+"request with a fairly inscrutable certificate validation error."
+msgstr ""
+
+#: ../../../../HISTORY.md:701
+msgid ""
+"The behavior of `SessionRedirectMixin` was slightly altered. "
+"`resolve_redirects` will now detect a redirect by calling "
+"`get_redirect_target(response)` instead of directly querying `Response."
+"is_redirect` and `Response.headers['location']`. Advanced users will be able "
+"to process malformed redirects more easily."
+msgstr ""
+
+#: ../../../../HISTORY.md:706
+msgid ""
+"Changed the internal calculation of elapsed request time to have higher "
+"resolution on Windows."
+msgstr ""
+
+#: ../../../../HISTORY.md:708
+msgid ""
+"Added `win_inet_pton` as conditional dependency for the `[socks]` extra on "
+"Windows with Python 2.7."
+msgstr ""
+
+#: ../../../../HISTORY.md:710
+msgid ""
+"Changed the proxy bypass implementation on Windows: the proxy bypass check "
+"doesn't use forward and reverse DNS requests anymore"
+msgstr ""
+
+#: ../../../../HISTORY.md:712
+msgid ""
+"URLs with schemes that begin with `http` but are not `http` or `https` no "
+"longer have their host parts forced to lowercase."
+msgstr ""
+
+#: ../../../../HISTORY.md:717
+msgid ""
+"Much improved handling of non-ASCII `Location` header values in redirects. "
+"Fewer `UnicodeDecodeErrors` are encountered on Python 2, and Python 3 now "
+"correctly understands that Latin-1 is unlikely to be the correct encoding."
+msgstr ""
+
+#: ../../../../HISTORY.md:721
+msgid ""
+"If an attempt to `seek` file to find out its length fails, we now "
+"appropriately handle that by aborting our content-length calculations."
+msgstr ""
+
+#: ../../../../HISTORY.md:724
+msgid ""
+"Restricted `HTTPDigestAuth` to only respond to auth challenges made on 4XX "
+"responses, rather than to all auth challenges."
+msgstr ""
+
+#: ../../../../HISTORY.md:726
+msgid "Fixed some code that was firing `DeprecationWarning` on Python 3.6."
+msgstr ""
+
+#: ../../../../HISTORY.md:727
+msgid ""
+"The dismayed person emoticon (`/o\\\\`) no longer has a big head. I'm sure "
+"this is what you were all worrying about most."
+msgstr ""
+
+#: ../../../../HISTORY.md:730 ../../../../HISTORY.md:745
+#: ../../../../HISTORY.md:811 ../../../../HISTORY.md:849
+#: ../../../../HISTORY.md:893 ../../../../HISTORY.md:907
+#: ../../../../HISTORY.md:936 ../../../../HISTORY.md:973
+msgid "**Miscellaneous**"
+msgstr ""
+
+#: ../../../../HISTORY.md:732
+msgid "Updated bundled urllib3 to v1.21.1."
+msgstr ""
+
+#: ../../../../HISTORY.md:733
+msgid "Updated bundled chardet to v3.0.2."
+msgstr ""
+
+#: ../../../../HISTORY.md:734
+msgid "Updated bundled idna to v2.5."
+msgstr ""
+
+#: ../../../../HISTORY.md:735
+msgid "Updated bundled certifi to 2017.4.17."
+msgstr ""
+
+#: ../../../../HISTORY.md:738
+msgid "2.13.0 (2017-01-24)"
+msgstr ""
+
+#: ../../../../HISTORY.md:740
+msgid "**Features**"
+msgstr ""
+
+#: ../../../../HISTORY.md:742
+msgid ""
+"Only load the `idna` library when we've determined we need it. This will "
+"save some memory for users."
+msgstr ""
+
+#: ../../../../HISTORY.md:747
+msgid "Updated bundled urllib3 to 1.20."
+msgstr ""
+
+#: ../../../../HISTORY.md:748
+msgid "Updated bundled idna to 2.2."
+msgstr ""
+
+#: ../../../../HISTORY.md:751
+msgid "2.12.5 (2017-01-18)"
+msgstr ""
+
+#: ../../../../HISTORY.md:755
+msgid ""
+"Fixed an issue with JSON encoding detection, specifically detecting big-"
+"endian UTF-32 with BOM."
+msgstr ""
+
+#: ../../../../HISTORY.md:759
+msgid "2.12.4 (2016-12-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:763
+msgid ""
+"Fixed regression from 2.12.2 where non-string types were rejected in the "
+"basic auth parameters. While support for this behaviour has been re-added, "
+"the behaviour is deprecated and will be removed in the future."
+msgstr ""
+
+#: ../../../../HISTORY.md:769
+msgid "2.12.3 (2016-12-01)"
+msgstr ""
+
+#: ../../../../HISTORY.md:773
+msgid ""
+"Fixed regression from v2.12.1 for URLs with schemes that begin with "
+"\"http\". These URLs have historically been processed as though they were "
+"HTTP-schemed URLs, and so have had parameters added. This was removed in "
+"v2.12.2 in an overzealous attempt to resolve problems with IDNA-encoding "
+"those URLs. This change was reverted: the other fixes for IDNA-encoding have "
+"been judged to be sufficient to return to the behaviour Requests had before "
+"v2.12.0."
+msgstr ""
+
+#: ../../../../HISTORY.md:782
+msgid "2.12.2 (2016-11-30)"
+msgstr ""
+
+#: ../../../../HISTORY.md:786
+msgid ""
+"Fixed several issues with IDNA-encoding URLs that are technically invalid "
+"but which are widely accepted. Requests will now attempt to IDNA-encode a "
+"URL if it can but, if it fails, and the host contains only ASCII characters, "
+"it will be passed through optimistically. This will allow users to opt-in to "
+"using IDNA2003 themselves if they want to, and will also allow technically "
+"invalid but still common hostnames."
+msgstr ""
+
+#: ../../../../HISTORY.md:793
+msgid ""
+"Fixed an issue where URLs with leading whitespace would raise "
+"`InvalidSchema` errors."
+msgstr ""
+
+#: ../../../../HISTORY.md:795
+msgid ""
+"Fixed an issue where some URLs without the HTTP or HTTPS schemes would still "
+"have HTTP URL preparation applied to them."
+msgstr ""
+
+#: ../../../../HISTORY.md:797
+msgid "Fixed an issue where Unicode strings could not be used in basic auth."
+msgstr ""
+
+#: ../../../../HISTORY.md:799
+msgid ""
+"Fixed an issue encountered by some Requests plugins where constructing a "
+"Response object would cause `Response.content` to raise an `AttributeError`."
+msgstr ""
+
+#: ../../../../HISTORY.md:804
+msgid "2.12.1 (2016-11-16)"
+msgstr ""
+
+#: ../../../../HISTORY.md:808
+msgid ""
+"Updated setuptools 'security' extra for the new PyOpenSSL backend in urllib3."
+msgstr ""
+
+#: ../../../../HISTORY.md:813
+msgid "Updated bundled urllib3 to 1.19.1."
+msgstr ""
+
+#: ../../../../HISTORY.md:816
+msgid "2.12.0 (2016-11-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:820
+msgid ""
+"Updated support for internationalized domain names from IDNA2003 to "
+"IDNA2008. This updated support is required for several forms of IDNs and is "
+"mandatory for .de domains."
+msgstr ""
+
+#: ../../../../HISTORY.md:823
+msgid ""
+"Much improved heuristics for guessing content lengths: Requests will no "
+"longer read an entire `StringIO` into memory."
+msgstr ""
+
+#: ../../../../HISTORY.md:825
+msgid ""
+"Much improved logic for recalculating `Content-Length` headers for "
+"`PreparedRequest` objects."
+msgstr ""
+
+#: ../../../../HISTORY.md:827
+msgid ""
+"Improved tolerance for file-like objects that have no `tell` method but do "
+"have a `seek` method."
+msgstr ""
+
+#: ../../../../HISTORY.md:829
+msgid ""
+"Anything that is a subclass of `Mapping` is now treated like a dictionary by "
+"the `data=` keyword argument."
+msgstr ""
+
+#: ../../../../HISTORY.md:831
+msgid ""
+"Requests now tolerates empty passwords in proxy credentials, rather than "
+"stripping the credentials."
+msgstr ""
+
+#: ../../../../HISTORY.md:833
+msgid ""
+"If a request is made with a file-like object as the body and that request is "
+"redirected with a 307 or 308 status code, Requests will now attempt to "
+"rewind the body object so it can be replayed."
+msgstr ""
+
+#: ../../../../HISTORY.md:839
+msgid ""
+"When calling `response.close`, the call to `close` will be propagated "
+"through to non-urllib3 backends."
+msgstr ""
+
+#: ../../../../HISTORY.md:841
+msgid ""
+"Fixed issue where the `ALL_PROXY` environment variable would be preferred "
+"over scheme-specific variables like `HTTP_PROXY`."
+msgstr ""
+
+#: ../../../../HISTORY.md:843
+msgid ""
+"Fixed issue where non-UTF8 reason phrases got severely mangled by falling "
+"back to decoding using ISO 8859-1 instead."
+msgstr ""
+
+#: ../../../../HISTORY.md:845
+msgid ""
+"Fixed a bug where Requests would not correctly correlate cookies set when "
+"using custom Host headers if those Host headers did not use the native "
+"string type for the platform."
+msgstr ""
+
+#: ../../../../HISTORY.md:851
+msgid "Updated bundled urllib3 to 1.19."
+msgstr ""
+
+#: ../../../../HISTORY.md:852
+msgid "Updated bundled certifi certs to 2016.09.26."
+msgstr ""
+
+#: ../../../../HISTORY.md:855
+msgid "2.11.1 (2016-08-17)"
+msgstr ""
+
+#: ../../../../HISTORY.md:859
+msgid ""
+"Fixed a bug when using `iter_content` with `decode_unicode=True` for "
+"streamed bodies would raise `AttributeError`. This bug was introduced in "
+"2.11."
+msgstr ""
+
+#: ../../../../HISTORY.md:862
+msgid ""
+"Strip Content-Type and Transfer-Encoding headers from the header block when "
+"following a redirect that transforms the verb from POST/PUT to GET."
+msgstr ""
+
+#: ../../../../HISTORY.md:867
+msgid "2.11.0 (2016-08-08)"
+msgstr ""
+
+#: ../../../../HISTORY.md:871
+msgid "Added support for the `ALL_PROXY` environment variable."
+msgstr ""
+
+#: ../../../../HISTORY.md:872
+msgid ""
+"Reject header values that contain leading whitespace or newline characters "
+"to reduce risk of header smuggling."
+msgstr ""
+
+#: ../../../../HISTORY.md:877
+msgid ""
+"Fixed occasional `TypeError` when attempting to decode a JSON response that "
+"occurred in an error case. Now correctly returns a `ValueError`."
+msgstr ""
+
+#: ../../../../HISTORY.md:880
+msgid ""
+"Requests would incorrectly ignore a non-CIDR IP address in the `NO_PROXY` "
+"environment variables: Requests now treats it as a specific IP."
+msgstr ""
+
+#: ../../../../HISTORY.md:883
+msgid ""
+"Fixed a bug when sending JSON data that could cause us to encounter obscure "
+"OpenSSL errors in certain network conditions (yes, really)."
+msgstr ""
+
+#: ../../../../HISTORY.md:885
+msgid ""
+"Added type checks to ensure that `iter_content` only accepts integers and "
+"`None` for chunk sizes."
+msgstr ""
+
+#: ../../../../HISTORY.md:887
+msgid ""
+"Fixed issue where responses whose body had not been fully consumed would "
+"have the underlying connection closed but not returned to the connection "
+"pool, which could cause Requests to hang in situations where the "
+"`HTTPAdapter` had been configured to use a blocking connection pool."
+msgstr ""
+
+#: ../../../../HISTORY.md:895
+msgid "Updated bundled urllib3 to 1.16."
+msgstr ""
+
+#: ../../../../HISTORY.md:896
+msgid ""
+"Some previous releases accidentally accepted non-strings as acceptable "
+"header values. This release does not."
+msgstr ""
+
+#: ../../../../HISTORY.md:900
+msgid "2.10.0 (2016-04-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:902
+msgid "**New Features**"
+msgstr ""
+
+#: ../../../../HISTORY.md:904
+msgid ""
+"SOCKS Proxy Support! (requires PySocks; `$ pip install requests[socks]`)"
+msgstr ""
+
+#: ../../../../HISTORY.md:909
+msgid "Updated bundled urllib3 to 1.15.1."
+msgstr ""
+
+#: ../../../../HISTORY.md:912
+msgid "2.9.2 (2016-04-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:916
+msgid ""
+"Change built-in CaseInsensitiveDict (used for headers) to use OrderedDict as "
+"its underlying datastore."
+msgstr ""
+
+#: ../../../../HISTORY.md:921
+msgid "Don't use redirect\\_cache if allow\\_redirects=False"
+msgstr ""
+
+#: ../../../../HISTORY.md:922
+msgid ""
+"When passed objects that throw exceptions from `tell()`, send them via "
+"chunked transfer encoding instead of failing."
+msgstr ""
+
+#: ../../../../HISTORY.md:924
+msgid "Raise a ProxyError for proxy related connection issues."
+msgstr ""
+
+#: ../../../../HISTORY.md:927
+msgid "2.9.1 (2015-12-21)"
+msgstr ""
+
+#: ../../../../HISTORY.md:931
+msgid ""
+"Resolve regression introduced in 2.9.0 that made it impossible to send "
+"binary strings as bodies in Python 3."
+msgstr ""
+
+#: ../../../../HISTORY.md:933
+msgid ""
+"Fixed errors when calculating cookie expiration dates in certain locales."
+msgstr ""
+
+#: ../../../../HISTORY.md:938
+msgid "Updated bundled urllib3 to 1.13.1."
+msgstr ""
+
+#: ../../../../HISTORY.md:941
+msgid "2.9.0 (2015-12-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:943
+msgid "**Minor Improvements** (Backwards compatible)"
+msgstr ""
+
+#: ../../../../HISTORY.md:945
+msgid ""
+"The `verify` keyword argument now supports being passed a path to a "
+"directory of CA certificates, not just a single-file bundle."
+msgstr ""
+
+#: ../../../../HISTORY.md:947
+msgid "Warnings are now emitted when sending files opened in text mode."
+msgstr ""
+
+#: ../../../../HISTORY.md:948
+msgid ""
+"Added the 511 Network Authentication Required status code to the status code "
+"registry."
+msgstr ""
+
+#: ../../../../HISTORY.md:953
+msgid ""
+"For file-like objects that are not sought to the very beginning, we now send "
+"the content length for the number of bytes we will actually read, rather "
+"than the total size of the file, allowing partial file uploads."
+msgstr ""
+
+#: ../../../../HISTORY.md:957
+msgid ""
+"When uploading file-like objects, if they are empty or have no obvious "
+"content length we set `Transfer-Encoding: chunked` rather than `Content-"
+"Length: 0`."
+msgstr ""
+
+#: ../../../../HISTORY.md:960
+msgid ""
+"We correctly receive the response in buffered mode when uploading chunked "
+"bodies."
+msgstr ""
+
+#: ../../../../HISTORY.md:962
+msgid ""
+"We now handle being passed a query string as a bytestring on Python 3, by "
+"decoding it as UTF-8."
+msgstr ""
+
+#: ../../../../HISTORY.md:964
+msgid ""
+"Sessions are now closed in all cases (exceptional and not) when using the "
+"functional API rather than leaking and waiting for the garbage collector to "
+"clean them up."
+msgstr ""
+
+#: ../../../../HISTORY.md:967
+msgid ""
+"Correctly handle digest auth headers with a malformed `qop` directive that "
+"contains no token, by treating it the same as if no `qop` directive was "
+"provided at all."
+msgstr ""
+
+#: ../../../../HISTORY.md:970
+msgid "Minor performance improvements when removing specific cookies by name."
+msgstr ""
+
+#: ../../../../HISTORY.md:975
+msgid "Updated urllib3 to 1.13."
+msgstr ""
+
+#: ../../../../HISTORY.md:978
+msgid "2.8.1 (2015-10-13)"
+msgstr ""
+
+#: ../../../../HISTORY.md:982
+msgid ""
+"Update certificate bundle to match `certifi` 2015.9.6.2's weak certificate "
+"bundle."
+msgstr ""
+
+#: ../../../../HISTORY.md:984
+msgid ""
+"Fix a bug in 2.8.0 where requests would raise `ConnectTimeout` instead of "
+"`ConnectionError`"
+msgstr ""
+
+#: ../../../../HISTORY.md:986
+msgid ""
+"When using the PreparedRequest flow, requests will now correctly respect the "
+"`json` parameter. Broken in 2.8.0."
+msgstr ""
+
+#: ../../../../HISTORY.md:988
+msgid ""
+"When using the PreparedRequest flow, requests will now correctly handle a "
+"Unicode-string method name on Python 2. Broken in 2.8.0."
+msgstr ""
+
+#: ../../../../HISTORY.md:992
+msgid "2.8.0 (2015-10-05)"
+msgstr ""
+
+#: ../../../../HISTORY.md:994
+msgid "**Minor Improvements** (Backwards Compatible)"
+msgstr ""
+
+#: ../../../../HISTORY.md:996
+msgid ""
+"Requests now supports per-host proxies. This allows the `proxies` dictionary "
+"to have entries of the form `{'<scheme>://<hostname>': '<proxy>'}`. Host-"
+"specific proxies will be used in preference to the previously-supported "
+"scheme-specific ones, but the previous syntax will continue to work."
+msgstr ""
+
+#: ../../../../HISTORY.md:1001
+msgid ""
+"`Response.raise_for_status` now prints the URL that failed as part of the "
+"exception message."
+msgstr ""
+
+#: ../../../../HISTORY.md:1003
+msgid ""
+"`requests.utils.get_netrc_auth` now takes an `raise_errors` kwarg, "
+"defaulting to `False`. When `True`, errors parsing `.netrc` files cause "
+"exceptions to be thrown."
+msgstr ""
+
+#: ../../../../HISTORY.md:1006
+msgid ""
+"Change to bundled projects import logic to make it easier to unbundle "
+"requests downstream."
+msgstr ""
+
+#: ../../../../HISTORY.md:1008
+msgid ""
+"Changed the default User-Agent string to avoid leaking data on Linux: now "
+"contains only the requests version."
+msgstr ""
+
+#: ../../../../HISTORY.md:1013
+msgid ""
+"The `json` parameter to `post()` and friends will now only be used if "
+"neither `data` nor `files` are present, consistent with the documentation."
+msgstr ""
+
+#: ../../../../HISTORY.md:1016
+msgid "We now ignore empty fields in the `NO_PROXY` environment variable."
+msgstr ""
+
+#: ../../../../HISTORY.md:1017
+msgid ""
+"Fixed problem where `httplib.BadStatusLine` would get raised if combining "
+"`stream=True` with `contextlib.closing`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1019
+msgid ""
+"Prevented bugs where we would attempt to return the same connection back to "
+"the connection pool twice when sending a Chunked body."
+msgstr ""
+
+#: ../../../../HISTORY.md:1021
+msgid "Miscellaneous minor internal changes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1022
+msgid "Digest Auth support is now thread safe."
+msgstr ""
+
+#: ../../../../HISTORY.md:1024
+msgid "**Updates**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1026
+msgid "Updated urllib3 to 1.12."
+msgstr ""
+
+#: ../../../../HISTORY.md:1029
+msgid "2.7.0 (2015-05-03)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1031
+msgid ""
+"This is the first release that follows our new release process. For more, "
+"see [our documentation](https://requests.readthedocs.io/en/latest/community/"
+"release-process/)."
+msgstr ""
+
+#: ../../../../HISTORY.md:1037
+msgid ""
+"Updated urllib3 to 1.10.4, resolving several bugs involving chunked transfer "
+"encoding and response framing."
+msgstr ""
+
+#: ../../../../HISTORY.md:1041
+msgid "2.6.2 (2015-04-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1045
+msgid ""
+"Fix regression where compressed data that was sent as chunked data was not "
+"properly decompressed. (\\#2561)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1049
+msgid "2.6.1 (2015-04-22)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1053
+msgid "Remove VendorAlias import machinery introduced in v2.5.2."
+msgstr ""
+
+#: ../../../../HISTORY.md:1054
+msgid ""
+"Simplify the PreparedRequest.prepare API: We no longer require the user to "
+"pass an empty list to the hooks keyword argument. (c.f. \\#2552)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1057
+msgid ""
+"Resolve redirects now receives and forwards all of the original arguments to "
+"the adapter. (\\#2503)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1059
+msgid ""
+"Handle UnicodeDecodeErrors when trying to deal with a unicode URL that "
+"cannot be encoded in ASCII. (\\#2540)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1061
+msgid ""
+"Populate the parsed path of the URI field when performing Digest "
+"Authentication. (\\#2426)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1063
+msgid ""
+"Copy a PreparedRequest's CookieJar more reliably when it is not an instance "
+"of RequestsCookieJar. (\\#2527)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1067
+msgid "2.6.0 (2015-03-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1071
+msgid ""
+"CVE-2015-2296: Fix handling of cookies on redirect. Previously a cookie "
+"without a host value set would use the hostname for the redirected URL "
+"exposing requests users to session fixation attacks and potentially cookie "
+"stealing. This was disclosed privately by Matthew Daley of [BugFuzz](https://"
+"bugfuzz.com). This affects all versions of requests from v2.1.0 to v2.5.3 "
+"(inclusive on both ends)."
+msgstr ""
+
+#: ../../../../HISTORY.md:1077
+msgid ""
+"Fix error when requests is an `install_requires` dependency and `python "
+"setup.py test` is run. (\\#2462)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1079
+msgid ""
+"Fix error when urllib3 is unbundled and requests continues to use the "
+"vendored import location."
+msgstr ""
+
+#: ../../../../HISTORY.md:1081
+msgid "Include fixes to `urllib3`'s header handling."
+msgstr ""
+
+#: ../../../../HISTORY.md:1082
+msgid "Requests' handling of unvendored dependencies is now more restrictive."
+msgstr ""
+
+#: ../../../../HISTORY.md:1085 ../../../../HISTORY.md:1103
+msgid "**Features and Improvements**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1087
+msgid ""
+"Support bytearrays when passed as parameters in the `files` argument. "
+"(\\#2468)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1089
+msgid ""
+"Avoid data duplication when creating a request with `str`, `bytes`, or "
+"`bytearray` input to the `files` argument."
+msgstr ""
+
+#: ../../../../HISTORY.md:1093
+msgid "2.5.3 (2015-02-24)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1097
+msgid ""
+"Revert changes to our vendored certificate bundle. For more context see "
+"(\\#2455, \\#2456, and <https://bugs.python.org/issue23476>)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1101
+msgid "2.5.2 (2015-02-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1105
+msgid ""
+"Add sha256 fingerprint support. ([shazow/urllib3\\#540](https://github.com/"
+"shazow/urllib3/pull/540))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1107
+msgid ""
+"Improve the performance of headers. ([shazow/urllib3\\#544](https://github."
+"com/shazow/urllib3/pull/544))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1112
+msgid ""
+"Copy pip's import machinery. When downstream redistributors remove requests."
+"packages.urllib3 the import machinery will continue to let those same "
+"symbols work. Example usage in requests' documentation and 3rd-party "
+"libraries relying on the vendored copies of urllib3 will work without having "
+"to fallback to the system urllib3."
+msgstr ""
+
+#: ../../../../HISTORY.md:1117
+msgid ""
+"Attempt to quote parts of the URL on redirect if unquoting and then quoting "
+"fails. (\\#2356)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1119
+msgid "Fix filename type check for multipart form-data uploads. (\\#2411)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1120
+msgid ""
+"Properly handle the case where a server issuing digest authentication "
+"challenges provides both auth and auth-int qop-values. (\\#2408)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1123
+msgid ""
+"Fix a socket leak. ([shazow/urllib3\\#549](https://github.com/shazow/urllib3/"
+"pull/549))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1125
+msgid ""
+"Fix multiple `Set-Cookie` headers properly. ([shazow/urllib3\\#534](https://"
+"github.com/shazow/urllib3/pull/534))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1127
+msgid ""
+"Disable the built-in hostname verification. ([shazow/urllib3\\#526](https://"
+"github.com/shazow/urllib3/pull/526))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1129
+msgid ""
+"Fix the behaviour of decoding an exhausted stream. ([shazow/urllib3\\#535]"
+"(https://github.com/shazow/urllib3/pull/535))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1132
+msgid "**Security**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1134
+msgid "Pulled in an updated `cacert.pem`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1135
+msgid ""
+"Drop RC4 from the default cipher list. ([shazow/urllib3\\#551](https://"
+"github.com/shazow/urllib3/pull/551))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1139
+msgid "2.5.1 (2014-12-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1141 ../../../../HISTORY.md:1161
+msgid "**Behavioural Changes**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1143
+msgid "Only catch HTTPErrors in raise\\_for\\_status (\\#2382)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1147
+msgid "Handle LocationParseError from urllib3 (\\#2344)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1148
+msgid "Handle file-like object filenames that are not strings (\\#2379)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1149
+msgid ""
+"Unbreak HTTPDigestAuth handler. Allow new nonces to be negotiated (\\#2389)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1153
+msgid "2.5.0 (2014-12-01)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1157
+msgid "Allow usage of urllib3's Retry object with HTTPAdapters (\\#2216)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1158
+msgid ""
+"The `iter_lines` method on a response now accepts a delimiter with which to "
+"split the content (\\#2295)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1163
+msgid ""
+"Add deprecation warnings to functions in requests.utils that will be removed "
+"in 3.0 (\\#2309)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1165
+msgid "Sessions used by the functional API are always closed (\\#2326)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1166
+msgid ""
+"Restrict requests to HTTP/1.1 and HTTP/1.0 (stop accepting HTTP/0.9) "
+"(\\#2323)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1171
+msgid "Only parse the URL once (\\#2353)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1172
+msgid "Allow Content-Length header to always be overridden (\\#2332)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1173
+msgid "Properly handle files in HTTPDigestAuth (\\#2333)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1174
+msgid "Cap redirect\\_cache size to prevent memory abuse (\\#2299)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1175
+msgid ""
+"Fix HTTPDigestAuth handling of redirects after authenticating successfully "
+"(\\#2253)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1177
+msgid "Fix crash with custom method parameter to Session.request (\\#2317)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1178
+msgid ""
+"Fix how Link headers are parsed using the regular expression library "
+"(\\#2271)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1181 ../../../../HISTORY.md:1217
+msgid "**Documentation**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1183
+msgid "Add more references for interlinking (\\#2348)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1184
+msgid "Update CSS for theme (\\#2290)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1185
+msgid "Update width of buttons and sidebar (\\#2289)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1186
+msgid "Replace references of Gittip with Gratipay (\\#2282)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1187
+msgid "Add link to changelog in sidebar (\\#2273)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1190
+msgid "2.4.3 (2014-10-06)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1194
+msgid "Unicode URL improvements for Python 2."
+msgstr ""
+
+#: ../../../../HISTORY.md:1195
+msgid "Re-order JSON param for backwards compat."
+msgstr ""
+
+#: ../../../../HISTORY.md:1196
+msgid ""
+"Automatically defrag authentication schemes from host/pass URIs. ([\\#2249]"
+"(https://github.com/psf/requests/issues/2249))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1200
+msgid "2.4.2 (2014-10-05)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1204
+msgid ""
+"FINALLY! Add json parameter for uploads! ([\\#2258](https://github.com/psf/"
+"requests/pull/2258))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1206
+msgid ""
+"Support for bytestring URLs on Python 3.x ([\\#2238](https://github.com/psf/"
+"requests/pull/2238))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1211
+msgid ""
+"Avoid getting stuck in a loop ([\\#2244](https://github.com/psf/requests/"
+"pull/2244))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1213
+msgid ""
+"Multiple calls to iter\\* fail with unhelpful error. ([\\#2240](https://"
+"github.com/psf/requests/issues/2240), [\\#2241](https://github.com/psf/"
+"requests/issues/2241))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1219
+msgid ""
+"Correct redirection introduction ([\\#2245](https://github.com/psf/requests/"
+"pull/2245/))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1221
+msgid ""
+"Added example of how to send multiple files in one request. ([\\#2227]"
+"(https://github.com/psf/requests/pull/2227/))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1223
+msgid ""
+"Clarify how to pass a custom set of CAs ([\\#2248](https://github.com/psf/"
+"requests/pull/2248/))"
+msgstr ""
+
+#: ../../../../HISTORY.md:1227
+msgid "2.4.1 (2014-09-09)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1229
+msgid ""
+"Now has a \"security\" package extras set, `$ pip install requests[security]`"
+msgstr ""
+
+#: ../../../../HISTORY.md:1231
+msgid "Requests will now use Certifi if it is available."
+msgstr ""
+
+#: ../../../../HISTORY.md:1232
+msgid "Capture and re-raise urllib3 ProtocolError"
+msgstr ""
+
+#: ../../../../HISTORY.md:1233
+msgid ""
+"Bugfix for responses that attempt to redirect to themselves forever (wtf?)."
+msgstr ""
+
+#: ../../../../HISTORY.md:1237
+msgid "2.4.0 (2014-08-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1239
+msgid "**Behavioral Changes**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1241
+msgid "`Connection: keep-alive` header is now sent automatically."
+msgstr ""
+
+#: ../../../../HISTORY.md:1245
+msgid ""
+"Support for connect timeouts! Timeout now accepts a tuple (connect, read) "
+"which is used to set individual connect and read timeouts."
+msgstr ""
+
+#: ../../../../HISTORY.md:1247
+msgid "Allow copying of PreparedRequests without headers/cookies."
+msgstr ""
+
+#: ../../../../HISTORY.md:1248
+msgid "Updated bundled urllib3 version."
+msgstr ""
+
+#: ../../../../HISTORY.md:1249
+msgid ""
+"Refactored settings loading from environment -- new Session."
+"merge\\_environment\\_settings."
+msgstr ""
+
+#: ../../../../HISTORY.md:1251
+msgid "Handle socket errors in iter\\_content."
+msgstr ""
+
+#: ../../../../HISTORY.md:1254
+msgid "2.3.0 (2014-05-16)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1256 ../../../../HISTORY.md:1296
+msgid "**API Changes**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1258
+msgid ""
+"New `Response` property `is_redirect`, which is true when the library could "
+"have processed this response as a redirection (whether or not it actually "
+"did)."
+msgstr ""
+
+#: ../../../../HISTORY.md:1261
+msgid ""
+"The `timeout` parameter now affects requests with both `stream=True` and "
+"`stream=False` equally."
+msgstr ""
+
+#: ../../../../HISTORY.md:1263
+msgid ""
+"The change in v2.0.0 to mandate explicit proxy schemes has been reverted. "
+"Proxy schemes now default to `http://`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1265
+msgid ""
+"The `CaseInsensitiveDict` used for HTTP headers now behaves like a normal "
+"dictionary when references as string or viewed in the interpreter."
+msgstr ""
+
+#: ../../../../HISTORY.md:1271
+msgid ""
+"No longer expose Authorization or Proxy-Authorization headers on redirect. "
+"Fix CVE-2014-1829 and CVE-2014-1830 respectively."
+msgstr ""
+
+#: ../../../../HISTORY.md:1273
+msgid "Authorization is re-evaluated each redirect."
+msgstr ""
+
+#: ../../../../HISTORY.md:1274
+msgid "On redirect, pass url as native strings."
+msgstr ""
+
+#: ../../../../HISTORY.md:1275
+msgid ""
+"Fall-back to autodetected encoding for JSON when Unicode detection fails."
+msgstr ""
+
+#: ../../../../HISTORY.md:1277
+msgid "Headers set to `None` on the `Session` are now correctly not sent."
+msgstr ""
+
+#: ../../../../HISTORY.md:1278
+msgid ""
+"Correctly honor `decode_unicode` even if it wasn't used earlier in the same "
+"response."
+msgstr ""
+
+#: ../../../../HISTORY.md:1280
+msgid "Stop advertising `compress` as a supported Content-Encoding."
+msgstr ""
+
+#: ../../../../HISTORY.md:1281
+msgid "The `Response.history` parameter is now always a list."
+msgstr ""
+
+#: ../../../../HISTORY.md:1282
+msgid "Many, many `urllib3` bugfixes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1285
+msgid "2.2.1 (2014-01-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1289
+msgid ""
+"Fixes incorrect parsing of proxy credentials that contain a literal or "
+"encoded '\\#' character."
+msgstr ""
+
+#: ../../../../HISTORY.md:1291
+msgid "Assorted urllib3 fixes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1294
+msgid "2.2.0 (2014-01-09)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1298
+msgid ""
+"New exception: `ContentDecodingError`. Raised instead of `urllib3` "
+"`DecodeError` exceptions."
+msgstr ""
+
+#: ../../../../HISTORY.md:1303
+msgid ""
+"Avoid many many exceptions from the buggy implementation of `proxy_bypass` "
+"on OS X in Python 2.6."
+msgstr ""
+
+#: ../../../../HISTORY.md:1305
+msgid ""
+"Avoid crashing when attempting to get authentication credentials from \\~/."
+"netrc when running as a user without a home directory."
+msgstr ""
+
+#: ../../../../HISTORY.md:1307
+msgid "Use the correct pool size for pools of connections to proxies."
+msgstr ""
+
+#: ../../../../HISTORY.md:1308
+msgid "Fix iteration of `CookieJar` objects."
+msgstr ""
+
+#: ../../../../HISTORY.md:1309
+msgid "Ensure that cookies are persisted over redirect."
+msgstr ""
+
+#: ../../../../HISTORY.md:1310
+msgid "Switch back to using chardet, since it has merged with charade."
+msgstr ""
+
+#: ../../../../HISTORY.md:1313
+msgid "2.1.0 (2013-12-05)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1315
+msgid "Updated CA Bundle, of course."
+msgstr ""
+
+#: ../../../../HISTORY.md:1316
+msgid ""
+"Cookies set on individual Requests through a `Session` (e.g. via `Session."
+"get()`) are no longer persisted to the `Session`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1318
+msgid ""
+"Clean up connections when we hit problems during chunked upload, rather than "
+"leaking them."
+msgstr ""
+
+#: ../../../../HISTORY.md:1320
+msgid ""
+"Return connections to the pool when a chunked upload is successful, rather "
+"than leaking it."
+msgstr ""
+
+#: ../../../../HISTORY.md:1322
+msgid "Match the HTTPbis recommendation for HTTP 301 redirects."
+msgstr ""
+
+#: ../../../../HISTORY.md:1323
+msgid ""
+"Prevent hanging when using streaming uploads and Digest Auth when a 401 is "
+"received."
+msgstr ""
+
+#: ../../../../HISTORY.md:1325
+msgid ""
+"Values of headers set by Requests are now always the native string type."
+msgstr ""
+
+#: ../../../../HISTORY.md:1327
+msgid "Fix previously broken SNI support."
+msgstr ""
+
+#: ../../../../HISTORY.md:1328
+msgid "Fix accessing HTTP proxies using proxy authentication."
+msgstr ""
+
+#: ../../../../HISTORY.md:1329
+msgid "Unencode HTTP Basic usernames and passwords extracted from URLs."
+msgstr ""
+
+#: ../../../../HISTORY.md:1330
+msgid "Support for IP address ranges for no\\_proxy environment variable"
+msgstr ""
+
+#: ../../../../HISTORY.md:1331
+msgid "Parse headers correctly when users override the default `Host:` header."
+msgstr ""
+
+#: ../../../../HISTORY.md:1333
+msgid "Avoid munging the URL in case of case-sensitive servers."
+msgstr ""
+
+#: ../../../../HISTORY.md:1334
+msgid "Looser URL handling for non-HTTP/HTTPS urls."
+msgstr ""
+
+#: ../../../../HISTORY.md:1335
+msgid "Accept unicode methods in Python 2.6 and 2.7."
+msgstr ""
+
+#: ../../../../HISTORY.md:1336
+msgid "More resilient cookie handling."
+msgstr ""
+
+#: ../../../../HISTORY.md:1337
+msgid "Make `Response` objects pickleable."
+msgstr ""
+
+#: ../../../../HISTORY.md:1338
+msgid ""
+"Actually added MD5-sess to Digest Auth instead of pretending to like last "
+"time."
+msgstr ""
+
+#: ../../../../HISTORY.md:1340
+msgid "Updated internal urllib3."
+msgstr ""
+
+#: ../../../../HISTORY.md:1341
+msgid "Fixed @Lukasa's lack of taste."
+msgstr ""
+
+#: ../../../../HISTORY.md:1344
+msgid "2.0.1 (2013-10-24)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1346
+msgid ""
+"Updated included CA Bundle with new mistrusts and automated process for the "
+"future"
+msgstr ""
+
+#: ../../../../HISTORY.md:1348
+msgid "Added MD5-sess to Digest Auth"
+msgstr ""
+
+#: ../../../../HISTORY.md:1349
+msgid "Accept per-file headers in multipart file POST messages."
+msgstr ""
+
+#: ../../../../HISTORY.md:1350
+msgid "Fixed: Don't send the full URL on CONNECT messages."
+msgstr ""
+
+#: ../../../../HISTORY.md:1351
+msgid "Fixed: Correctly lowercase a redirect scheme."
+msgstr ""
+
+#: ../../../../HISTORY.md:1352
+msgid "Fixed: Cookies not persisted when set via functional API."
+msgstr ""
+
+#: ../../../../HISTORY.md:1353
+msgid ""
+"Fixed: Translate urllib3 ProxyError into a requests ProxyError derived from "
+"ConnectionError."
+msgstr ""
+
+#: ../../../../HISTORY.md:1355
+msgid "Updated internal urllib3 and chardet."
+msgstr ""
+
+#: ../../../../HISTORY.md:1358
+msgid "2.0.0 (2013-09-24)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1360
+msgid "**API Changes:**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1362
+msgid ""
+"Keys in the Headers dictionary are now native strings on all Python "
+"versions, i.e. bytestrings on Python 2, unicode on Python 3."
+msgstr ""
+
+#: ../../../../HISTORY.md:1364
+msgid ""
+"Proxy URLs now *must* have an explicit scheme. A `MissingSchema` exception "
+"will be raised if they don't."
+msgstr ""
+
+#: ../../../../HISTORY.md:1366
+msgid "Timeouts now apply to read time if `Stream=False`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1367
+msgid "`RequestException` is now a subclass of `IOError`, not `RuntimeError`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1369
+msgid ""
+"Added new method to `PreparedRequest` objects: `PreparedRequest.copy()`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1371
+msgid ""
+"Added new method to `Session` objects: `Session.update_request()`. This "
+"method updates a `Request` object with the data (e.g. cookies) stored on the "
+"`Session`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1374
+msgid ""
+"Added new method to `Session` objects: `Session.prepare_request()`. This "
+"method updates and prepares a `Request` object, and returns the "
+"corresponding `PreparedRequest` object."
+msgstr ""
+
+#: ../../../../HISTORY.md:1377
+msgid ""
+"Added new method to `HTTPAdapter` objects: `HTTPAdapter.proxy_headers()`. "
+"This should not be called directly, but improves the subclass interface."
+msgstr ""
+
+#: ../../../../HISTORY.md:1380
+msgid ""
+"`httplib.IncompleteRead` exceptions caused by incorrect chunked encoding "
+"will now raise a Requests `ChunkedEncodingError` instead."
+msgstr ""
+
+#: ../../../../HISTORY.md:1382
+msgid ""
+"Invalid percent-escape sequences now cause a Requests `InvalidURL` exception "
+"to be raised."
+msgstr ""
+
+#: ../../../../HISTORY.md:1384
+msgid ""
+"HTTP 208 no longer uses reason phrase `\"im_used\"`. Correctly uses "
+"`\"already_reported\"`."
+msgstr ""
+
+#: ../../../../HISTORY.md:1386
+msgid "HTTP 226 reason added (`\"im_used\"`)."
+msgstr ""
+
+#: ../../../../HISTORY.md:1388
+msgid "**Bugfixes:**"
+msgstr ""
+
+#: ../../../../HISTORY.md:1390
+msgid ""
+"Vastly improved proxy support, including the CONNECT verb. Special thanks to "
+"the many contributors who worked towards this improvement."
+msgstr ""
+
+#: ../../../../HISTORY.md:1392
+msgid ""
+"Cookies are now properly managed when 401 authentication responses are "
+"received."
+msgstr ""
+
+#: ../../../../HISTORY.md:1394
+msgid "Chunked encoding fixes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1395
+msgid "Support for mixed case schemes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1396
+msgid "Better handling of streaming downloads."
+msgstr ""
+
+#: ../../../../HISTORY.md:1397
+msgid "Retrieve environment proxies from more locations."
+msgstr ""
+
+#: ../../../../HISTORY.md:1398
+msgid "Minor cookies fixes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1399
+msgid "Improved redirect behaviour."
+msgstr ""
+
+#: ../../../../HISTORY.md:1400
+msgid "Improved streaming behaviour, particularly for compressed data."
+msgstr ""
+
+#: ../../../../HISTORY.md:1401
+msgid "Miscellaneous small Python 3 text encoding bugs."
+msgstr ""
+
+#: ../../../../HISTORY.md:1402
+msgid "`.netrc` no longer overrides explicit auth."
+msgstr ""
+
+#: ../../../../HISTORY.md:1403
+msgid "Cookies set by hooks are now correctly persisted on Sessions."
+msgstr ""
+
+#: ../../../../HISTORY.md:1404
+msgid "Fix problem with cookies that specify port numbers in their host field."
+msgstr ""
+
+#: ../../../../HISTORY.md:1406
+msgid "`BytesIO` can be used to perform streaming uploads."
+msgstr ""
+
+#: ../../../../HISTORY.md:1407
+msgid "More generous parsing of the `no_proxy` environment variable."
+msgstr ""
+
+#: ../../../../HISTORY.md:1408
+msgid "Non-string objects can be passed in data values alongside files."
+msgstr ""
+
+#: ../../../../HISTORY.md:1411
+msgid "1.2.3 (2013-05-25)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1413 ../../../../HISTORY.md:1418
+msgid "Simple packaging fix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1416
+msgid "1.2.2 (2013-05-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1421
+msgid "1.2.1 (2013-05-20)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1423
+msgid ""
+"301 and 302 redirects now change the verb to GET for all verbs, not just "
+"POST, improving browser compatibility."
+msgstr ""
+
+#: ../../../../HISTORY.md:1425
+msgid "Python 3.3.2 compatibility"
+msgstr ""
+
+#: ../../../../HISTORY.md:1426
+msgid "Always percent-encode location headers"
+msgstr ""
+
+#: ../../../../HISTORY.md:1427
+msgid "Fix connection adapter matching to be most-specific first"
+msgstr ""
+
+#: ../../../../HISTORY.md:1428
+msgid ""
+"new argument to the default connection adapter for passing a block argument"
+msgstr ""
+
+#: ../../../../HISTORY.md:1430
+msgid "prevent a KeyError when there's no link headers"
+msgstr ""
+
+#: ../../../../HISTORY.md:1433
+msgid "1.2.0 (2013-03-31)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1435
+msgid "Fixed cookies on sessions and on requests"
+msgstr ""
+
+#: ../../../../HISTORY.md:1436
+msgid ""
+"Significantly change how hooks are dispatched - hooks now receive all the "
+"arguments specified by the user when making a request so hooks can make a "
+"secondary request with the same parameters. This is especially necessary for "
+"authentication handler authors"
+msgstr ""
+
+#: ../../../../HISTORY.md:1440
+msgid "certifi support was removed"
+msgstr ""
+
+#: ../../../../HISTORY.md:1441
+msgid "Fixed bug where using OAuth 1 with body `signature_type` sent no data"
+msgstr ""
+
+#: ../../../../HISTORY.md:1443
+msgid ""
+"Major proxy work thanks to @Lukasa including parsing of proxy authentication "
+"from the proxy url"
+msgstr ""
+
+#: ../../../../HISTORY.md:1445
+msgid "Fix DigestAuth handling too many 401s"
+msgstr ""
+
+#: ../../../../HISTORY.md:1446
+msgid "Update vendored urllib3 to include SSL bug fixes"
+msgstr ""
+
+#: ../../../../HISTORY.md:1447
+msgid ""
+"Allow keyword arguments to be passed to `json.loads()` via the `Response."
+"json()` method"
+msgstr ""
+
+#: ../../../../HISTORY.md:1449
+msgid ""
+"Don't send `Content-Length` header by default on `GET` or `HEAD` requests"
+msgstr ""
+
+#: ../../../../HISTORY.md:1451
+msgid ""
+"Add `elapsed` attribute to `Response` objects to time how long a request "
+"took."
+msgstr ""
+
+#: ../../../../HISTORY.md:1453
+msgid "Fix `RequestsCookieJar`"
+msgstr ""
+
+#: ../../../../HISTORY.md:1454
+msgid ""
+"Sessions and Adapters are now picklable, i.e., can be used with the "
+"multiprocessing library"
+msgstr ""
+
+#: ../../../../HISTORY.md:1456
+msgid "Update charade to version 1.0.3"
+msgstr ""
+
+#: ../../../../HISTORY.md:1458
+msgid ""
+"The change in how hooks are dispatched will likely cause a great deal of "
+"issues."
+msgstr ""
+
+#: ../../../../HISTORY.md:1462
+msgid "1.1.0 (2013-01-10)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1464
+msgid "CHUNKED REQUESTS"
+msgstr ""
+
+#: ../../../../HISTORY.md:1465
+msgid "Support for iterable response bodies"
+msgstr ""
+
+#: ../../../../HISTORY.md:1466
+msgid "Assume servers persist redirect params"
+msgstr ""
+
+#: ../../../../HISTORY.md:1467
+msgid "Allow explicit content types to be specified for file data"
+msgstr ""
+
+#: ../../../../HISTORY.md:1468
+msgid "Make merge\\_kwargs case-insensitive when looking up keys"
+msgstr ""
+
+#: ../../../../HISTORY.md:1471
+msgid "1.0.3 (2012-12-18)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1473
+msgid "Fix file upload encoding bug"
+msgstr ""
+
+#: ../../../../HISTORY.md:1474
+msgid "Fix cookie behavior"
+msgstr ""
+
+#: ../../../../HISTORY.md:1477
+msgid "1.0.2 (2012-12-17)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1479 ../../../../HISTORY.md:1485
+msgid "Proxy fix for HTTPAdapter."
+msgstr ""
+
+#: ../../../../HISTORY.md:1482
+msgid "1.0.1 (2012-12-17)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1484
+msgid "Cert verification exception bug."
+msgstr ""
+
+#: ../../../../HISTORY.md:1488
+msgid "1.0.0 (2012-12-17)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1490
+msgid "Massive Refactor and Simplification"
+msgstr ""
+
+#: ../../../../HISTORY.md:1491
+msgid "Switch to Apache 2.0 license"
+msgstr ""
+
+#: ../../../../HISTORY.md:1492
+msgid "Swappable Connection Adapters"
+msgstr ""
+
+#: ../../../../HISTORY.md:1493
+msgid "Mountable Connection Adapters"
+msgstr ""
+
+#: ../../../../HISTORY.md:1494
+msgid "Mutable ProcessedRequest chain"
+msgstr ""
+
+#: ../../../../HISTORY.md:1495
+msgid "/s/prefetch/stream"
+msgstr ""
+
+#: ../../../../HISTORY.md:1496
+msgid "Removal of all configuration"
+msgstr ""
+
+#: ../../../../HISTORY.md:1497
+msgid "Standard library logging"
+msgstr ""
+
+#: ../../../../HISTORY.md:1498
+msgid "Make Response.json() callable, not property."
+msgstr ""
+
+#: ../../../../HISTORY.md:1499
+msgid ""
+"Usage of new charade project, which provides python 2 and 3 simultaneous "
+"chardet."
+msgstr ""
+
+#: ../../../../HISTORY.md:1501
+msgid "Removal of all hooks except 'response'"
+msgstr ""
+
+#: ../../../../HISTORY.md:1502
+msgid "Removal of all authentication helpers (OAuth, Kerberos)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1504
+msgid "This is not a backwards compatible change."
+msgstr ""
+
+#: ../../../../HISTORY.md:1507
+msgid "0.14.2 (2012-10-27)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1509
+msgid "Improved mime-compatible JSON handling"
+msgstr ""
+
+#: ../../../../HISTORY.md:1510
+msgid "Proxy fixes"
+msgstr ""
+
+#: ../../../../HISTORY.md:1511
+msgid "Path hack fixes"
+msgstr ""
+
+#: ../../../../HISTORY.md:1512
+msgid "Case-Insensitive Content-Encoding headers"
+msgstr ""
+
+#: ../../../../HISTORY.md:1513
+msgid "Support for CJK parameters in form posts"
+msgstr ""
+
+#: ../../../../HISTORY.md:1516
+msgid "0.14.1 (2012-10-01)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1518
+msgid "Python 3.3 Compatibility"
+msgstr ""
+
+#: ../../../../HISTORY.md:1519
+msgid "Simply default accept-encoding"
+msgstr ""
+
+#: ../../../../HISTORY.md:1520 ../../../../HISTORY.md:1910
+#: ../../../../HISTORY.md:1925
+msgid "Bugfixes"
+msgstr ""
+
+#: ../../../../HISTORY.md:1523
+msgid "0.14.0 (2012-09-02)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1525
+msgid "No more iter\\_content errors if already downloaded."
+msgstr ""
+
+#: ../../../../HISTORY.md:1528
+msgid "0.13.9 (2012-08-25)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1530
+msgid "Fix for OAuth + POSTs"
+msgstr ""
+
+#: ../../../../HISTORY.md:1531
+msgid "Remove exception eating from dispatch\\_hook"
+msgstr ""
+
+#: ../../../../HISTORY.md:1532
+msgid "General bugfixes"
+msgstr ""
+
+#: ../../../../HISTORY.md:1535
+msgid "0.13.8 (2012-08-21)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1537
+msgid "Incredible Link header support :)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1540
+msgid "0.13.7 (2012-08-19)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1542
+msgid "Support for (key, value) lists everywhere."
+msgstr ""
+
+#: ../../../../HISTORY.md:1543
+msgid "Digest Authentication improvements."
+msgstr ""
+
+#: ../../../../HISTORY.md:1544
+msgid "Ensure proxy exclusions work properly."
+msgstr ""
+
+#: ../../../../HISTORY.md:1545
+msgid "Clearer UnicodeError exceptions."
+msgstr ""
+
+#: ../../../../HISTORY.md:1546
+msgid "Automatic casting of URLs to strings (fURL and such)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1547 ../../../../HISTORY.md:1705
+msgid "Bugfixes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1550
+msgid "0.13.6 (2012-08-06)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1552
+msgid "Long awaited fix for hanging connections!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1555
+msgid "0.13.5 (2012-07-27)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1557
+msgid "Packaging fix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1560
+msgid "0.13.4 (2012-07-27)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1562
+msgid "GSSAPI/Kerberos authentication!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1563
+msgid "App Engine 2.7 Fixes!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1564
+msgid "Fix leaking connections (from urllib3 update)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1565
+msgid "OAuthlib path hack fix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1566
+msgid "OAuthlib URL parameters fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1569
+msgid "0.13.3 (2012-07-12)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1571
+msgid "Use simplejson if available."
+msgstr ""
+
+#: ../../../../HISTORY.md:1572
+msgid "Do not hide SSLErrors behind Timeouts."
+msgstr ""
+
+#: ../../../../HISTORY.md:1573
+msgid "Fixed param handling with urls containing fragments."
+msgstr ""
+
+#: ../../../../HISTORY.md:1574
+msgid "Significantly improved information in User Agent."
+msgstr ""
+
+#: ../../../../HISTORY.md:1575
+msgid "client certificates are ignored when verify=False"
+msgstr ""
+
+#: ../../../../HISTORY.md:1578
+msgid "0.13.2 (2012-06-28)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1580
+msgid "Zero dependencies (once again)!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1581
+msgid "New: Response.reason"
+msgstr ""
+
+#: ../../../../HISTORY.md:1582
+msgid "Sign querystring parameters in OAuth 1.0"
+msgstr ""
+
+#: ../../../../HISTORY.md:1583
+msgid "Client certificates no longer ignored when verify=False"
+msgstr ""
+
+#: ../../../../HISTORY.md:1584
+msgid "Add openSUSE certificate support"
+msgstr ""
+
+#: ../../../../HISTORY.md:1587
+msgid "0.13.1 (2012-06-07)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1589
+msgid "Allow passing a file or file-like object as data."
+msgstr ""
+
+#: ../../../../HISTORY.md:1590
+msgid "Allow hooks to return responses that indicate errors."
+msgstr ""
+
+#: ../../../../HISTORY.md:1591
+msgid "Fix Response.text and Response.json for body-less responses."
+msgstr ""
+
+#: ../../../../HISTORY.md:1594
+msgid "0.13.0 (2012-05-29)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1596
+msgid ""
+"Removal of Requests.async in favor of [grequests](https://github.com/"
+"kennethreitz/grequests)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1598
+msgid "Allow disabling of cookie persistence."
+msgstr ""
+
+#: ../../../../HISTORY.md:1599
+msgid "New implementation of safe\\_mode"
+msgstr ""
+
+#: ../../../../HISTORY.md:1600
+msgid "cookies.get now supports default argument"
+msgstr ""
+
+#: ../../../../HISTORY.md:1601
+msgid ""
+"Session cookies not saved when Session.request is called with "
+"return\\_response=False"
+msgstr ""
+
+#: ../../../../HISTORY.md:1603
+msgid "Env: no\\_proxy support."
+msgstr ""
+
+#: ../../../../HISTORY.md:1604
+msgid "RequestsCookieJar improvements."
+msgstr ""
+
+#: ../../../../HISTORY.md:1605
+msgid "Various bug fixes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1608
+msgid "0.12.1 (2012-05-08)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1610
+msgid "New `Response.json` property."
+msgstr ""
+
+#: ../../../../HISTORY.md:1611
+msgid "Ability to add string file uploads."
+msgstr ""
+
+#: ../../../../HISTORY.md:1612
+msgid "Fix out-of-range issue with iter\\_lines."
+msgstr ""
+
+#: ../../../../HISTORY.md:1613
+msgid "Fix iter\\_content default size."
+msgstr ""
+
+#: ../../../../HISTORY.md:1614
+msgid "Fix POST redirects containing files."
+msgstr ""
+
+#: ../../../../HISTORY.md:1617
+msgid "0.12.0 (2012-05-02)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1619
+msgid "EXPERIMENTAL OAUTH SUPPORT!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1620
+msgid ""
+"Proper CookieJar-backed cookies interface with awesome dict-like interface."
+msgstr ""
+
+#: ../../../../HISTORY.md:1622
+msgid "Speed fix for non-iterated content chunks."
+msgstr ""
+
+#: ../../../../HISTORY.md:1623
+msgid "Move `pre_request` to a more usable place."
+msgstr ""
+
+#: ../../../../HISTORY.md:1624
+msgid "New `pre_send` hook."
+msgstr ""
+
+#: ../../../../HISTORY.md:1625
+msgid "Lazily encode data, params, files."
+msgstr ""
+
+#: ../../../../HISTORY.md:1626
+msgid "Load system Certificate Bundle if `certify` isn't available."
+msgstr ""
+
+#: ../../../../HISTORY.md:1627
+msgid "Cleanups, fixes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1630
+msgid "0.11.2 (2012-04-22)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1632
+msgid ""
+"Attempt to use the OS's certificate bundle if `certifi` isn't available."
+msgstr ""
+
+#: ../../../../HISTORY.md:1634
+msgid "Infinite digest auth redirect fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1635
+msgid "Multi-part file upload improvements."
+msgstr ""
+
+#: ../../../../HISTORY.md:1636
+msgid "Fix decoding of invalid %encodings in URLs."
+msgstr ""
+
+#: ../../../../HISTORY.md:1637
+msgid ""
+"If there is no content in a response don't throw an error the second time "
+"that content is attempted to be read."
+msgstr ""
+
+#: ../../../../HISTORY.md:1639
+msgid "Upload data on redirects."
+msgstr ""
+
+#: ../../../../HISTORY.md:1642
+msgid "0.11.1 (2012-03-30)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1644
+msgid ""
+"POST redirects now break RFC to do what browsers do: Follow up with a GET."
+msgstr ""
+
+#: ../../../../HISTORY.md:1646
+msgid "New `strict_mode` configuration to disable new redirect behavior."
+msgstr ""
+
+#: ../../../../HISTORY.md:1649
+msgid "0.11.0 (2012-03-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1651
+msgid "Private SSL Certificate support"
+msgstr ""
+
+#: ../../../../HISTORY.md:1652
+msgid "Remove select.poll from Gevent monkeypatching"
+msgstr ""
+
+#: ../../../../HISTORY.md:1653
+msgid "Remove redundant generator for chunked transfer encoding"
+msgstr ""
+
+#: ../../../../HISTORY.md:1654
+msgid "Fix: Response.ok raises Timeout Exception in safe\\_mode"
+msgstr ""
+
+#: ../../../../HISTORY.md:1657
+msgid "0.10.8 (2012-03-09)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1659
+msgid "Generate chunked ValueError fix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1660
+msgid "Proxy configuration by environment variables"
+msgstr ""
+
+#: ../../../../HISTORY.md:1661
+msgid "Simplification of iter\\_lines."
+msgstr ""
+
+#: ../../../../HISTORY.md:1662
+msgid "New trust\\_env configuration for disabling system/environment hints."
+msgstr ""
+
+#: ../../../../HISTORY.md:1663
+msgid "Suppress cookie errors."
+msgstr ""
+
+#: ../../../../HISTORY.md:1666
+msgid "0.10.7 (2012-03-07)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1668
+msgid "encode\\_uri = False"
+msgstr ""
+
+#: ../../../../HISTORY.md:1671
+msgid "0.10.6 (2012-02-25)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1673
+msgid "Allow '=' in cookies."
+msgstr ""
+
+#: ../../../../HISTORY.md:1676
+msgid "0.10.5 (2012-02-25)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1678
+msgid "Response body with 0 content-length fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1679
+msgid "New async.imap."
+msgstr ""
+
+#: ../../../../HISTORY.md:1680
+msgid "Don't fail on netrc."
+msgstr ""
+
+#: ../../../../HISTORY.md:1683
+msgid "0.10.4 (2012-02-20)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1685
+msgid "Honor netrc."
+msgstr ""
+
+#: ../../../../HISTORY.md:1688
+msgid "0.10.3 (2012-02-20)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1690
+msgid "HEAD requests don't follow redirects anymore."
+msgstr ""
+
+#: ../../../../HISTORY.md:1691
+msgid "raise\\_for\\_status() doesn't raise for 3xx anymore."
+msgstr ""
+
+#: ../../../../HISTORY.md:1692
+msgid "Make Session objects picklable."
+msgstr ""
+
+#: ../../../../HISTORY.md:1693
+msgid "ValueError for invalid schema URLs."
+msgstr ""
+
+#: ../../../../HISTORY.md:1696
+msgid "0.10.2 (2012-01-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1698
+msgid "Vastly improved URL quoting."
+msgstr ""
+
+#: ../../../../HISTORY.md:1699
+msgid "Additional allowed cookie key values."
+msgstr ""
+
+#: ../../../../HISTORY.md:1700
+msgid "Attempted fix for \"Too many open files\" Error"
+msgstr ""
+
+#: ../../../../HISTORY.md:1701
+msgid "Replace unicode errors on first pass, no need for second pass."
+msgstr ""
+
+#: ../../../../HISTORY.md:1702
+msgid "Append '/' to bare-domain urls before query insertion."
+msgstr ""
+
+#: ../../../../HISTORY.md:1703
+msgid "Exceptions now inherit from RuntimeError."
+msgstr ""
+
+#: ../../../../HISTORY.md:1704
+msgid "Binary uploads + auth fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1708
+msgid "0.10.1 (2012-01-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1710
+msgid "PYTHON 3 SUPPORT!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1711
+msgid "Dropped 2.5 Support. (*Backwards Incompatible*)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1714
+msgid "0.10.0 (2012-01-21)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1716
+msgid "`Response.content` is now bytes-only. (*Backwards Incompatible*)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1717
+msgid "New `Response.text` is unicode-only."
+msgstr ""
+
+#: ../../../../HISTORY.md:1718
+msgid ""
+"If no `Response.encoding` is specified and `chardet` is available, `Response."
+"text` will guess an encoding."
+msgstr ""
+
+#: ../../../../HISTORY.md:1720
+msgid "Default to ISO-8859-1 (Western) encoding for \"text\" subtypes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1721
+msgid "Removal of decode\\_unicode. (*Backwards Incompatible*)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1722
+msgid "New multiple-hooks system."
+msgstr ""
+
+#: ../../../../HISTORY.md:1723
+msgid "New `Response.register_hook` for registering hooks within the pipeline."
+msgstr ""
+
+#: ../../../../HISTORY.md:1725
+msgid "`Response.url` is now Unicode."
+msgstr ""
+
+#: ../../../../HISTORY.md:1728
+msgid "0.9.3 (2012-01-18)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1730
+msgid "SSL verify=False bugfix (apparent on windows machines)."
+msgstr ""
+
+#: ../../../../HISTORY.md:1733
+msgid "0.9.2 (2012-01-18)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1735
+msgid "Asynchronous async.send method."
+msgstr ""
+
+#: ../../../../HISTORY.md:1736
+msgid "Support for proper chunk streams with boundaries."
+msgstr ""
+
+#: ../../../../HISTORY.md:1737
+msgid "session argument for Session classes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1738
+msgid "Print entire hook tracebacks, not just exception instance."
+msgstr ""
+
+#: ../../../../HISTORY.md:1739
+msgid "Fix response.iter\\_lines from pending next line."
+msgstr ""
+
+#: ../../../../HISTORY.md:1740
+msgid "Fix but in HTTP-digest auth w/ URI having query strings."
+msgstr ""
+
+#: ../../../../HISTORY.md:1741
+msgid "Fix in Event Hooks section."
+msgstr ""
+
+#: ../../../../HISTORY.md:1742 ../../../../HISTORY.md:1766
+msgid "Urllib3 update."
+msgstr ""
+
+#: ../../../../HISTORY.md:1745
+msgid "0.9.1 (2012-01-06)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1747
+msgid "danger\\_mode for automatic Response.raise\\_for\\_status()"
+msgstr ""
+
+#: ../../../../HISTORY.md:1748
+msgid "Response.iter\\_lines refactor"
+msgstr ""
+
+#: ../../../../HISTORY.md:1751
+msgid "0.9.0 (2011-12-28)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1753
+msgid "verify ssl is default."
+msgstr ""
+
+#: ../../../../HISTORY.md:1756
+msgid "0.8.9 (2011-12-28)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1758
+msgid "Packaging fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1761
+msgid "0.8.8 (2011-12-28)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1763
+msgid "SSL CERT VERIFICATION!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1764
+msgid "Release of Cerifi: Mozilla's cert list."
+msgstr ""
+
+#: ../../../../HISTORY.md:1765
+msgid "New 'verify' argument for SSL requests."
+msgstr ""
+
+#: ../../../../HISTORY.md:1769
+msgid "0.8.7 (2011-12-24)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1771
+msgid "iter\\_lines last-line truncation fix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1772
+msgid "Force safe\\_mode for async requests"
+msgstr ""
+
+#: ../../../../HISTORY.md:1773
+msgid "Handle safe\\_mode exceptions more consistently"
+msgstr ""
+
+#: ../../../../HISTORY.md:1774
+msgid "Fix iteration on null responses in safe\\_mode"
+msgstr ""
+
+#: ../../../../HISTORY.md:1777
+msgid "0.8.6 (2011-12-18)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1779
+msgid "Socket timeout fixes."
+msgstr ""
+
+#: ../../../../HISTORY.md:1780
+msgid "Proxy Authorization support."
+msgstr ""
+
+#: ../../../../HISTORY.md:1783
+msgid "0.8.5 (2011-12-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1785
+msgid "Response.iter\\_lines!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1788
+msgid "0.8.4 (2011-12-11)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1790
+msgid "Prefetch bugfix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1791
+msgid "Added license to installed version."
+msgstr ""
+
+#: ../../../../HISTORY.md:1794
+msgid "0.8.3 (2011-11-27)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1796
+msgid "Converted auth system to use simpler callable objects."
+msgstr ""
+
+#: ../../../../HISTORY.md:1797
+msgid "New session parameter to API methods."
+msgstr ""
+
+#: ../../../../HISTORY.md:1798
+msgid "Display full URL while logging."
+msgstr ""
+
+#: ../../../../HISTORY.md:1801
+msgid "0.8.2 (2011-11-19)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1803
+msgid "New Unicode decoding system, based on over-ridable Response.encoding."
+msgstr ""
+
+#: ../../../../HISTORY.md:1805
+msgid "Proper URL slash-quote handling."
+msgstr ""
+
+#: ../../../../HISTORY.md:1806
+msgid "Cookies with `[`, `]`, and `_` allowed."
+msgstr ""
+
+#: ../../../../HISTORY.md:1809
+msgid "0.8.1 (2011-11-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1811
+msgid "URL Request path fix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1812
+msgid "Proxy fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1813
+msgid "Timeouts fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1816
+msgid "0.8.0 (2011-11-13)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1818
+msgid "Keep-alive support!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1819
+msgid "Complete removal of Urllib2"
+msgstr ""
+
+#: ../../../../HISTORY.md:1820
+msgid "Complete removal of Poster"
+msgstr ""
+
+#: ../../../../HISTORY.md:1821
+msgid "Complete removal of CookieJars"
+msgstr ""
+
+#: ../../../../HISTORY.md:1822
+msgid "New ConnectionError raising"
+msgstr ""
+
+#: ../../../../HISTORY.md:1823
+msgid "Safe\\_mode for error catching"
+msgstr ""
+
+#: ../../../../HISTORY.md:1824
+msgid "prefetch parameter for request methods"
+msgstr ""
+
+#: ../../../../HISTORY.md:1825
+msgid "OPTION method"
+msgstr ""
+
+#: ../../../../HISTORY.md:1826
+msgid "Async pool size throttling"
+msgstr ""
+
+#: ../../../../HISTORY.md:1827
+msgid "File uploads send real names"
+msgstr ""
+
+#: ../../../../HISTORY.md:1828
+msgid "Vendored in urllib3"
+msgstr ""
+
+#: ../../../../HISTORY.md:1831
+msgid "0.7.6 (2011-11-07)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1833
+msgid "Digest authentication bugfix (attach query data to path)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1836
+msgid "0.7.5 (2011-11-04)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1838
+msgid "Response.content = None if there was an invalid response."
+msgstr ""
+
+#: ../../../../HISTORY.md:1839
+msgid "Redirection auth handling."
+msgstr ""
+
+#: ../../../../HISTORY.md:1842
+msgid "0.7.4 (2011-10-26)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1844
+msgid "Session Hooks fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1847
+msgid "0.7.3 (2011-10-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1849
+msgid "Digest Auth fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1852
+msgid "0.7.2 (2011-10-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1854
+msgid "PATCH Fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1857
+msgid "0.7.1 (2011-10-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1859
+msgid "Move away from urllib2 authentication handling."
+msgstr ""
+
+#: ../../../../HISTORY.md:1860
+msgid "Fully Remove AuthManager, AuthObject, &c."
+msgstr ""
+
+#: ../../../../HISTORY.md:1861
+msgid "New tuple-based auth system with handler callbacks."
+msgstr ""
+
+#: ../../../../HISTORY.md:1864
+msgid "0.7.0 (2011-10-22)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1866
+msgid "Sessions are now the primary interface."
+msgstr ""
+
+#: ../../../../HISTORY.md:1867
+msgid "Deprecated InvalidMethodException."
+msgstr ""
+
+#: ../../../../HISTORY.md:1868
+msgid "PATCH fix."
+msgstr ""
+
+#: ../../../../HISTORY.md:1869
+msgid "New config system (no more global settings)."
+msgstr ""
+
+#: ../../../../HISTORY.md:1872
+msgid "0.6.6 (2011-10-19)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1874
+msgid "Session parameter bugfix (params merging)."
+msgstr ""
+
+#: ../../../../HISTORY.md:1877
+msgid "0.6.5 (2011-10-18)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1879
+msgid "Offline (fast) test suite."
+msgstr ""
+
+#: ../../../../HISTORY.md:1880
+msgid "Session dictionary argument merging."
+msgstr ""
+
+#: ../../../../HISTORY.md:1883
+msgid "0.6.4 (2011-10-13)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1885
+msgid "Automatic decoding of unicode, based on HTTP Headers."
+msgstr ""
+
+#: ../../../../HISTORY.md:1886
+msgid "New `decode_unicode` setting."
+msgstr ""
+
+#: ../../../../HISTORY.md:1887
+msgid "Removal of `r.read/close` methods."
+msgstr ""
+
+#: ../../../../HISTORY.md:1888
+msgid "New `r.faw` interface for advanced response usage.\\*"
+msgstr ""
+
+#: ../../../../HISTORY.md:1889
+msgid "Automatic expansion of parameterized headers."
+msgstr ""
+
+#: ../../../../HISTORY.md:1892
+msgid "0.6.3 (2011-10-13)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1894
+msgid "Beautiful `requests.async` module, for making async requests w/ gevent."
+msgstr ""
+
+#: ../../../../HISTORY.md:1898
+msgid "0.6.2 (2011-10-09)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1900
+msgid "GET/HEAD obeys allow\\_redirects=False."
+msgstr ""
+
+#: ../../../../HISTORY.md:1903
+msgid "0.6.1 (2011-08-20)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1905
+msgid "Enhanced status codes experience `\\o/`"
+msgstr ""
+
+#: ../../../../HISTORY.md:1906
+msgid "Set a maximum number of redirects (`settings.max_redirects`)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1907
+msgid "Full Unicode URL support"
+msgstr ""
+
+#: ../../../../HISTORY.md:1908
+msgid "Support for protocol-less redirects."
+msgstr ""
+
+#: ../../../../HISTORY.md:1909
+msgid "Allow for arbitrary request types."
+msgstr ""
+
+#: ../../../../HISTORY.md:1913
+msgid "0.6.0 (2011-08-17)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1915
+msgid "New callback hook system"
+msgstr ""
+
+#: ../../../../HISTORY.md:1916
+msgid "New persistent sessions object and context manager"
+msgstr ""
+
+#: ../../../../HISTORY.md:1917
+msgid "Transparent Dict-cookie handling"
+msgstr ""
+
+#: ../../../../HISTORY.md:1918
+msgid "Status code reference object"
+msgstr ""
+
+#: ../../../../HISTORY.md:1919
+msgid "Removed Response.cached"
+msgstr ""
+
+#: ../../../../HISTORY.md:1920
+msgid "Added Response.request"
+msgstr ""
+
+#: ../../../../HISTORY.md:1921
+msgid "All args are kwargs"
+msgstr ""
+
+#: ../../../../HISTORY.md:1922
+msgid "Relative redirect support"
+msgstr ""
+
+#: ../../../../HISTORY.md:1923
+msgid "HTTPError handling improvements"
+msgstr ""
+
+#: ../../../../HISTORY.md:1924
+msgid "Improved https testing"
+msgstr ""
+
+#: ../../../../HISTORY.md:1928
+msgid "0.5.1 (2011-07-23)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1930
+msgid "International Domain Name Support!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1931
+msgid "Access headers without fetching entire body (`read()`)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1932
+msgid "Use lists as dicts for parameters"
+msgstr ""
+
+#: ../../../../HISTORY.md:1933
+msgid "Add Forced Basic Authentication"
+msgstr ""
+
+#: ../../../../HISTORY.md:1934
+msgid "Forced Basic is default authentication type"
+msgstr ""
+
+#: ../../../../HISTORY.md:1935
+msgid "`python-requests.org` default User-Agent header"
+msgstr ""
+
+#: ../../../../HISTORY.md:1936
+msgid "CaseInsensitiveDict lower-case caching"
+msgstr ""
+
+#: ../../../../HISTORY.md:1937
+msgid "Response.history bugfix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1940
+msgid "0.5.0 (2011-06-21)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1942
+msgid "PATCH Support"
+msgstr ""
+
+#: ../../../../HISTORY.md:1943
+msgid "Support for Proxies"
+msgstr ""
+
+#: ../../../../HISTORY.md:1944
+msgid "HTTPBin Test Suite"
+msgstr ""
+
+#: ../../../../HISTORY.md:1945
+msgid "Redirect Fixes"
+msgstr ""
+
+#: ../../../../HISTORY.md:1946
+msgid "settings.verbose stream writing"
+msgstr ""
+
+#: ../../../../HISTORY.md:1947
+msgid "Querystrings for all methods"
+msgstr ""
+
+#: ../../../../HISTORY.md:1948
+msgid ""
+"URLErrors (Connection Refused, Timeout, Invalid URLs) are treated as "
+"explicitly raised `r.requests.get('hwe://blah'); r.raise_for_status()`"
+msgstr ""
+
+#: ../../../../HISTORY.md:1953
+msgid "0.4.1 (2011-05-22)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1955
+msgid "Improved Redirection Handling"
+msgstr ""
+
+#: ../../../../HISTORY.md:1956
+msgid "New 'allow\\_redirects' param for following non-GET/HEAD Redirects"
+msgstr ""
+
+#: ../../../../HISTORY.md:1957
+msgid "Settings module refactoring"
+msgstr ""
+
+#: ../../../../HISTORY.md:1960
+msgid "0.4.0 (2011-05-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1962
+msgid "Response.history: list of redirected responses"
+msgstr ""
+
+#: ../../../../HISTORY.md:1963
+msgid "Case-Insensitive Header Dictionaries!"
+msgstr ""
+
+#: ../../../../HISTORY.md:1964
+msgid "Unicode URLs"
+msgstr ""
+
+#: ../../../../HISTORY.md:1967
+msgid "0.3.4 (2011-05-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1969
+msgid "Urllib2 HTTPAuthentication Recursion fix (Basic/Digest)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1970
+msgid "Internal Refactor"
+msgstr ""
+
+#: ../../../../HISTORY.md:1971
+msgid "Bytes data upload Bugfix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1974
+msgid "0.3.3 (2011-05-12)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1976
+msgid "Request timeouts"
+msgstr ""
+
+#: ../../../../HISTORY.md:1977
+msgid "Unicode url-encoded data"
+msgstr ""
+
+#: ../../../../HISTORY.md:1978
+msgid "Settings context manager and module"
+msgstr ""
+
+#: ../../../../HISTORY.md:1981
+msgid "0.3.2 (2011-04-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1983
+msgid "Automatic Decompression of GZip Encoded Content"
+msgstr ""
+
+#: ../../../../HISTORY.md:1984
+msgid "AutoAuth Support for Tupled HTTP Auth"
+msgstr ""
+
+#: ../../../../HISTORY.md:1987
+msgid "0.3.1 (2011-04-01)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1989
+msgid "Cookie Changes"
+msgstr ""
+
+#: ../../../../HISTORY.md:1990
+msgid "Response.read()"
+msgstr ""
+
+#: ../../../../HISTORY.md:1991
+msgid "Poster fix"
+msgstr ""
+
+#: ../../../../HISTORY.md:1994
+msgid "0.3.0 (2011-02-25)"
+msgstr ""
+
+#: ../../../../HISTORY.md:1996
+msgid "Automatic Authentication API Change"
+msgstr ""
+
+#: ../../../../HISTORY.md:1997
+msgid "Smarter Query URL Parameterization"
+msgstr ""
+
+#: ../../../../HISTORY.md:1998
+msgid "Allow file uploads and POST data together"
+msgstr ""
+
+#: ../../../../HISTORY.md:2001
+msgid "New Authentication Manager System"
+msgstr ""
+
+#: ../../../../HISTORY.md:2005
+msgid ":   -   Simpler Basic HTTP System"
+msgstr ""
+
+#: ../../../../HISTORY.md:2004
+msgid "Supports all built-in urllib2 Auths"
+msgstr ""
+
+#: ../../../../HISTORY.md:2005
+msgid "Allows for custom Auth Handlers"
+msgstr ""
+
+#: ../../../../HISTORY.md:2008
+msgid "0.2.4 (2011-02-19)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2010
+msgid "Python 2.5 Support"
+msgstr ""
+
+#: ../../../../HISTORY.md:2011
+msgid "PyPy-c v1.4 Support"
+msgstr ""
+
+#: ../../../../HISTORY.md:2012
+msgid "Auto-Authentication tests"
+msgstr ""
+
+#: ../../../../HISTORY.md:2013
+msgid "Improved Request object constructor"
+msgstr ""
+
+#: ../../../../HISTORY.md:2016
+msgid "0.2.3 (2011-02-15)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2020
+msgid "New HTTPHandling Methods"
+msgstr ""
+
+#: ../../../../HISTORY.md:2025
+msgid ":   -   Response.\\_\\_nonzero\\_\\_ (false if bad HTTP Status)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2023
+msgid "Response.ok (True if expected HTTP Status)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2024
+msgid "Response.error (Logged HTTPError if bad HTTP Status)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2025
+msgid "Response.raise\\_for\\_status() (Raises stored HTTPError)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2028
+msgid "0.2.2 (2011-02-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2030
+msgid "Still handles request in the event of an HTTPError. (Issue \\#2)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2031
+msgid "Eventlet and Gevent Monkeypatch support."
+msgstr ""
+
+#: ../../../../HISTORY.md:2032
+msgid "Cookie Support (Issue \\#1)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2035
+msgid "0.2.1 (2011-02-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2037
+msgid ""
+"Added file attribute to POST and PUT requests for multipart-encode file "
+"uploads."
+msgstr ""
+
+#: ../../../../HISTORY.md:2039
+msgid "Added Request.url attribute for context and redirects"
+msgstr ""
+
+#: ../../../../HISTORY.md:2042
+msgid "0.2.0 (2011-02-14)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2044
+msgid "Birth!"
+msgstr ""
+
+#: ../../../../HISTORY.md:2047
+msgid "0.0.1 (2011-02-13)"
+msgstr ""
+
+#: ../../../../HISTORY.md:2049
+msgid "Frustration"
+msgstr ""
+
+#: ../../../../HISTORY.md:2050
+msgid "Conception"
+msgstr ""

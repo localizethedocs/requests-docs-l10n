@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) MMXVIX. A Kenneth Reitz Project
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../community/support.rst:4
+msgid "Support"
+msgstr ""
+
+#: ../../../community/support.rst:6
+msgid ""
+"If you have questions or issues about Requests, there are several options:"
+msgstr ""
+
+#: ../../../community/support.rst:9
+msgid "Stack Overflow"
+msgstr ""
+
+#: ../../../community/support.rst:11
+msgid ""
+"If your question does not contain sensitive (possibly proprietary) "
+"information or can be properly anonymized, please ask a question on `Stack "
+"Overflow <https://stackoverflow.com/questions/tagged/python-requests>`_ and "
+"use the tag ``python-requests``."
+msgstr ""
+
+#: ../../../community/support.rst:18
+msgid "File an Issue"
+msgstr ""
+
+#: ../../../community/support.rst:20
+msgid ""
+"If you notice some unexpected behaviour in Requests, or want to see support "
+"for a new feature, `file an issue on GitHub <https://github.com/psf/requests/"
+"issues>`_."
+msgstr ""
+
+#: ../../../community/support.rst:26
+msgid "Send a Tweet"
+msgstr ""
+
+#: ../../../community/support.rst:28
+msgid ""
+"If your question is less than 280 characters, feel free to send a tweet to "
+"`@nateprewitt <https://twitter.com/nateprewitt>`_, `@sethmlarson <https://"
+"twitter.com/sethmlarson>`_, or `@sigmavirus24 <https://twitter.com/"
+"sigmavirus24>`_."
+msgstr ""
