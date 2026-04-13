@@ -13,22 +13,22 @@
     },
     "zh_CN" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-04-11 19:05:37 -0500",
+        "hash" : "4b0b1a3e9f2fc21b9dcd8b906f2ff02645aa697e",
+        "title" : "Update pre-commit versions (#7348)"
       }
     },
     "zh_TW" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-04-11 19:05:37 -0500",
+        "hash" : "4b0b1a3e9f2fc21b9dcd8b906f2ff02645aa697e",
+        "title" : "Update pre-commit versions (#7348)"
       }
     }
   },

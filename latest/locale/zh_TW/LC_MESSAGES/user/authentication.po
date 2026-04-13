@@ -1,0 +1,262 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Kenneth Reitz and contributors
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/authentication.rst:4
+msgid "Authentication"
+msgstr ""
+
+#: ../../../user/authentication.rst:6
+msgid ""
+"This document discusses using various kinds of authentication with Requests."
+msgstr ""
+
+#: ../../../user/authentication.rst:8
+msgid ""
+"Many web services require authentication, and there are many different "
+"types. Below, we outline various forms of authentication available in "
+"Requests, from the simple to the complex."
+msgstr ""
+
+#: ../../../user/authentication.rst:14
+msgid "Basic Authentication"
+msgstr ""
+
+#: ../../../user/authentication.rst:16
+msgid ""
+"Many web services that require authentication accept HTTP Basic Auth. This "
+"is the simplest kind, and Requests supports it straight out of the box."
+msgstr ""
+
+#: ../../../user/authentication.rst:19
+msgid "Making requests with HTTP Basic Auth is very simple::"
+msgstr ""
+
+#: ../../../user/authentication.rst:21
+msgid ""
+">>> from requests.auth import HTTPBasicAuth\n"
+">>> basic = HTTPBasicAuth('user', 'pass')\n"
+">>> requests.get('https://httpbin.org/basic-auth/user/pass', auth=basic)\n"
+"<Response [200]>"
+msgstr ""
+
+#: ../../../user/authentication.rst:26
+msgid ""
+"In fact, HTTP Basic Auth is so common that Requests provides a handy "
+"shorthand for using it::"
+msgstr ""
+
+#: ../../../user/authentication.rst:29
+msgid ""
+">>> requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', "
+"'pass'))\n"
+"<Response [200]>"
+msgstr ""
+
+#: ../../../user/authentication.rst:32
+msgid ""
+"Providing the credentials in a tuple like this is exactly the same as the "
+"``HTTPBasicAuth`` example above."
+msgstr ""
+
+#: ../../../user/authentication.rst:37
+msgid "netrc Authentication"
+msgstr ""
+
+#: ../../../user/authentication.rst:39
+msgid ""
+"If no authentication method is given with the ``auth`` argument, Requests "
+"will attempt to get the authentication credentials for the URL's hostname "
+"from the user's netrc file. The netrc file overrides raw HTTP authentication "
+"headers set with `headers=`."
+msgstr ""
+
+#: ../../../user/authentication.rst:44
+msgid ""
+"If credentials for the hostname are found, the request is sent with HTTP "
+"Basic Auth."
+msgstr ""
+
+#: ../../../user/authentication.rst:47
+msgid ""
+"Requests will search for the netrc file at `~/.netrc`, `~/_netrc`, or at the "
+"path specified by the `NETRC` environment variable. `~` denotes the user's "
+"home directory, which is `$HOME` on Unix based systems and `%USERPROFILE%` "
+"on Windows."
+msgstr ""
+
+#: ../../../user/authentication.rst:51
+msgid ""
+"Usage of netrc file can be disabled by setting `trust_env` to `False` in the "
+"Requests session::"
+msgstr ""
+
+#: ../../../user/authentication.rst:54
+msgid ""
+">>> s = requests.Session()\n"
+">>> s.trust_env = False\n"
+">>> s.get('https://httpbin.org/basic-auth/user/pass')"
+msgstr ""
+
+#: ../../../user/authentication.rst:59
+msgid "Digest Authentication"
+msgstr ""
+
+#: ../../../user/authentication.rst:61
+msgid ""
+"Another very popular form of HTTP Authentication is Digest Authentication, "
+"and Requests supports this out of the box as well::"
+msgstr ""
+
+#: ../../../user/authentication.rst:64
+msgid ""
+">>> from requests.auth import HTTPDigestAuth\n"
+">>> url = 'https://httpbin.org/digest-auth/auth/user/pass'\n"
+">>> requests.get(url, auth=HTTPDigestAuth('user', 'pass'))\n"
+"<Response [200]>"
+msgstr ""
+
+#: ../../../user/authentication.rst:71
+msgid "OAuth 1 Authentication"
+msgstr ""
+
+#: ../../../user/authentication.rst:73
+msgid ""
+"A common form of authentication for several web APIs is OAuth. The "
+"``requests-oauthlib`` library allows Requests users to easily make OAuth 1 "
+"authenticated requests::"
+msgstr ""
+
+#: ../../../user/authentication.rst:76
+msgid ""
+">>> import requests\n"
+">>> from requests_oauthlib import OAuth1\n"
+"\n"
+">>> url = 'https://api.twitter.com/1.1/account/verify_credentials.json'\n"
+">>> auth = OAuth1('YOUR_APP_KEY', 'YOUR_APP_SECRET',\n"
+"...               'USER_OAUTH_TOKEN', 'USER_OAUTH_TOKEN_SECRET')\n"
+"\n"
+">>> requests.get(url, auth=auth)\n"
+"<Response [200]>"
+msgstr ""
+
+#: ../../../user/authentication.rst:86
+msgid ""
+"For more information on how to OAuth flow works, please see the official "
+"`OAuth`_ website. For examples and documentation on requests-oauthlib, "
+"please see the `requests_oauthlib`_ repository on GitHub"
+msgstr ""
+
+#: ../../../user/authentication.rst:91
+msgid "OAuth 2 and OpenID Connect Authentication"
+msgstr ""
+
+#: ../../../user/authentication.rst:93
+msgid ""
+"The ``requests-oauthlib`` library also handles OAuth 2, the authentication "
+"mechanism underpinning OpenID Connect. See the `requests-oauthlib OAuth2 "
+"documentation`_ for details of the various OAuth 2 credential management "
+"flows:"
+msgstr ""
+
+#: ../../../user/authentication.rst:97
+msgid "`Web Application Flow`_"
+msgstr ""
+
+#: ../../../user/authentication.rst:98
+msgid "`Mobile Application Flow`_"
+msgstr ""
+
+#: ../../../user/authentication.rst:99
+msgid "`Legacy Application Flow`_"
+msgstr ""
+
+#: ../../../user/authentication.rst:100
+msgid "`Backend Application Flow`_"
+msgstr ""
+
+#: ../../../user/authentication.rst:103
+msgid "Other Authentication"
+msgstr ""
+
+#: ../../../user/authentication.rst:105
+msgid ""
+"Requests is designed to allow other forms of authentication to be easily and "
+"quickly plugged in. Members of the open-source community frequently write "
+"authentication handlers for more complicated or less commonly-used forms of "
+"authentication. Some of the best have been brought together under the "
+"`Requests organization`_, including:"
+msgstr ""
+
+#: ../../../user/authentication.rst:111
+msgid "Kerberos_"
+msgstr ""
+
+#: ../../../user/authentication.rst:112
+msgid "NTLM_"
+msgstr ""
+
+#: ../../../user/authentication.rst:114
+msgid ""
+"If you want to use any of these forms of authentication, go straight to "
+"their GitHub page and follow the instructions."
+msgstr ""
+
+#: ../../../user/authentication.rst:119
+msgid "New Forms of Authentication"
+msgstr ""
+
+#: ../../../user/authentication.rst:121
+msgid ""
+"If you can't find a good implementation of the form of authentication you "
+"want, you can implement it yourself. Requests makes it easy to add your own "
+"forms of authentication."
+msgstr ""
+
+#: ../../../user/authentication.rst:125
+msgid ""
+"To do so, subclass :class:`AuthBase <requests.auth.AuthBase>` and implement "
+"the ``__call__()`` method::"
+msgstr ""
+
+#: ../../../user/authentication.rst:128
+msgid ""
+">>> import requests\n"
+">>> class MyAuth(requests.auth.AuthBase):\n"
+"...     def __call__(self, r):\n"
+"...         # Implement my authentication\n"
+"...         return r\n"
+"...\n"
+">>> url = 'https://httpbin.org/get'\n"
+">>> requests.get(url, auth=MyAuth())\n"
+"<Response [200]>"
+msgstr ""
+
+#: ../../../user/authentication.rst:138
+msgid ""
+"When an authentication handler is attached to a request, it is called during "
+"request setup. The ``__call__`` method must therefore do whatever is "
+"required to make the authentication work. Some forms of authentication will "
+"additionally add hooks to provide further functionality."
+msgstr ""
+
+#: ../../../user/authentication.rst:143
+msgid ""
+"Further examples can be found under the `Requests organization`_ and in the "
+"``auth.py`` file."
+msgstr ""

@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Kenneth Reitz and contributors
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/install.rst:4
+msgid "Installation of Requests"
+msgstr ""
+
+#: ../../../user/install.rst:6
+msgid ""
+"This part of the documentation covers the installation of Requests. The "
+"first step to using any software package is getting it properly installed."
+msgstr ""
+
+#: ../../../user/install.rst:11 ../../../user/install.rst:15
+msgid "$ python -m pip install requests"
+msgstr ""
+
+#: ../../../user/install.rst:13
+msgid ""
+"To install Requests, simply run this simple command in your terminal of "
+"choice::"
+msgstr ""
+
+#: ../../../user/install.rst:18
+msgid "Get the Source Code"
+msgstr ""
+
+#: ../../../user/install.rst:20
+msgid ""
+"Requests is actively developed on GitHub, where the code is `always "
+"available <https://github.com/psf/requests>`_."
+msgstr ""
+
+#: ../../../user/install.rst:23
+msgid "You can either clone the public repository::"
+msgstr ""
+
+#: ../../../user/install.rst:25
+msgid "$ git clone https://github.com/psf/requests.git"
+msgstr ""
+
+#: ../../../user/install.rst:27
+msgid ""
+"Or, download the `tarball <https://github.com/psf/requests/tarball/main>`_::"
+msgstr ""
+
+#: ../../../user/install.rst:29
+msgid ""
+"$ curl -OL https://github.com/psf/requests/tarball/main\n"
+"# optionally, zipball is also available (for Windows users)."
+msgstr ""
+
+#: ../../../user/install.rst:32
+msgid ""
+"Once you have a copy of the source, you can embed it in your own Python "
+"package, or install it into your site-packages easily::"
+msgstr ""
+
+#: ../../../user/install.rst:35
+msgid ""
+"$ cd requests\n"
+"$ python -m pip install ."
+msgstr ""
