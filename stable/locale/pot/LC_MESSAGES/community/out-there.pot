@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) MMXVIX. A Kenneth Reitz Project
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../community/out-there.rst:2
+msgid "Integrations"
+msgstr ""
+
+#: ../../../community/out-there.rst:5
+msgid "Articles & Talks"
+msgstr ""
+
+#: ../../../community/out-there.rst:6
+msgid ""
+"`Daniel Greenfeld's Review of Requests <https://pydanny.blogspot.com/2011/05/"
+"python-http-requests-for-humans.html>`_"
+msgstr ""
+
+#: ../../../community/out-there.rst:7
+msgid ""
+"`Issac Kelly's 'Consuming Web APIs' talk <https://issackelly.github.io/"
+"Consuming-Web-APIs-with-Python-Talk/slides/slides.html>`_"
+msgstr ""
+
+#: ../../../community/out-there.rst:8
+msgid ""
+"`Blog post about Requests via Yum <https://arunsag.wordpress.com/2011/08/17/"
+"new-package-python-requests-http-for-humans/>`_"
+msgstr ""
+
+#: ../../../community/out-there.rst:9
+msgid ""
+"`Russian blog post introducing Requests <https://habr.com/post/126262/>`_"
+msgstr ""
+
+#: ../../../community/out-there.rst:10
+msgid ""
+"`Sending JSON in Requests <http://www.coglib.com/~icordasc/blog/2014/11/"
+"sending-json-in-requests.html>`_"
+msgstr ""
