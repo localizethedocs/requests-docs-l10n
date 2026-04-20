@@ -420,7 +420,7 @@ msgstr ""
 
 #: ../../../user/advanced.rst:255
 msgid "Client Side Certificates"
-msgstr ""
+msgstr "客戶端證書"
 
 #: ../../../user/advanced.rst:257
 msgid ""
@@ -467,7 +467,7 @@ msgstr ""
 
 #: ../../../user/advanced.rst:280
 msgid "CA Certificates"
-msgstr ""
+msgstr "CA 證書"
 
 #: ../../../user/advanced.rst:282
 msgid ""
