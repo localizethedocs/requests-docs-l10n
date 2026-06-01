@@ -1,0 +1,2505 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Kenneth Reitz and contributors
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../api.rst:4
+msgid "Developer Interface"
+msgstr ""
+
+#: ../../../api.rst:8
+msgid ""
+"This part of the documentation covers all the interfaces of Requests. For "
+"parts where Requests depends on external libraries, we document the most "
+"important right here and provide links to the canonical documentation."
+msgstr ""
+
+#: ../../../api.rst:14
+msgid "Main Interface"
+msgstr ""
+
+#: ../../../api.rst:16
+msgid ""
+"All of Requests' functionality can be accessed by these 7 methods. They all "
+"return an instance of the :class:`Response <Response>` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:1
+msgid "Constructs and sends a :class:`Request <Request>`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.send:0 requests.adapters.HTTPAdapter:0
+#: requests.adapters.HTTPAdapter.add_headers:0
+#: requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:0
+#: requests.adapters.HTTPAdapter.build_response:0
+#: requests.adapters.HTTPAdapter.cert_verify:0
+#: requests.adapters.HTTPAdapter.get_connection:0
+#: requests.adapters.HTTPAdapter.get_connection_with_tls_context:0
+#: requests.adapters.HTTPAdapter.init_poolmanager:0
+#: requests.adapters.HTTPAdapter.proxy_headers:0
+#: requests.adapters.HTTPAdapter.proxy_manager_for:0
+#: requests.adapters.HTTPAdapter.request_url:0
+#: requests.adapters.HTTPAdapter.send:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: requests.api.delete:0 requests.api.get:0 requests.api.head:0
+#: requests.api.patch:0 requests.api.post:0 requests.api.put:0
+#: requests.api.request:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: requests.cookies.cookiejar_from_dict:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: requests.models.Request:0 requests.models.Response.json:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.delete:0 requests.sessions.Session.get:0
+#: requests.sessions.Session.head:0 requests.sessions.Session.options:0
+#: requests.sessions.Session.patch:0 requests.sessions.Session.post:0
+#: requests.sessions.Session.prepare_request:0 requests.sessions.Session.put:0
+#: requests.sessions.Session.request:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: requests.utils.add_dict_to_cookiejar:0 requests.utils.dict_from_cookiejar:0
+#: requests.utils.get_encoding_from_headers:0
+#: requests.utils.get_encodings_from_content:0
+#: requests.utils.get_unicode_from_response:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:3
+msgid ""
+"method for the new :class:`Request` object: ``GET``, ``OPTIONS``, ``HEAD``, "
+"``POST``, ``PUT``, ``PATCH``, or ``DELETE``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.delete:3 requests.api.get:3 requests.api.head:3
+#: requests.api.patch:3 requests.api.post:3 requests.api.put:3
+#: requests.api.request:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.delete:3 requests.sessions.Session.get:3
+#: requests.sessions.Session.head:3 requests.sessions.Session.options:3
+#: requests.sessions.Session.patch:3 requests.sessions.Session.post:3
+#: requests.sessions.Session.put:3 requests.sessions.Session.request:5
+msgid "URL for the new :class:`Request` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.get:4 requests.api.request:5
+msgid ""
+"(optional) Dictionary, list of tuples or bytes to send in the query string "
+"for the :class:`Request`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.patch:4 requests.api.post:4 requests.api.put:4
+#: requests.api.request:7
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.patch:4 requests.sessions.Session.post:4
+#: requests.sessions.Session.put:4 requests.sessions.Session.request:8
+msgid ""
+"(optional) Dictionary, list of tuples, bytes, or file-like object to send in "
+"the body of the :class:`Request`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.patch:6 requests.api.post:6 requests.api.put:6
+#: requests.api.request:9
+msgid ""
+"(optional) A JSON serializable Python object to send in the body of the :"
+"class:`Request`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:10
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.request:12
+msgid ""
+"(optional) Dictionary of HTTP Headers to send with the :class:`Request`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:11
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.request:14
+msgid "(optional) Dict or CookieJar object to send with the :class:`Request`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:12
+msgid ""
+"(optional) Dictionary of ``'name': file-like-objects`` (or ``{'name': file-"
+"tuple}``) for multipart encoding upload. ``file-tuple`` can be a 2-tuple "
+"``('filename', fileobj)``, 3-tuple ``('filename', fileobj, 'content_type')`` "
+"or a 4-tuple ``('filename', fileobj, 'content_type', custom_headers)``, "
+"where ``'content_type'`` is a string defining the content type of the given "
+"file and ``custom_headers`` a dict-like object containing additional headers "
+"to add for the file."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:17
+msgid "(optional) Auth tuple to enable Basic/Digest/Custom HTTP Auth."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:18
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.request:20
+msgid ""
+"(optional) How many seconds to wait for the server to send data before "
+"giving up, as a float, or a :ref:`(connect timeout, read timeout) "
+"<timeouts>` tuple."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:22
+msgid ""
+"(optional) Boolean. Enable/disable GET/OPTIONS/POST/PUT/PATCH/DELETE/HEAD "
+"redirection. Defaults to ``True``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:24
+msgid "(optional) Dictionary mapping protocol to the URL of the proxy."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:25
+msgid ""
+"(optional) Either a boolean, in which case it controls whether we verify the "
+"server's TLS certificate, or a string, in which case it must be a path to a "
+"CA bundle to use. Defaults to ``True``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:28
+msgid ""
+"(optional) if ``False``, the response content will be immediately downloaded."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:29
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.request:40
+msgid ""
+"(optional) if String, path to ssl client cert file (.pem). If Tuple, "
+"('cert', 'key') pair."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:0
+#: requests.adapters.HTTPAdapter.proxy_manager_for:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: requests.api.delete:0 requests.api.get:0 requests.api.head:0
+#: requests.api.patch:0 requests.api.post:0 requests.api.put:0
+#: requests.api.request:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.delete:5 requests.api.get:7 requests.api.head:7
+#: requests.api.patch:8 requests.api.post:8 requests.api.put:8
+#: requests.api.request:30
+msgid ":class:`Response <Response>` object"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_response:0
+#: requests.adapters.HTTPAdapter.get_connection:0
+#: requests.adapters.HTTPAdapter.get_connection_with_tls_context:0
+#: requests.adapters.HTTPAdapter.proxy_headers:0
+#: requests.adapters.HTTPAdapter.proxy_manager_for:0
+#: requests.adapters.HTTPAdapter.request_url:0
+#: requests.adapters.HTTPAdapter.send:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: requests.api.delete:0 requests.api.get:0 requests.api.head:0
+#: requests.api.patch:0 requests.api.post:0 requests.api.put:0
+#: requests.api.request:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: requests.cookies.RequestsCookieJar.get_dict:0
+#: requests.cookies.RequestsCookieJar.multiple_domains:0
+#: requests.cookies.cookiejar_from_dict:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.delete:0 requests.sessions.Session.get:0
+#: requests.sessions.Session.get_adapter:0 requests.sessions.Session.head:0
+#: requests.sessions.Session.merge_environment_settings:0
+#: requests.sessions.Session.options:0 requests.sessions.Session.patch:0
+#: requests.sessions.Session.post:0 requests.sessions.Session.prepare_request:0
+#: requests.sessions.Session.put:0 requests.sessions.Session.request:0
+#: requests.sessions.Session.send:0
+#: requests.sessions.SessionRedirectMixin.rebuild_proxies:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: requests.utils.add_dict_to_cookiejar:0 requests.utils.dict_from_cookiejar:0
+#: requests.utils.get_encoding_from_headers:0
+#: requests.utils.get_unicode_from_response:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter:19
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: requests.api.request:33
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: requests.models.PreparedRequest:8 requests.models.Request:20
+msgid "Usage::"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.request:35
+msgid ""
+">>> import requests\n"
+">>> req = requests.request('GET', 'https://httpbin.org/get')\n"
+">>> req\n"
+"<Response [200]>"
+msgstr ""
+">>> import requests\n"
+">>> req = requests.request('GET', 'https://httpbin.org/get')\n"
+">>> req\n"
+"<Response [200]>"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.head:1
+msgid "Sends a HEAD request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.head:4
+msgid ""
+"Optional arguments that ``request`` takes. If `allow_redirects` is not "
+"provided, it will be set to `False` (as opposed to the default :meth:"
+"`request` behavior)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.get:1
+msgid "Sends a GET request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.delete:4 requests.api.get:6 requests.api.patch:7
+#: requests.api.post:7 requests.api.put:7
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.delete:4 requests.sessions.Session.get:4
+#: requests.sessions.Session.head:4 requests.sessions.Session.options:4
+#: requests.sessions.Session.patch:6 requests.sessions.Session.post:7
+#: requests.sessions.Session.put:6
+msgid "Optional arguments that ``request`` takes."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.post:1
+msgid "Sends a POST request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.put:1
+msgid "Sends a PUT request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.patch:1
+msgid "Sends a PATCH request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
+#: of requests.api.delete:1
+msgid "Sends a DELETE request."
+msgstr ""
+
+#: ../../../api.rst:29
+msgid "Exceptions"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.RequestException:1
+msgid ""
+"There was an ambiguous exception that occurred while handling your request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.ConnectionError:1
+msgid "A Connection error occurred."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.HTTPError:1
+msgid "An HTTP error occurred."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.TooManyRedirects:1
+msgid "Too many redirects."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.ConnectTimeout:1
+msgid "The request timed out while trying to connect to the remote server."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.ConnectTimeout:3
+msgid "Requests that produced this error are safe to retry."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.ReadTimeout:1
+msgid "The server did not send any data in the allotted amount of time."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.Timeout:1
+msgid "The request timed out."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.Timeout:3
+msgid ""
+"Catching this error will catch both :exc:`~requests.exceptions."
+"ConnectTimeout` and :exc:`~requests.exceptions.ReadTimeout` errors."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
+#: of requests.exceptions.JSONDecodeError:1
+msgid "Couldn't decode the text into json"
+msgstr ""
+
+#: ../../../api.rst:42
+msgid "Request Sessions"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session:1
+msgid "A Requests session."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session:3
+msgid "Provides cookie persistence, connection-pooling, and configuration."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session:5
+msgid "Basic Usage::"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session:7
+msgid ""
+">>> import requests\n"
+">>> s = requests.Session()\n"
+">>> s.get('https://httpbin.org/get')\n"
+"<Response [200]>"
+msgstr ""
+">>> import requests\n"
+">>> s = requests.Session()\n"
+">>> s.get('https://httpbin.org/get')\n"
+"<Response [200]>"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session:12
+msgid "Or as a context manager::"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session:14
+msgid ""
+">>> with requests.Session() as s:\n"
+"...     s.get('https://httpbin.org/get')\n"
+"<Response [200]>"
+msgstr ""
+">>> with requests.Session() as s:\n"
+"...     s.get('https://httpbin.org/get')\n"
+"<Response [200]>"
+
+#: ../../../docstring of requests.Session.auth:1
+msgid ""
+"Default Authentication tuple or object to attach to :class:`Request "
+"<Request>`."
+msgstr ""
+
+#: ../../../docstring of requests.Session.cert:1
+msgid ""
+"SSL client certificate default, if String, path to ssl client cert file (."
+"pem). If Tuple, ('cert', 'key') pair."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.close:1
+msgid "Closes all adapters and as such the session"
+msgstr ""
+
+#: ../../../docstring of requests.Session.cookies:1
+msgid ""
+"A CookieJar containing all currently outstanding cookies set on this "
+"session. By default it is a :class:`RequestsCookieJar <requests.cookies."
+"RequestsCookieJar>`, but may be any other ``cookielib.CookieJar`` compatible "
+"object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.delete:1
+msgid "Sends a DELETE request. Returns :class:`Response` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.get:1
+msgid "Sends a GET request. Returns :class:`Response` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.get_adapter:1
+msgid "Returns the appropriate connection adapter for the given URL."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.SessionRedirectMixin.get_redirect_target:1
+msgid "Receives a Response. Returns a redirect URI or ``None``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.head:1
+msgid "Sends a HEAD request. Returns :class:`Response` object."
+msgstr ""
+
+#: ../../../docstring of requests.Session.headers:1
+msgid ""
+"A case-insensitive dictionary of headers to be sent on each :class:`Request "
+"<Request>` sent from this :class:`Session <Session>`."
+msgstr ""
+
+#: ../../../docstring of requests.Session.hooks:1
+msgid "Event-handling hooks."
+msgstr ""
+
+#: ../../../docstring of requests.Session.max_redirects:1
+msgid ""
+"Maximum number of redirects allowed. If the request exceeds this limit, a :"
+"class:`TooManyRedirects` exception is raised. This defaults to requests."
+"models.DEFAULT_REDIRECT_LIMIT, which is 30."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.merge_environment_settings:1
+msgid "Check the environment and merge it with some settings."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.mount:1
+msgid "Registers a connection adapter to a prefix."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.mount:3
+msgid "Adapters are sorted in descending order by prefix length."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.options:1
+msgid "Sends a OPTIONS request. Returns :class:`Response` object."
+msgstr ""
+
+#: ../../../docstring of requests.Session.params:1
+msgid ""
+"Dictionary of querystring data to attach to each :class:`Request <Request>`. "
+"The dictionary values may be lists for representing multivalued query "
+"parameters."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.patch:1
+msgid "Sends a PATCH request. Returns :class:`Response` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.post:1
+msgid "Sends a POST request. Returns :class:`Response` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.post:6 requests.sessions.Session.request:10
+msgid "(optional) json to send in the body of the :class:`Request`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.prepare_request:1
+msgid ""
+"Constructs a :class:`PreparedRequest <PreparedRequest>` for transmission and "
+"returns it. The :class:`PreparedRequest` has settings merged from the :class:"
+"`Request <Request>` instance and those of the :class:`Session`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.prepare_request:6
+msgid ":class:`Request` instance to prepare with this session's settings."
+msgstr ""
+
+#: ../../../docstring of requests.Session.proxies:1
+msgid ""
+"Dictionary mapping protocol or protocol and host to the URL of the proxy (e."
+"g. {'http': 'foo.bar:3128', 'http://host.name': 'foo.bar:4012'}) to be used "
+"on each :class:`Request <Request>`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.put:1
+msgid "Sends a PUT request. Returns :class:`Response` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.SessionRedirectMixin.rebuild_auth:1
+msgid ""
+"When being redirected we may want to strip authentication from the request "
+"to avoid leaking credentials. This method intelligently removes and "
+"reapplies authentication where possible to avoid credential loss."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.SessionRedirectMixin.rebuild_method:1
+msgid ""
+"When being redirected we may want to change the method of the request based "
+"on certain specs or browser behavior."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.SessionRedirectMixin.rebuild_proxies:1
+msgid ""
+"This method re-evaluates the proxy configuration by considering the "
+"environment variables. If we are redirected to a URL covered by NO_PROXY, we "
+"strip the proxy configuration. Otherwise, we set missing proxy keys for this "
+"URL (in case they were stripped by a previous redirect)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.SessionRedirectMixin.rebuild_proxies:7
+msgid ""
+"This method also replaces the Proxy-Authorization header where necessary."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:1
+msgid ""
+"Constructs a :class:`Request <Request>`, prepares it and sends it. Returns :"
+"class:`Response <Response>` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:4
+msgid "method for the new :class:`Request` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:6
+msgid ""
+"(optional) Dictionary or bytes to be sent in the query string for the :class:"
+"`Request`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:16
+msgid ""
+"(optional) Dictionary of ``'filename': file-like-objects`` for multipart "
+"encoding upload."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:18
+msgid ""
+"(optional) Auth tuple or callable to enable Basic/Digest/Custom HTTP Auth."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:24
+msgid "(optional) Set to True by default."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:26
+msgid ""
+"(optional) Dictionary mapping protocol or protocol and hostname to the URL "
+"of the proxy."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:28
+msgid ""
+"(optional) Dictionary mapping hook name to one event or list of events, "
+"event must be callable."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:30
+msgid ""
+"(optional) whether to immediately download the response content. Defaults to "
+"``False``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.request:32
+msgid ""
+"(optional) Either a boolean, in which case it controls whether we verify the "
+"server's TLS certificate, or a string, in which case it must be a path to a "
+"CA bundle to use. Defaults to ``True``. When set to ``False``, requests will "
+"accept any TLS certificate presented by the server, and will ignore hostname "
+"mismatches and/or expired certificates, which will make your application "
+"vulnerable to man-in-the-middle (MitM) attacks. Setting verify to ``False`` "
+"may be useful during local development or testing."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.SessionRedirectMixin.resolve_redirects:1
+msgid "Receives a Response. Returns a generator of Responses or Requests."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.Session.send:1
+msgid "Send a given PreparedRequest."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: of requests.sessions.SessionRedirectMixin.should_strip_auth:1
+msgid "Decide whether Authorization header should be removed when redirecting"
+msgstr ""
+
+#: ../../../docstring of requests.Session.stream:1
+msgid "Stream response content default."
+msgstr ""
+
+#: ../../../docstring of requests.Session.trust_env:1
+msgid ""
+"Trust environment settings for proxy configuration, default authentication "
+"and similar."
+msgstr ""
+
+#: ../../../docstring of requests.Session.verify:1
+msgid ""
+"SSL Verification default. Defaults to `True`, requiring requests to verify "
+"the TLS certificate at the remote end. If verify is set to `False`, requests "
+"will accept any TLS certificate presented by the server, and will ignore "
+"hostname mismatches and/or expired certificates, which will make your "
+"application vulnerable to man-in-the-middle (MitM) attacks. Only set this to "
+"`False` for testing. If verify is set to a string, it must be the path to a "
+"CA bundle file that will be used to verify the TLS certificate."
+msgstr ""
+
+#: ../../../api.rst:51
+msgid "Lower-Level Classes"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:1
+msgid "A user-created :class:`Request <Request>` object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:3
+msgid ""
+"Used to prepare a :class:`PreparedRequest <PreparedRequest>`, which is sent "
+"to the server."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:5
+msgid "HTTP method to use."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:6
+msgid "URL to send."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:7
+msgid "dictionary of headers to send."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:8
+msgid "dictionary of {filename: fileobject} files to multipart upload."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:9
+msgid ""
+"the body to attach to the request. If a dictionary or list of tuples "
+"``[(key, value)]`` is provided, form-encoding will take place."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:12
+msgid ""
+"json for the body to attach to the request (if files or data is not "
+"specified)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:13
+msgid ""
+"URL parameters to append to the URL. If a dictionary or list of tuples "
+"``[(key, value)]`` is provided, form-encoding will take place."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:16
+msgid "Auth handler or (user, pass) tuple."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:17
+msgid "dictionary or CookieJar of cookies to attach to this request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:18 ../../../docstring
+#: requests.PreparedRequest.hooks:1
+msgid "dictionary of callback hooks, for internal usage."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request:22
+msgid ""
+">>> import requests\n"
+">>> req = requests.Request('GET', 'https://httpbin.org/get')\n"
+">>> req.prepare()\n"
+"<PreparedRequest [GET]>"
+msgstr ""
+">>> import requests\n"
+">>> req = requests.Request('GET', 'https://httpbin.org/get')\n"
+">>> req.prepare()\n"
+"<PreparedRequest [GET]>"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.RequestHooksMixin.deregister_hook:1
+msgid ""
+"Deregister a previously registered hook. Returns True if the hook existed, "
+"False if not."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Request.prepare:1
+msgid ""
+"Constructs a :class:`PreparedRequest <PreparedRequest>` for transmission and "
+"returns it."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.RequestHooksMixin.register_hook:1
+msgid "Properly register a hook."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response:1
+msgid ""
+"The :class:`Response <Response>` object, which contains a server's response "
+"to an HTTP request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.apparent_encoding:1
+msgid ""
+"The apparent encoding, provided by the charset_normalizer or chardet "
+"libraries."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.close:1
+msgid ""
+"Releases the connection back to the pool. Once this method has been called "
+"the underlying ``raw`` object must not be accessed again."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.close:4
+msgid "*Note: Should not normally need to be called explicitly.*"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.content:1
+msgid "Content of the response, in bytes."
+msgstr ""
+
+#: ../../../docstring of requests.Response.cookies:1
+msgid "A CookieJar of Cookies the server sent back."
+msgstr ""
+
+#: ../../../docstring of requests.Response.elapsed:1
+msgid ""
+"The amount of time elapsed between sending the request and the arrival of "
+"the response (as a timedelta). This property specifically measures the time "
+"taken between sending the first byte of the request and finishing parsing "
+"the headers. It is therefore unaffected by consuming the response content or "
+"the value of the ``stream`` keyword argument."
+msgstr ""
+
+#: ../../../docstring of requests.Response.encoding:1
+msgid "Encoding to decode with when accessing r.text."
+msgstr ""
+
+#: ../../../docstring of requests.Response.headers:1
+msgid ""
+"Case-insensitive Dictionary of Response Headers. For example, "
+"``headers['content-encoding']`` will return the value of a ``'Content-"
+"Encoding'`` response header."
+msgstr ""
+
+#: ../../../docstring of requests.Response.history:1
+msgid ""
+"A list of :class:`Response <Response>` objects from the history of the "
+"Request. Any redirect responses will end up here. The list is sorted from "
+"the oldest to the most recent request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.is_redirect:1
+msgid ""
+"True if this Response is a well-formed HTTP redirect that could have been "
+"processed automatically (by :meth:`Session.resolve_redirects`)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.iter_content:1
+msgid ""
+"Iterates over the response data.  When stream=True is set on the request, "
+"this avoids reading the content at once into memory for large responses.  "
+"The chunk size is the number of bytes it should read into memory.  This is "
+"not necessarily the length of each item returned as decoding can take place."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.iter_content:7
+msgid ""
+"chunk_size must be of type int or None. A value of None will function "
+"differently depending on the value of `stream`. stream=True will read data "
+"as it arrives in whatever size the chunks are received. If stream=False, "
+"data is returned as a single chunk."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.iter_content:13
+msgid ""
+"If decode_unicode is True, content will be decoded using the best available "
+"encoding based on the response."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.iter_lines:1
+msgid ""
+"Iterates over the response data, one line at a time.  When stream=True is "
+"set on the request, this avoids reading the content at once into memory for "
+"large responses."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.iter_lines:5
+msgid "This method is not reentrant safe."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.json:1
+msgid "Decodes the JSON response body (if any) as a Python object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.json:3
+msgid ""
+"This may return a dictionary, list, etc. depending on what is in the "
+"response."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.json:5
+msgid "Optional arguments that ``json.loads`` takes."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.json:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.json:6
+msgid "If the response body does not contain valid json."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.links:1
+msgid "Returns the parsed header links of the response, if any."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.next:1
+msgid ""
+"Returns a PreparedRequest for the next request in a redirect chain, if there "
+"is one."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.ok:1
+msgid "Returns True if :attr:`status_code` is less than 400, False if not."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.ok:3
+msgid ""
+"This attribute checks if the status code of the response is between 400 and "
+"600 to see if there was a client error or a server error. If the status code "
+"is between 200 and 400, this will return True. This is **not** a check to "
+"see if the response code is ``200 OK``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.raise_for_status:1
+msgid "Raises :class:`HTTPError`, if one occurred."
+msgstr ""
+
+#: ../../../docstring of requests.Response.raw:1
+msgid ""
+"File-like object representation of response (for advanced usage). Use of "
+"``raw`` requires that ``stream=True`` be set on the request. This "
+"requirement does not apply for use internally to Requests."
+msgstr ""
+
+#: ../../../docstring of requests.Response.reason:1
+msgid "Textual reason of responded HTTP Status, e.g. \"Not Found\" or \"OK\"."
+msgstr ""
+
+#: ../../../docstring of requests.Response.request:1
+msgid ""
+"The :class:`PreparedRequest <PreparedRequest>` object to which this is a "
+"response."
+msgstr ""
+
+#: ../../../docstring of requests.Response.status_code:1
+msgid "Integer Code of responded HTTP Status, e.g. 404 or 200."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.text:1
+msgid "Content of the response, in unicode."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.text:3
+msgid ""
+"If Response.encoding is None, encoding will be guessed using "
+"``charset_normalizer`` or ``chardet``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.Response.text:6
+msgid ""
+"The encoding of the response content is determined based solely on HTTP "
+"headers, following RFC 2616 to the letter. If you can take advantage of non-"
+"HTTP knowledge to make a better guess at the encoding, you should set ``r."
+"encoding`` appropriately before accessing this property."
+msgstr ""
+
+#: ../../../docstring of requests.Response.url:1
+msgid "Final URL location of Response."
+msgstr ""
+
+#: ../../../api.rst:62
+msgid "Lower-Lower-Level Classes"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest:1
+msgid ""
+"The fully mutable :class:`PreparedRequest <PreparedRequest>` object, "
+"containing the exact bytes that will be sent to the server."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest:4
+msgid ""
+"Instances are generated from a :class:`Request <Request>` object, and should "
+"not be instantiated manually; doing so may produce undesirable effects."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest:10
+msgid ""
+">>> import requests\n"
+">>> req = requests.Request('GET', 'https://httpbin.org/get')\n"
+">>> r = req.prepare()\n"
+">>> r\n"
+"<PreparedRequest [GET]>\n"
+"\n"
+">>> s = requests.Session()\n"
+">>> s.send(r)\n"
+"<Response [200]>"
+msgstr ""
+">>> import requests\n"
+">>> req = requests.Request('GET', 'https://httpbin.org/get')\n"
+">>> r = req.prepare()\n"
+">>> r\n"
+"<PreparedRequest [GET]>\n"
+"\n"
+">>> s = requests.Session()\n"
+">>> s.send(r)\n"
+"<Response [200]>"
+
+#: ../../../docstring of requests.PreparedRequest.body:1
+msgid "request body to send to the server."
+msgstr ""
+
+#: ../../../docstring of requests.PreparedRequest.headers:1
+msgid "dictionary of HTTP headers."
+msgstr ""
+
+#: ../../../docstring of requests.PreparedRequest.method:1
+msgid "HTTP verb to send to the server."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.PreparedRequest.path_url:1
+msgid "Build the path URL to use."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare:1
+msgid "Prepares the entire request with the given parameters."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_auth:1
+msgid "Prepares the given HTTP auth data."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_body:1
+msgid "Prepares the given HTTP body data."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_content_length:1
+msgid "Prepare Content-Length header based on request method and body"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_cookies:1
+msgid "Prepares the given HTTP cookie data."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_cookies:3
+msgid ""
+"This function eventually generates a ``Cookie`` header from the given "
+"cookies using cookielib. Due to cookielib's design, the header will not be "
+"regenerated if it already exists, meaning this function can only be called "
+"once for the life of the :class:`PreparedRequest <PreparedRequest>` object. "
+"Any subsequent calls to ``prepare_cookies`` will have no actual effect, "
+"unless the \"Cookie\" header is removed beforehand."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_headers:1
+msgid "Prepares the given HTTP headers."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_hooks:1
+msgid "Prepares the given hooks."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_method:1
+msgid "Prepares the given HTTP method."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.PreparedRequest.prepare_url:1
+msgid "Prepares the given HTTP URL."
+msgstr ""
+
+#: ../../../docstring of requests.PreparedRequest.url:1
+msgid "HTTP URL to send the request to."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter:1
+msgid "The Base Transport Adapter"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.close:1
+msgid "Cleans up adapter specific items."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.send:1 requests.adapters.HTTPAdapter.send:1
+msgid "Sends PreparedRequest object. Returns Response object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.send:3
+#: requests.adapters.HTTPAdapter.request_url:10
+#: requests.adapters.HTTPAdapter.send:3
+msgid "The :class:`PreparedRequest <PreparedRequest>` being sent."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.send:4 requests.adapters.HTTPAdapter.send:4
+msgid "(optional) Whether to stream the request content."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.send:5 requests.adapters.HTTPAdapter.send:5
+msgid ""
+"(optional) How long to wait for the server to send data before giving up, as "
+"a float, or a :ref:`(connect timeout, read timeout) <timeouts>` tuple."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.send:9 requests.adapters.HTTPAdapter.send:9
+msgid ""
+"(optional) Either a boolean, in which case it controls whether we verify the "
+"server's TLS certificate, or a string, in which case it must be a path to a "
+"CA bundle to use"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.send:12
+#: requests.adapters.HTTPAdapter.send:12
+msgid "(optional) Any user-provided SSL certificate to be trusted."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.BaseAdapter.send:13
+#: requests.adapters.HTTPAdapter.get_connection_with_tls_context:12
+#: requests.adapters.HTTPAdapter.send:13
+msgid "(optional) The proxies dictionary to apply to the request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter:1
+msgid "The built-in HTTP Adapter for urllib3."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter:3
+msgid ""
+"Provides a general-case interface for Requests sessions to contact HTTP and "
+"HTTPS urls by implementing the Transport Adapter interface. This class will "
+"usually be created by the :class:`Session <Session>` class under the covers."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter:8
+#: requests.adapters.HTTPAdapter.init_poolmanager:7
+msgid "The number of urllib3 connection pools to cache."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter:9
+#: requests.adapters.HTTPAdapter.init_poolmanager:8
+msgid "The maximum number of connections to save in the pool."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter:10
+msgid ""
+"The maximum number of retries each connection should attempt. Note, this "
+"applies only to failed DNS lookups, socket connections and connection "
+"timeouts, never to requests where data has made it to the server. By "
+"default, Requests does not retry failed connections. If you need granular "
+"control over the conditions under which we retry a request, import urllib3's "
+"``Retry`` class and pass that instead."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter:17
+msgid "Whether the connection pool should block for connections."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter:21
+msgid ""
+">>> import requests\n"
+">>> s = requests.Session()\n"
+">>> a = requests.adapters.HTTPAdapter(max_retries=3)\n"
+">>> s.mount('http://', a)"
+msgstr ""
+">>> import requests\n"
+">>> s = requests.Session()\n"
+">>> a = requests.adapters.HTTPAdapter(max_retries=3)\n"
+">>> s.mount('http://', a)"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.add_headers:1
+msgid ""
+"Add any headers needed by the connection. As of v2.0 this does nothing by "
+"default, but is left for overriding by users that subclass the :class:"
+"`HTTPAdapter <requests.adapters.HTTPAdapter>`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.add_headers:5
+#: requests.adapters.HTTPAdapter.proxy_headers:6
+#: requests.adapters.HTTPAdapter.request_url:6
+msgid ""
+"This should not be called from user code, and is only exposed for use when "
+"subclassing the :class:`HTTPAdapter <requests.adapters.HTTPAdapter>`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.add_headers:9
+msgid "The :class:`PreparedRequest <PreparedRequest>` to add headers to."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.add_headers:10
+msgid "The keyword arguments from the call to send()."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:1
+msgid "Build the PoolKey attributes used by urllib3 to return a connection."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:3
+msgid ""
+"This looks at the PreparedRequest, the user-specified verify value, and the "
+"value of the cert parameter to determine what PoolKey values to use to "
+"select a connection from a given urllib3 Connection Pool."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:7
+msgid ""
+"The SSL related pool key arguments are not consistently set. As of this "
+"writing, use the following to determine what keys may be in that dictionary:"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:11
+msgid ""
+"If ``verify`` is ``True``, ``\"ssl_context\"`` will be set and will be the "
+"default Requests SSL Context"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:13
+msgid ""
+"If ``verify`` is ``False``, ``\"ssl_context\"`` will not be set but "
+"``\"cert_reqs\"`` will be set"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:15
+msgid ""
+"If ``verify`` is a string, (i.e., it is a user-specified trust bundle) "
+"``\"ca_certs\"`` will be set if the string is not a directory recognized by :"
+"py:func:`os.path.isdir`, otherwise ``\"ca_cert_dir\"`` will be set."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:19
+msgid ""
+"If ``\"cert\"`` is specified, ``\"cert_file\"`` will always be set. If "
+"``\"cert\"`` is a tuple with a second item, ``\"key_file\"`` will also be "
+"present"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:23
+msgid ""
+"To override these settings, one may subclass this class, call this method "
+"and use the above logic to change parameters as desired. For example, if one "
+"wishes to use a custom :py:class:`ssl.SSLContext` one must both set "
+"``\"ssl_context\"`` and based on what else they require, alter the other "
+"keys to ensure the desired behaviour."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:29
+msgid "The PreparedReqest being sent over the connection."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:33
+#: requests.adapters.HTTPAdapter.get_connection_with_tls_context:8
+msgid ""
+"Either a boolean, in which case it controls whether we verify the server's "
+"TLS certificate, or a string, in which case it must be a path to a CA bundle "
+"to use."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:37
+msgid ""
+"(optional) Any user-provided SSL certificate for client authentication (a.k."
+"a., mTLS). This may be a string (i.e., just the path to a file which holds "
+"both certificate and key) or a tuple of length 2 with the certificate file "
+"path and key file path."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:43
+msgid ""
+"A tuple of two dictionaries. The first is the \"host parameters\" portion of "
+"the Pool Key including scheme, hostname, and port. The second is a "
+"dictionary of SSLContext related parameters."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_response:1
+msgid ""
+"Builds a :class:`Response <requests.Response>` object from a urllib3 "
+"response. This should not be called from user code, and is only exposed for "
+"use when subclassing the :class:`HTTPAdapter <requests.adapters.HTTPAdapter>`"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_response:6
+msgid ""
+"The :class:`PreparedRequest <PreparedRequest>` used to generate the response."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.build_response:7
+msgid "The urllib3 response object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.cert_verify:1
+msgid ""
+"Verify a SSL certificate. This method should not be called from user code, "
+"and is only exposed for use when subclassing the :class:`HTTPAdapter "
+"<requests.adapters.HTTPAdapter>`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.cert_verify:5
+msgid "The urllib3 connection object associated with the cert."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.cert_verify:6
+msgid "The requested URL."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.cert_verify:7
+msgid ""
+"Either a boolean, in which case it controls whether we verify the server's "
+"TLS certificate, or a string, in which case it must be a path to a CA bundle "
+"to use"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.cert_verify:10
+msgid "The SSL certificate to verify."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.close:1
+msgid "Disposes of any internal state."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.close:3
+msgid ""
+"Currently, this closes the PoolManager and any active ProxyManager, which "
+"closes any pooled connections."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.get_connection:1
+msgid ""
+"DEPRECATED: Users should move to `get_connection_with_tls_context` for all "
+"subclasses of HTTPAdapter using Requests>=2.32.2."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.get_connection:4
+msgid ""
+"Returns a urllib3 connection for the given URL. This should not be called "
+"from user code, and is only exposed for use when subclassing the :class:"
+"`HTTPAdapter <requests.adapters.HTTPAdapter>`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.get_connection:8
+msgid "The URL to connect to."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.get_connection:9
+msgid "(optional) A Requests-style dictionary of proxies used on this request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.get_connection_with_tls_context:1
+msgid ""
+"Returns a urllib3 connection for the given request and TLS settings. This "
+"should not be called from user code, and is only exposed for use when "
+"subclassing the :class:`HTTPAdapter <requests.adapters.HTTPAdapter>`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.get_connection_with_tls_context:5
+msgid ""
+"The :class:`PreparedRequest <PreparedRequest>` object to be sent over the "
+"connection."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.get_connection_with_tls_context:14
+msgid ""
+"(optional) Any user-provided SSL certificate to be used for client "
+"authentication (a.k.a., mTLS)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.init_poolmanager:1
+msgid "Initializes a urllib3 PoolManager."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.init_poolmanager:3
+#: requests.adapters.HTTPAdapter.proxy_manager_for:3
+msgid ""
+"This method should not be called from user code, and is only exposed for use "
+"when subclassing the :class:`HTTPAdapter <requests.adapters.HTTPAdapter>`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.init_poolmanager:9
+msgid "Block when no free connections are available."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.init_poolmanager:10
+msgid "Extra keyword arguments used to initialize the Pool Manager."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.proxy_headers:1
+msgid ""
+"Returns a dictionary of the headers to add to any request sent through a "
+"proxy. This works with urllib3 magic to ensure that they are correctly sent "
+"to the proxy, rather than in a tunnelled request if CONNECT is being used."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.proxy_headers:10
+msgid "The url of the proxy being used for this request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.proxy_manager_for:1
+msgid "Return urllib3 ProxyManager for the given proxy."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.proxy_manager_for:7
+msgid "The proxy to return a urllib3 ProxyManager for."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.proxy_manager_for:8
+msgid "Extra keyword arguments used to configure the Proxy Manager."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.proxy_manager_for:9
+msgid "ProxyManager"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.request_url:1
+msgid "Obtain the url to use when making the final request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.request_url:3
+msgid ""
+"If the message is being sent through a HTTP proxy, the full URL has to be "
+"used. Otherwise, we should only use the path portion of the URL."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
+#: of requests.adapters.HTTPAdapter.request_url:11
+msgid "A dictionary of schemes or schemes and hosts to proxy URLs."
+msgstr ""
+
+#: ../../../api.rst:74
+msgid "Authentication"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/auth.py:docstring
+#: of requests.auth.AuthBase:1
+msgid "Base class that all auth implementations derive from"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/auth.py:docstring
+#: of requests.auth.HTTPBasicAuth:1
+msgid "Attaches HTTP Basic Authentication to the given Request object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/auth.py:docstring
+#: of requests.auth.HTTPProxyAuth:1
+msgid "Attaches HTTP Proxy Authentication to a given Request object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/auth.py:docstring
+#: of requests.auth.HTTPDigestAuth:1
+msgid "Attaches HTTP Digest Authentication to the given Request object."
+msgstr ""
+
+#: ../../../api.rst:84
+msgid "Encodings"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_encodings_from_content:1
+msgid "Returns encodings from given content string."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_encodings_from_content:3
+msgid "bytestring to extract encodings from."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_encoding_from_headers:1
+msgid "Returns encodings from given HTTP Header Dict."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_encoding_from_headers:3
+msgid "dictionary to extract encoding from."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_unicode_from_response:1
+msgid "Returns the requested content back in unicode."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_unicode_from_response:3
+msgid "Response object to get unicode content from."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_unicode_from_response:5
+msgid "Tried:"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_unicode_from_response:7
+msgid "charset from content-type"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.get_unicode_from_response:8
+msgid "fall back and replace all unicode characters"
+msgstr ""
+
+#: ../../../api.rst:94
+msgid "Cookies"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.dict_from_cookiejar:1
+msgid "Returns a key/value dictionary from a CookieJar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.dict_from_cookiejar:3
+msgid "CookieJar object to extract cookies from."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.cookiejar_from_dict:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: requests.utils.add_dict_to_cookiejar:1
+msgid "Returns a CookieJar from a key/value dictionary."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: of requests.utils.add_dict_to_cookiejar:3
+msgid "CookieJar to insert cookies into."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.cookiejar_from_dict:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/utils.py:docstring
+#: requests.utils.add_dict_to_cookiejar:4
+msgid "Dict of key/values to insert into CookieJar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.cookiejar_from_dict:4
+msgid "(optional) A cookiejar to add the cookies to."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.cookiejar_from_dict:5
+msgid ""
+"(optional) If False, will not replace cookies already in the jar with new "
+"ones."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar:1
+msgid ""
+"Compatibility class; is a http.cookiejar.CookieJar, but exposes a dict "
+"interface."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar:4
+msgid ""
+"This is the CookieJar we create by default for requests and sessions that "
+"don't specify one, since some clients may expect response.cookies and "
+"session.cookies to support dict operations."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar:8
+msgid ""
+"Requests does not use the dict interface internally; it's just for "
+"compatibility with external client code. All requests code should work out "
+"of the box with externally provided instances of ``CookieJar``, e.g. "
+"``LWPCookieJar`` and ``FileCookieJar``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar:13
+msgid "Unlike a regular CookieJar, this class is pickleable."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar:15
+msgid "dictionary operations that are normally O(1) may be O(n)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.add_cookie_header:1
+msgid "Add correct Cookie: header to request (urllib.request.Request object)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.add_cookie_header:3
+msgid "The Cookie2 header is also added unless policy.hide_cookie2 is true."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.clear:1
+msgid "Clear some cookies."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.clear:3
+msgid ""
+"Invoking this method without arguments will clear all cookies.  If given a "
+"single argument, only cookies belonging to that domain will be removed.  If "
+"given two arguments, cookies belonging to the specified path within that "
+"domain are removed.  If given three arguments, then the cookie with the "
+"specified name, path and domain is removed."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.clear:9
+msgid "Raises KeyError if no matching cookie exists."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.clear_expired_cookies:1
+msgid "Discard all expired cookies."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.clear_expired_cookies:3
+msgid ""
+"You probably don't need to call this method: expired cookies are never sent "
+"back to the server (provided you're using DefaultCookiePolicy), this method "
+"is called by CookieJar itself every so often, and the .save() method won't "
+"save expired cookies anyway (unless you ask otherwise by passing a true "
+"ignore_expires argument)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.clear_session_cookies:1
+msgid "Discard all session cookies."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.clear_session_cookies:3
+msgid ""
+"Note that the .save() method won't save session cookies anyway, unless you "
+"ask otherwise by passing a true ignore_discard argument."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.copy:1
+msgid "Return a copy of this RequestsCookieJar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.extract_cookies:1
+msgid "Extract cookies from response, where allowable given the request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.get:1
+msgid ""
+"Dict-like get() that also supports optional domain and path args in order to "
+"resolve naming collisions from using one cookie jar over multiple domains."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.get:5
+msgid "operation is O(n), not O(1)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.get_dict:1
+msgid ""
+"Takes as an argument an optional domain and path and returns a plain old "
+"Python dict of name-value pairs of cookies that meet the requirements."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.get_policy:1
+msgid "Return the CookiePolicy instance used."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.items:1
+msgid ""
+"Dict-like items() that returns a list of name-value tuples from the jar. "
+"Allows client-code to call ``dict(RequestsCookieJar)`` and get a vanilla "
+"python dict of key value pairs."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.items:5
+msgid "keys() and values()."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.iteritems:1
+msgid ""
+"Dict-like iteritems() that returns an iterator of name-value tuples from the "
+"jar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.iteritems:4
+msgid "iterkeys() and itervalues()."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.iterkeys:1
+msgid ""
+"Dict-like iterkeys() that returns an iterator of names of cookies from the "
+"jar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.iterkeys:4
+msgid "itervalues() and iteritems()."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.itervalues:1
+msgid ""
+"Dict-like itervalues() that returns an iterator of values of cookies from "
+"the jar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.itervalues:4
+msgid "iterkeys() and iteritems()."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.keys:1
+msgid "Dict-like keys() that returns a list of names of cookies from the jar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.keys:4
+msgid "values() and items()."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.list_domains:1
+msgid "Utility method to list all the domains in the jar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.list_paths:1
+msgid "Utility method to list all the paths in the jar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.make_cookies:1
+msgid "Return sequence of Cookie objects extracted from response object."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.multiple_domains:1
+msgid ""
+"Returns True if there are multiple domains in the jar. Returns False "
+"otherwise."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of collections.abc.MutableMapping.pop:1
+msgid ""
+"If key is not found, d is returned if given, otherwise KeyError is raised."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of collections.abc.MutableMapping.popitem:1
+msgid "as a 2-tuple; but raise KeyError if D is empty."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.set:1
+msgid ""
+"Dict-like set() that also supports optional domain and path args in order to "
+"resolve naming collisions from using one cookie jar over multiple domains."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.set_cookie:1
+msgid "Set a cookie, without checking whether or not it should be set."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of http.cookiejar.CookieJar.set_cookie_if_ok:1
+msgid "Set a cookie if policy says it's OK to do so."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.update:1
+msgid "Updates this jar with cookies from another CookieJar or dict-like"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.values:1
+msgid ""
+"Dict-like values() that returns a list of values of cookies from the jar."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.RequestsCookieJar.values:4
+msgid "keys() and items()."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.CookieConflictError:1
+msgid ""
+"There are two cookies that meet the criteria specified in the cookie jar. "
+"Use .get and .set and include domain and path args in order to be more "
+"specific."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.CookieConflictError.add_note:1
+msgid "Exception.add_note(note) -- add a note to the exception"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
+#: of requests.cookies.CookieConflictError.with_traceback:1
+msgid ""
+"Exception.with_traceback(tb) -- set self.__traceback__ to tb and return self."
+msgstr ""
+
+#: ../../../api.rst:109
+msgid "Status Code Lookup"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:1
+msgid ""
+"The ``codes`` object defines a mapping from common names for HTTP statuses "
+"to their numerical codes, accessible either as attributes or as dictionary "
+"items."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:5
+msgid "Example::"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:7
+msgid ""
+">>> import requests\n"
+">>> requests.codes['temporary_redirect']\n"
+"307\n"
+">>> requests.codes.teapot\n"
+"418\n"
+">>> requests.codes['\\o/']\n"
+"200"
+msgstr ""
+">>> import requests\n"
+">>> requests.codes['temporary_redirect']\n"
+"307\n"
+">>> requests.codes.teapot\n"
+"418\n"
+">>> requests.codes['\\o/']\n"
+"200"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:15
+msgid ""
+"Some codes have multiple names, and both upper- and lower-case versions of "
+"the names are allowed. For example, ``codes.ok``, ``codes.OK``, and ``codes."
+"okay`` all correspond to the HTTP status code 200."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:19
+msgid "100: ``continue``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:20
+msgid "101: ``switching_protocols``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:21
+msgid "102: ``processing``, ``early-hints``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:22
+msgid "103: ``checkpoint``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:23
+msgid "122: ``uri_too_long``, ``request_uri_too_long``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:24
+msgid ""
+"200: ``ok``, ``okay``, ``all_ok``, ``all_okay``, ``all_good``, ``\\o/``, "
+"``✓``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:25
+msgid "201: ``created``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:26
+msgid "202: ``accepted``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:27
+msgid "203: ``non_authoritative_info``, ``non_authoritative_information``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:28
+msgid "204: ``no_content``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:29
+msgid "205: ``reset_content``, ``reset``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:30
+msgid "206: ``partial_content``, ``partial``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:31
+msgid ""
+"207: ``multi_status``, ``multiple_status``, ``multi_stati``, "
+"``multiple_stati``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:32
+msgid "208: ``already_reported``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:33
+msgid "226: ``im_used``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:34
+msgid "300: ``multiple_choices``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:35
+msgid "301: ``moved_permanently``, ``moved``, ``\\o-``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:36
+msgid "302: ``found``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:37
+msgid "303: ``see_other``, ``other``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:38
+msgid "304: ``not_modified``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:39
+msgid "305: ``use_proxy``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:40
+msgid "306: ``switch_proxy``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:41
+msgid "307: ``temporary_redirect``, ``temporary_moved``, ``temporary``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:42
+msgid "308: ``permanent_redirect``, ``resume_incomplete``, ``resume``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:43
+msgid "400: ``bad_request``, ``bad``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:44
+msgid "401: ``unauthorized``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:45
+msgid "402: ``payment_required``, ``payment``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:46
+msgid "403: ``forbidden``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:47
+msgid "404: ``not_found``, ``-o-``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:48
+msgid "405: ``method_not_allowed``, ``not_allowed``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:49
+msgid "406: ``not_acceptable``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:50
+msgid ""
+"407: ``proxy_authentication_required``, ``proxy_auth``, "
+"``proxy_authentication``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:51
+msgid "408: ``request_timeout``, ``timeout``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:52
+msgid "409: ``conflict``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:53
+msgid "410: ``gone``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:54
+msgid "411: ``length_required``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:55
+msgid "412: ``precondition_failed``, ``precondition``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:56
+msgid "413: ``request_entity_too_large``, ``content_too_large``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:57
+msgid "414: ``request_uri_too_large``, ``uri_too_long``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:58
+msgid "415: ``unsupported_media_type``, ``unsupported_media``, ``media_type``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:59
+msgid ""
+"416: ``requested_range_not_satisfiable``, ``requested_range``, "
+"``range_not_satisfiable``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:60
+msgid "417: ``expectation_failed``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:61
+msgid "418: ``im_a_teapot``, ``teapot``, ``i_am_a_teapot``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:62
+msgid "421: ``misdirected_request``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:63
+msgid ""
+"422: ``unprocessable_entity``, ``unprocessable``, ``unprocessable_content``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:64
+msgid "423: ``locked``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:65
+msgid "424: ``failed_dependency``, ``dependency``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:66
+msgid "425: ``unordered_collection``, ``unordered``, ``too_early``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:67
+msgid "426: ``upgrade_required``, ``upgrade``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:68
+msgid "428: ``precondition_required``, ``precondition``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:69
+msgid "429: ``too_many_requests``, ``too_many``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:70
+msgid "431: ``header_fields_too_large``, ``fields_too_large``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:71
+msgid "444: ``no_response``, ``none``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:72
+msgid "449: ``retry_with``, ``retry``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:73
+msgid "450: ``blocked_by_windows_parental_controls``, ``parental_controls``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:74
+msgid "451: ``unavailable_for_legal_reasons``, ``legal_reasons``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:75
+msgid "499: ``client_closed_request``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:76
+msgid "500: ``internal_server_error``, ``server_error``, ``/o\\``, ``✗``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:77
+msgid "501: ``not_implemented``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:78
+msgid "502: ``bad_gateway``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:79
+msgid "503: ``service_unavailable``, ``unavailable``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:80
+msgid "504: ``gateway_timeout``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:81
+msgid "505: ``http_version_not_supported``, ``http_version``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:82
+msgid "506: ``variant_also_negotiates``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:83
+msgid "507: ``insufficient_storage``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:84
+msgid "509: ``bandwidth_limit_exceeded``, ``bandwidth``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:85
+msgid "510: ``not_extended``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
+#: of requests.status_codes:86
+msgid ""
+"511: ``network_authentication_required``, ``network_auth``, "
+"``network_authentication``"
+msgstr ""
+
+#: ../../../api.rst:117
+msgid "Migrating to 1.x"
+msgstr ""
+
+#: ../../../api.rst:119
+msgid ""
+"This section details the main differences between 0.x and 1.x and is meant "
+"to ease the pain of upgrading."
+msgstr ""
+
+#: ../../../api.rst:124 ../../../api.rst:221
+msgid "API Changes"
+msgstr ""
+
+#: ../../../api.rst:126
+msgid "``Response.json`` is now a callable and not a property of a response."
+msgstr ""
+
+#: ../../../api.rst:130
+msgid ""
+"import requests\n"
+"r = requests.get('https://api.github.com/events')\n"
+"r.json()   # This *call* raises an exception if JSON decoding fails"
+msgstr ""
+
+#: ../../../api.rst:134
+msgid ""
+"The ``Session`` API has changed. Sessions objects no longer take parameters. "
+"``Session`` is also now capitalized, but it can still be instantiated with a "
+"lowercase ``session`` for backwards compatibility."
+msgstr ""
+
+#: ../../../api.rst:140
+msgid ""
+"s = requests.Session()    # formerly, session took parameters\n"
+"s.auth = auth\n"
+"s.headers.update(headers)\n"
+"r = s.get('https://httpbin.org/headers')"
+msgstr ""
+
+#: ../../../api.rst:145
+msgid "All request hooks have been removed except 'response'."
+msgstr ""
+
+#: ../../../api.rst:147
+msgid ""
+"Authentication helpers have been broken out into separate modules. See "
+"requests-oauthlib_ and requests-kerberos_."
+msgstr ""
+
+#: ../../../api.rst:153
+msgid ""
+"The parameter for streaming requests was changed from ``prefetch`` to "
+"``stream`` and the logic was inverted. In addition, ``stream`` is now "
+"required for raw response reading."
+msgstr ""
+
+#: ../../../api.rst:159
+msgid ""
+"# in 0.x, passing prefetch=False would accomplish the same thing\n"
+"r = requests.get('https://api.github.com/events', stream=True)\n"
+"for chunk in r.iter_content(8192):\n"
+"    ..."
+msgstr ""
+
+#: ../../../api.rst:164
+msgid ""
+"The ``config`` parameter to the requests method has been removed. Some of "
+"these options are now configured on a ``Session`` such as keep-alive and "
+"maximum number of redirects. The verbosity option should be handled by "
+"configuring logging."
+msgstr ""
+
+#: ../../../api.rst:171
+msgid ""
+"import requests\n"
+"import logging\n"
+"\n"
+"# Enabling debugging at http.client level (requests->urllib3->http.client)\n"
+"# you will see the REQUEST, including HEADERS and DATA, and RESPONSE with "
+"HEADERS but without DATA.\n"
+"# the only thing missing will be the response.body which is not logged.\n"
+"try: # for Python 3\n"
+"    from http.client import HTTPConnection\n"
+"except ImportError:\n"
+"    from httplib import HTTPConnection\n"
+"HTTPConnection.debuglevel = 1\n"
+"\n"
+"logging.basicConfig() # you need to initialize logging, otherwise you will "
+"not see anything from requests\n"
+"logging.getLogger().setLevel(logging.DEBUG)\n"
+"requests_log = logging.getLogger(\"urllib3\")\n"
+"requests_log.setLevel(logging.DEBUG)\n"
+"requests_log.propagate = True\n"
+"\n"
+"requests.get('https://httpbin.org/headers')"
+msgstr ""
+
+#: ../../../api.rst:194
+msgid "Licensing"
+msgstr ""
+
+#: ../../../api.rst:196
+msgid ""
+"One key difference that has nothing to do with the API is a change in the "
+"license from the ISC_ license to the `Apache 2.0`_ license. The Apache 2.0 "
+"license ensures that contributions to Requests are also covered by the "
+"Apache 2.0 license."
+msgstr ""
+
+#: ../../../api.rst:206
+msgid "Migrating to 2.x"
+msgstr ""
+
+#: ../../../api.rst:209
+msgid ""
+"Compared with the 1.0 release, there were relatively few backwards "
+"incompatible changes, but there are still a few issues to be aware of with "
+"this major release."
+msgstr ""
+
+#: ../../../api.rst:213
+msgid ""
+"For more details on the changes in this release including new APIs, links to "
+"the relevant GitHub issues and some of the bug fixes, read Cory's blog_ on "
+"the subject."
+msgstr ""
+
+#: ../../../api.rst:223
+msgid ""
+"There were a couple changes to how Requests handles exceptions. "
+"``RequestException`` is now a subclass of ``IOError`` rather than "
+"``RuntimeError`` as that more accurately categorizes the type of error. In "
+"addition, an invalid URL escape sequence now raises a subclass of "
+"``RequestException`` rather than a ``ValueError``."
+msgstr ""
+
+#: ../../../api.rst:231
+msgid "requests.get('http://%zz/')   # raises requests.exceptions.InvalidURL"
+msgstr ""
+
+#: ../../../api.rst:233
+msgid ""
+"Lastly, ``httplib.IncompleteRead`` exceptions caused by incorrect chunked "
+"encoding will now raise a Requests ``ChunkedEncodingError`` instead."
+msgstr ""
+
+#: ../../../api.rst:236
+msgid ""
+"The proxy API has changed slightly. The scheme for a proxy URL is now "
+"required."
+msgstr ""
+
+#: ../../../api.rst:241
+msgid ""
+"proxies = {\n"
+"  \"http\": \"10.10.1.10:3128\",    # use http://10.10.1.10:3128 instead\n"
+"}\n"
+"\n"
+"# In requests 1.x, this was legal, in requests 2.x,\n"
+"#  this raises requests.exceptions.MissingSchema\n"
+"requests.get(\"http://example.org\", proxies=proxies)"
+msgstr ""
+
+#: ../../../api.rst:251
+msgid "Behavioural Changes"
+msgstr ""
+
+#: ../../../api.rst:253
+msgid ""
+"Keys in the ``headers`` dictionary are now native strings on all Python "
+"versions, i.e. bytestrings on Python 2 and unicode on Python 3. If the keys "
+"are not native strings (unicode on Python 2 or bytestrings on Python 3) they "
+"will be converted to the native string type assuming UTF-8 encoding."
+msgstr ""
+
+#: ../../../api.rst:258
+msgid ""
+"Values in the ``headers`` dictionary should always be strings. This has been "
+"the project's position since before 1.0 but a recent change (since version "
+"2.11.0) enforces this more strictly. It's advised to avoid passing header "
+"values as unicode when possible."
+msgstr ""

@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Kenneth Reitz and contributors
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../community/vulnerabilities.rst:2
+msgid "Vulnerability Disclosure"
+msgstr ""
+
+#: ../../../community/vulnerabilities.rst:4
+msgid ""
+"The latest vulnerability disclosure information can be found on GitHub in "
+"our `Security Policy <https://github.com/psf/requests/blob/main/.github/"
+"SECURITY.md>`_."
+msgstr ""
