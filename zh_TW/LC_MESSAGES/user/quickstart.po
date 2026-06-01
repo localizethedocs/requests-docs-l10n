@@ -1,0 +1,1122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) MMXVIX. A Kenneth Reitz Project
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/quickstart.rst:4
+msgid "Quickstart"
+msgstr ""
+
+#: ../../../user/quickstart.rst:8
+msgid ""
+"Eager to get started? This page gives a good introduction in how to get "
+"started with Requests."
+msgstr ""
+
+#: ../../../user/quickstart.rst:11
+msgid "First, make sure that:"
+msgstr ""
+
+#: ../../../user/quickstart.rst:13
+msgid "Requests is :ref:`installed <install>`"
+msgstr ""
+
+#: ../../../user/quickstart.rst:14
+msgid "Requests is :ref:`up-to-date <updates>`"
+msgstr ""
+
+#: ../../../user/quickstart.rst:17
+msgid "Let's get started with some simple examples."
+msgstr ""
+
+#: ../../../user/quickstart.rst:21
+msgid "Make a Request"
+msgstr ""
+
+#: ../../../user/quickstart.rst:23
+msgid "Making a request with Requests is very simple."
+msgstr ""
+
+#: ../../../user/quickstart.rst:25
+msgid "Begin by importing the Requests module::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:27
+msgid ">>> import requests"
+msgstr ">>> import requests"
+
+#: ../../../user/quickstart.rst:29
+msgid ""
+"Now, let's try to get a webpage. For this example, let's get GitHub's public "
+"timeline::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:32
+msgid ">>> r = requests.get('https://api.github.com/events')"
+msgstr ">>> r = requests.get('https://api.github.com/events')"
+
+#: ../../../user/quickstart.rst:34
+msgid ""
+"Now, we have a :class:`Response <requests.Response>` object called ``r``. We "
+"can get all the information we need from this object."
+msgstr ""
+
+#: ../../../user/quickstart.rst:37
+msgid ""
+"Requests' simple API means that all forms of HTTP request are as obvious. "
+"For example, this is how you make an HTTP POST request::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:40
+msgid ""
+">>> r = requests.post('https://httpbin.org/post', data={'key': 'value'})"
+msgstr ""
+">>> r = requests.post('https://httpbin.org/post', data={'key': 'value'})"
+
+#: ../../../user/quickstart.rst:42
+msgid ""
+"Nice, right? What about the other HTTP request types: PUT, DELETE, HEAD and "
+"OPTIONS? These are all just as simple::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:45
+msgid ""
+">>> r = requests.put('https://httpbin.org/put', data={'key': 'value'})\n"
+">>> r = requests.delete('https://httpbin.org/delete')\n"
+">>> r = requests.head('https://httpbin.org/get')\n"
+">>> r = requests.options('https://httpbin.org/get')"
+msgstr ""
+">>> r = requests.put('https://httpbin.org/put', data={'key': 'value'})\n"
+">>> r = requests.delete('https://httpbin.org/delete')\n"
+">>> r = requests.head('https://httpbin.org/get')\n"
+">>> r = requests.options('https://httpbin.org/get')"
+
+#: ../../../user/quickstart.rst:50
+msgid ""
+"That's all well and good, but it's also only the start of what Requests can "
+"do."
+msgstr ""
+
+#: ../../../user/quickstart.rst:55
+msgid "Passing Parameters In URLs"
+msgstr ""
+
+#: ../../../user/quickstart.rst:57
+msgid ""
+"You often want to send some sort of data in the URL's query string. If you "
+"were constructing the URL by hand, this data would be given as key/value "
+"pairs in the URL after a question mark, e.g. ``httpbin.org/get?key=val``. "
+"Requests allows you to provide these arguments as a dictionary of strings, "
+"using the ``params`` keyword argument. As an example, if you wanted to pass "
+"``key1=value1`` and ``key2=value2`` to ``httpbin.org/get``, you would use "
+"the following code::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:65
+msgid ""
+">>> payload = {'key1': 'value1', 'key2': 'value2'}\n"
+">>> r = requests.get('https://httpbin.org/get', params=payload)"
+msgstr ""
+">>> payload = {'key1': 'value1', 'key2': 'value2'}\n"
+">>> r = requests.get('https://httpbin.org/get', params=payload)"
+
+#: ../../../user/quickstart.rst:68
+msgid ""
+"You can see that the URL has been correctly encoded by printing the URL::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:70
+msgid ""
+">>> print(r.url)\n"
+"https://httpbin.org/get?key2=value2&key1=value1"
+msgstr ""
+">>> print(r.url)\n"
+"https://httpbin.org/get?key2=value2&key1=value1"
+
+#: ../../../user/quickstart.rst:73
+msgid ""
+"Note that any dictionary key whose value is ``None`` will not be added to "
+"the URL's query string."
+msgstr ""
+
+#: ../../../user/quickstart.rst:76
+msgid "You can also pass a list of items as a value::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:78
+msgid ""
+">>> payload = {'key1': 'value1', 'key2': ['value2', 'value3']}\n"
+"\n"
+">>> r = requests.get('https://httpbin.org/get', params=payload)\n"
+">>> print(r.url)\n"
+"https://httpbin.org/get?key1=value1&key2=value2&key2=value3"
+msgstr ""
+">>> payload = {'key1': 'value1', 'key2': ['value2', 'value3']}\n"
+"\n"
+">>> r = requests.get('https://httpbin.org/get', params=payload)\n"
+">>> print(r.url)\n"
+"https://httpbin.org/get?key1=value1&key2=value2&key2=value3"
+
+#: ../../../user/quickstart.rst:85
+msgid "Response Content"
+msgstr ""
+
+#: ../../../user/quickstart.rst:87
+msgid ""
+"We can read the content of the server's response. Consider the GitHub "
+"timeline again::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:90
+msgid ""
+">>> import requests\n"
+"\n"
+">>> r = requests.get('https://api.github.com/events')\n"
+">>> r.text\n"
+"'[{\"repository\":{\"open_issues\":0,\"url\":\"https://github.com/..."
+msgstr ""
+">>> import requests\n"
+"\n"
+">>> r = requests.get('https://api.github.com/events')\n"
+">>> r.text\n"
+"'[{\"repository\":{\"open_issues\":0,\"url\":\"https://github.com/..."
+
+#: ../../../user/quickstart.rst:96
+msgid ""
+"Requests will automatically decode content from the server. Most unicode "
+"charsets are seamlessly decoded."
+msgstr ""
+
+#: ../../../user/quickstart.rst:99
+msgid ""
+"When you make a request, Requests makes educated guesses about the encoding "
+"of the response based on the HTTP headers. The text encoding guessed by "
+"Requests is used when you access ``r.text``. You can find out what encoding "
+"Requests is using, and change it, using the ``r.encoding`` property::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:104
+msgid ""
+">>> r.encoding\n"
+"'utf-8'\n"
+">>> r.encoding = 'ISO-8859-1'"
+msgstr ""
+">>> r.encoding\n"
+"'utf-8'\n"
+">>> r.encoding = 'ISO-8859-1'"
+
+#: ../../../user/quickstart.rst:108
+msgid ""
+"If you change the encoding, Requests will use the new value of ``r."
+"encoding`` whenever you call ``r.text``. You might want to do this in any "
+"situation where you can apply special logic to work out what the encoding of "
+"the content will be. For example, HTML and XML have the ability to specify "
+"their encoding in their body. In situations like this, you should use ``r."
+"content`` to find the encoding, and then set ``r.encoding``. This will let "
+"you use ``r.text`` with the correct encoding."
+msgstr ""
+
+#: ../../../user/quickstart.rst:116
+msgid ""
+"Requests will also use custom encodings in the event that you need them. If "
+"you have created your own encoding and registered it with the ``codecs`` "
+"module, you can simply use the codec name as the value of ``r.encoding`` and "
+"Requests will handle the decoding for you."
+msgstr ""
+
+#: ../../../user/quickstart.rst:122
+msgid "Binary Response Content"
+msgstr ""
+
+#: ../../../user/quickstart.rst:124
+msgid "You can also access the response body as bytes, for non-text requests::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:126
+msgid ""
+">>> r.content\n"
+"b'[{\"repository\":{\"open_issues\":0,\"url\":\"https://github.com/..."
+msgstr ""
+">>> r.content\n"
+"b'[{\"repository\":{\"open_issues\":0,\"url\":\"https://github.com/..."
+
+#: ../../../user/quickstart.rst:129
+msgid ""
+"The ``gzip`` and ``deflate`` transfer-encodings are automatically decoded "
+"for you."
+msgstr ""
+
+#: ../../../user/quickstart.rst:131
+msgid ""
+"The ``br``  transfer-encoding is automatically decoded for you if a Brotli "
+"library like `brotli <https://pypi.org/project/brotli>`_ or `brotlicffi "
+"<https://pypi.org/project/brotlicffi>`_ is installed."
+msgstr ""
+
+#: ../../../user/quickstart.rst:134
+msgid ""
+"For example, to create an image from binary data returned by a request, you "
+"can use the following code::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:137
+msgid ""
+">>> from PIL import Image\n"
+">>> from io import BytesIO\n"
+"\n"
+">>> i = Image.open(BytesIO(r.content))"
+msgstr ""
+">>> from PIL import Image\n"
+">>> from io import BytesIO\n"
+"\n"
+">>> i = Image.open(BytesIO(r.content))"
+
+#: ../../../user/quickstart.rst:144
+msgid "JSON Response Content"
+msgstr ""
+
+#: ../../../user/quickstart.rst:146
+msgid ""
+"There's also a builtin JSON decoder, in case you're dealing with JSON data::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:148
+msgid ""
+">>> import requests\n"
+"\n"
+">>> r = requests.get('https://api.github.com/events')\n"
+">>> r.json()\n"
+"[{'repository': {'open_issues': 0, 'url': 'https://github.com/..."
+msgstr ""
+">>> import requests\n"
+"\n"
+">>> r = requests.get('https://api.github.com/events')\n"
+">>> r.json()\n"
+"[{'repository': {'open_issues': 0, 'url': 'https://github.com/..."
+
+#: ../../../user/quickstart.rst:154
+msgid ""
+"In case the JSON decoding fails, ``r.json()`` raises an exception. For "
+"example, if the response gets a 204 (No Content), or if the response "
+"contains invalid JSON, attempting ``r.json()`` raises ``requests.exceptions."
+"JSONDecodeError``. This wrapper exception provides interoperability for "
+"multiple exceptions that may be thrown by different python versions and json "
+"serialization libraries."
+msgstr ""
+
+#: ../../../user/quickstart.rst:160
+msgid ""
+"It should be noted that the success of the call to ``r.json()`` does **not** "
+"indicate the success of the response. Some servers may return a JSON object "
+"in a failed response (e.g. error details with HTTP 500). Such JSON will be "
+"decoded and returned. To check that a request is successful, use ``r."
+"raise_for_status()`` or check ``r.status_code`` is what you expect."
+msgstr ""
+
+#: ../../../user/quickstart.rst:168
+msgid "Raw Response Content"
+msgstr ""
+
+#: ../../../user/quickstart.rst:170
+msgid ""
+"In the rare case that you'd like to get the raw socket response from the "
+"server, you can access ``r.raw``. If you want to do this, make sure you set "
+"``stream=True`` in your initial request. Once you do, you can do this::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:174
+msgid ""
+">>> r = requests.get('https://api.github.com/events', stream=True)\n"
+"\n"
+">>> r.raw\n"
+"<urllib3.response.HTTPResponse object at 0x101194810>\n"
+"\n"
+">>> r.raw.read(10)\n"
+"b'\\x1f\\x8b\\x08\\x00\\x00\\x00\\x00\\x00\\x00\\x03'"
+msgstr ""
+">>> r = requests.get('https://api.github.com/events', stream=True)\n"
+"\n"
+">>> r.raw\n"
+"<urllib3.response.HTTPResponse object at 0x101194810>\n"
+"\n"
+">>> r.raw.read(10)\n"
+"b'\\x1f\\x8b\\x08\\x00\\x00\\x00\\x00\\x00\\x00\\x03'"
+
+#: ../../../user/quickstart.rst:182
+msgid ""
+"In general, however, you should use a pattern like this to save what is "
+"being streamed to a file::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:185
+msgid ""
+"with open(filename, 'wb') as fd:\n"
+"    for chunk in r.iter_content(chunk_size=128):\n"
+"        fd.write(chunk)"
+msgstr ""
+
+#: ../../../user/quickstart.rst:189
+msgid ""
+"Using ``Response.iter_content`` will handle a lot of what you would "
+"otherwise have to handle when using ``Response.raw`` directly. When "
+"streaming a download, the above is the preferred and recommended way to "
+"retrieve the content. Note that ``chunk_size`` can be freely adjusted to a "
+"number that may better fit your use cases."
+msgstr ""
+
+#: ../../../user/quickstart.rst:197
+msgid ""
+"An important note about using ``Response.iter_content`` versus ``Response."
+"raw``. ``Response.iter_content`` will automatically decode the ``gzip`` and "
+"``deflate`` transfer-encodings.  ``Response.raw`` is a raw stream of bytes "
+"-- it does not transform the response content.  If you really need access to "
+"the bytes as they were returned, use ``Response.raw``."
+msgstr ""
+
+#: ../../../user/quickstart.rst:207
+msgid "Custom Headers"
+msgstr ""
+
+#: ../../../user/quickstart.rst:209
+msgid ""
+"If you'd like to add HTTP headers to a request, simply pass in a ``dict`` to "
+"the ``headers`` parameter."
+msgstr ""
+
+#: ../../../user/quickstart.rst:212
+msgid "For example, we didn't specify our user-agent in the previous example::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:214
+msgid ""
+">>> url = 'https://api.github.com/some/endpoint'\n"
+">>> headers = {'user-agent': 'my-app/0.0.1'}\n"
+"\n"
+">>> r = requests.get(url, headers=headers)"
+msgstr ""
+">>> url = 'https://api.github.com/some/endpoint'\n"
+">>> headers = {'user-agent': 'my-app/0.0.1'}\n"
+"\n"
+">>> r = requests.get(url, headers=headers)"
+
+#: ../../../user/quickstart.rst:219
+msgid ""
+"Note: Custom headers are given less precedence than more specific sources of "
+"information. For instance:"
+msgstr ""
+
+#: ../../../user/quickstart.rst:221
+msgid ""
+"Authorization headers set with `headers=` will be overridden if credentials "
+"are specified in ``.netrc``, which in turn will be overridden by the  "
+"``auth=`` parameter. Requests will search for the netrc file at `~/.netrc`, "
+"`~/_netrc`, or at the path specified by the `NETRC` environment variable. "
+"Check details in :ref:`netrc authentication <authentication>`."
+msgstr ""
+
+#: ../../../user/quickstart.rst:226
+msgid "Authorization headers will be removed if you get redirected off-host."
+msgstr ""
+
+#: ../../../user/quickstart.rst:227
+msgid ""
+"Proxy-Authorization headers will be overridden by proxy credentials provided "
+"in the URL."
+msgstr ""
+
+#: ../../../user/quickstart.rst:228
+msgid ""
+"Content-Length headers will be overridden when we can determine the length "
+"of the content."
+msgstr ""
+
+#: ../../../user/quickstart.rst:230
+msgid ""
+"Furthermore, Requests does not change its behavior at all based on which "
+"custom headers are specified. The headers are simply passed on into the "
+"final request."
+msgstr ""
+
+#: ../../../user/quickstart.rst:232
+msgid ""
+"Note: All header values must be a ``string``, bytestring, or unicode. While "
+"permitted, it's advised to avoid passing unicode header values."
+msgstr ""
+
+#: ../../../user/quickstart.rst:235
+msgid "More complicated POST requests"
+msgstr ""
+
+#: ../../../user/quickstart.rst:237
+msgid ""
+"Typically, you want to send some form-encoded data — much like an HTML form. "
+"To do this, simply pass a dictionary to the ``data`` argument. Your "
+"dictionary of data will automatically be form-encoded when the request is "
+"made::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:241
+msgid ""
+">>> payload = {'key1': 'value1', 'key2': 'value2'}\n"
+"\n"
+">>> r = requests.post('https://httpbin.org/post', data=payload)\n"
+">>> print(r.text)\n"
+"{\n"
+"  ...\n"
+"  \"form\": {\n"
+"    \"key2\": \"value2\",\n"
+"    \"key1\": \"value1\"\n"
+"  },\n"
+"  ...\n"
+"}"
+msgstr ""
+">>> payload = {'key1': 'value1', 'key2': 'value2'}\n"
+"\n"
+">>> r = requests.post('https://httpbin.org/post', data=payload)\n"
+">>> print(r.text)\n"
+"{\n"
+"  ...\n"
+"  \"form\": {\n"
+"    \"key2\": \"value2\",\n"
+"    \"key1\": \"value1\"\n"
+"  },\n"
+"  ...\n"
+"}"
+
+#: ../../../user/quickstart.rst:254
+msgid ""
+"The ``data`` argument can also have multiple values for each key. This can "
+"be done by making ``data`` either a list of tuples or a dictionary with "
+"lists as values. This is particularly useful when the form has multiple "
+"elements that use the same key::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:259
+msgid ""
+">>> payload_tuples = [('key1', 'value1'), ('key1', 'value2')]\n"
+">>> r1 = requests.post('https://httpbin.org/post', data=payload_tuples)\n"
+">>> payload_dict = {'key1': ['value1', 'value2']}\n"
+">>> r2 = requests.post('https://httpbin.org/post', data=payload_dict)\n"
+">>> print(r1.text)\n"
+"{\n"
+"  ...\n"
+"  \"form\": {\n"
+"    \"key1\": [\n"
+"      \"value1\",\n"
+"      \"value2\"\n"
+"    ]\n"
+"  },\n"
+"  ...\n"
+"}\n"
+">>> # httpbin may embed non-deterministic metadata,\n"
+">>> # so we only compare our submitted data here.\n"
+">>> r1.json()['form'] == r2.json()['form']\n"
+"True"
+msgstr ""
+">>> payload_tuples = [('key1', 'value1'), ('key1', 'value2')]\n"
+">>> r1 = requests.post('https://httpbin.org/post', data=payload_tuples)\n"
+">>> payload_dict = {'key1': ['value1', 'value2']}\n"
+">>> r2 = requests.post('https://httpbin.org/post', data=payload_dict)\n"
+">>> print(r1.text)\n"
+"{\n"
+"  ...\n"
+"  \"form\": {\n"
+"    \"key1\": [\n"
+"      \"value1\",\n"
+"      \"value2\"\n"
+"    ]\n"
+"  },\n"
+"  ...\n"
+"}\n"
+">>> # httpbin may embed non-deterministic metadata,\n"
+">>> # so we only compare our submitted data here.\n"
+">>> r1.json()['form'] == r2.json()['form']\n"
+"True"
+
+#: ../../../user/quickstart.rst:279
+msgid ""
+"There are times that you may want to send data that is not form-encoded. If "
+"you pass in a ``string`` instead of a ``dict``, that data will be posted "
+"directly."
+msgstr ""
+
+#: ../../../user/quickstart.rst:282
+msgid "For example, the GitHub API v3 accepts JSON-Encoded POST/PATCH data::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:284
+msgid ""
+">>> import json\n"
+"\n"
+">>> url = 'https://api.github.com/some/endpoint'\n"
+">>> payload = {'some': 'data'}\n"
+"\n"
+">>> r = requests.post(url, data=json.dumps(payload))"
+msgstr ""
+">>> import json\n"
+"\n"
+">>> url = 'https://api.github.com/some/endpoint'\n"
+">>> payload = {'some': 'data'}\n"
+"\n"
+">>> r = requests.post(url, data=json.dumps(payload))"
+
+#: ../../../user/quickstart.rst:291
+msgid ""
+"Please note that the above code will NOT add the ``Content-Type`` header (so "
+"in particular it will NOT set it to ``application/json``)."
+msgstr ""
+
+#: ../../../user/quickstart.rst:294
+msgid ""
+"If you need that header set and you don't want to encode the ``dict`` "
+"yourself, you can also pass it directly using the ``json`` parameter (added "
+"in version 2.4.2) and it will be encoded automatically:"
+msgstr ""
+
+#: ../../../user/quickstart.rst:303
+msgid ""
+"Note, the ``json`` parameter is ignored if either ``data`` or ``files`` is "
+"passed."
+msgstr ""
+
+#: ../../../user/quickstart.rst:306
+msgid "POST a Multipart-Encoded File"
+msgstr ""
+
+#: ../../../user/quickstart.rst:308
+msgid "Requests makes it simple to upload Multipart-encoded files::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:310
+msgid ""
+">>> url = 'https://httpbin.org/post'\n"
+">>> files = {'file': open('report.xls', 'rb')}\n"
+"\n"
+">>> r = requests.post(url, files=files)\n"
+">>> r.text\n"
+"{\n"
+"  ...\n"
+"  \"files\": {\n"
+"    \"file\": \"<censored...binary...data>\"\n"
+"  },\n"
+"  ...\n"
+"}"
+msgstr ""
+">>> url = 'https://httpbin.org/post'\n"
+">>> files = {'file': open('report.xls', 'rb')}\n"
+"\n"
+">>> r = requests.post(url, files=files)\n"
+">>> r.text\n"
+"{\n"
+"  ...\n"
+"  \"files\": {\n"
+"    \"file\": \"<censored...binary...data>\"\n"
+"  },\n"
+"  ...\n"
+"}"
+
+#: ../../../user/quickstart.rst:323
+msgid "You can set the filename, content_type and headers explicitly::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:325
+msgid ""
+">>> url = 'https://httpbin.org/post'\n"
+">>> files = {'file': ('report.xls', open('report.xls', 'rb'), 'application/"
+"vnd.ms-excel', {'Expires': '0'})}\n"
+"\n"
+">>> r = requests.post(url, files=files)\n"
+">>> r.text\n"
+"{\n"
+"  ...\n"
+"  \"files\": {\n"
+"    \"file\": \"<censored...binary...data>\"\n"
+"  },\n"
+"  ...\n"
+"}"
+msgstr ""
+">>> url = 'https://httpbin.org/post'\n"
+">>> files = {'file': ('report.xls', open('report.xls', 'rb'), 'application/"
+"vnd.ms-excel', {'Expires': '0'})}\n"
+"\n"
+">>> r = requests.post(url, files=files)\n"
+">>> r.text\n"
+"{\n"
+"  ...\n"
+"  \"files\": {\n"
+"    \"file\": \"<censored...binary...data>\"\n"
+"  },\n"
+"  ...\n"
+"}"
+
+#: ../../../user/quickstart.rst:338
+msgid "If you want, you can send strings to be received as files::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:340
+msgid ""
+">>> url = 'https://httpbin.org/post'\n"
+">>> files = {'file': ('report.csv', 'some,data,to,send\\nanother,row,to,"
+"send\\n')}\n"
+"\n"
+">>> r = requests.post(url, files=files)\n"
+">>> r.text\n"
+"{\n"
+"  ...\n"
+"  \"files\": {\n"
+"    \"file\": \"some,data,to,send\\\\nanother,row,to,send\\\\n\"\n"
+"  },\n"
+"  ...\n"
+"}"
+msgstr ""
+">>> url = 'https://httpbin.org/post'\n"
+">>> files = {'file': ('report.csv', 'some,data,to,send\\nanother,row,to,"
+"send\\n')}\n"
+"\n"
+">>> r = requests.post(url, files=files)\n"
+">>> r.text\n"
+"{\n"
+"  ...\n"
+"  \"files\": {\n"
+"    \"file\": \"some,data,to,send\\\\nanother,row,to,send\\\\n\"\n"
+"  },\n"
+"  ...\n"
+"}"
+
+#: ../../../user/quickstart.rst:353
+msgid ""
+"In the event you are posting a very large file as a ``multipart/form-data`` "
+"request, you may want to stream the request. By default, ``requests`` does "
+"not support this, but there is a separate package which does - ``requests-"
+"toolbelt``. You should read `the toolbelt's documentation <https://toolbelt."
+"readthedocs.io>`_ for more details about how to use it."
+msgstr ""
+
+#: ../../../user/quickstart.rst:359
+msgid ""
+"For sending multiple files in one request refer to the :ref:`advanced "
+"<advanced>` section."
+msgstr ""
+
+#: ../../../user/quickstart.rst:362
+msgid ""
+"It is strongly recommended that you open files in :ref:`binary mode <tut-"
+"files>`. This is because Requests may attempt to provide the ``Content-"
+"Length`` header for you, and if it does this value will be set to the number "
+"of *bytes* in the file. Errors may occur if you open the file in *text mode*."
+msgstr ""
+
+#: ../../../user/quickstart.rst:370
+msgid "Response Status Codes"
+msgstr ""
+
+#: ../../../user/quickstart.rst:372
+msgid "We can check the response status code::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:374
+msgid ""
+">>> r = requests.get('https://httpbin.org/get')\n"
+">>> r.status_code\n"
+"200"
+msgstr ""
+">>> r = requests.get('https://httpbin.org/get')\n"
+">>> r.status_code\n"
+"200"
+
+#: ../../../user/quickstart.rst:378
+msgid ""
+"Requests also comes with a built-in status code lookup object for easy "
+"reference::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:381
+msgid ""
+">>> r.status_code == requests.codes.ok\n"
+"True"
+msgstr ""
+">>> r.status_code == requests.codes.ok\n"
+"True"
+
+#: ../../../user/quickstart.rst:384
+msgid ""
+"If we made a bad request (a 4XX client error or 5XX server error response), "
+"we can raise it with :meth:`Response.raise_for_status() <requests.Response."
+"raise_for_status>`::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:388
+msgid ""
+">>> bad_r = requests.get('https://httpbin.org/status/404')\n"
+">>> bad_r.status_code\n"
+"404\n"
+"\n"
+">>> bad_r.raise_for_status()\n"
+"Traceback (most recent call last):\n"
+"  File \"requests/models.py\", line 832, in raise_for_status\n"
+"    raise http_error\n"
+"requests.exceptions.HTTPError: 404 Client Error"
+msgstr ""
+">>> bad_r = requests.get('https://httpbin.org/status/404')\n"
+">>> bad_r.status_code\n"
+"404\n"
+"\n"
+">>> bad_r.raise_for_status()\n"
+"Traceback (most recent call last):\n"
+"  File \"requests/models.py\", line 832, in raise_for_status\n"
+"    raise http_error\n"
+"requests.exceptions.HTTPError: 404 Client Error"
+
+#: ../../../user/quickstart.rst:398
+msgid ""
+"But, since our ``status_code`` for ``r`` was ``200``, when we call "
+"``raise_for_status()`` we get::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:401
+msgid ""
+">>> r.raise_for_status()\n"
+"None"
+msgstr ""
+">>> r.raise_for_status()\n"
+"None"
+
+#: ../../../user/quickstart.rst:404
+msgid "All is well."
+msgstr ""
+
+#: ../../../user/quickstart.rst:408
+msgid "Response Headers"
+msgstr ""
+
+#: ../../../user/quickstart.rst:410
+msgid "We can view the server's response headers using a Python dictionary::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:412
+msgid ""
+">>> r.headers\n"
+"{\n"
+"    'content-encoding': 'gzip',\n"
+"    'transfer-encoding': 'chunked',\n"
+"    'connection': 'close',\n"
+"    'server': 'nginx/1.0.4',\n"
+"    'x-runtime': '148ms',\n"
+"    'etag': '\"e1ca502697e5c9317743dc078f67693f\"',\n"
+"    'content-type': 'application/json'\n"
+"}"
+msgstr ""
+">>> r.headers\n"
+"{\n"
+"    'content-encoding': 'gzip',\n"
+"    'transfer-encoding': 'chunked',\n"
+"    'connection': 'close',\n"
+"    'server': 'nginx/1.0.4',\n"
+"    'x-runtime': '148ms',\n"
+"    'etag': '\"e1ca502697e5c9317743dc078f67693f\"',\n"
+"    'content-type': 'application/json'\n"
+"}"
+
+#: ../../../user/quickstart.rst:423
+msgid ""
+"The dictionary is special, though: it's made just for HTTP headers. "
+"According to `RFC 7230 <https://tools.ietf.org/html/rfc7230#section-3.2>`_, "
+"HTTP Header names are case-insensitive."
+msgstr ""
+
+#: ../../../user/quickstart.rst:427
+msgid "So, we can access the headers using any capitalization we want::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:429
+msgid ""
+">>> r.headers['Content-Type']\n"
+"'application/json'\n"
+"\n"
+">>> r.headers.get('content-type')\n"
+"'application/json'"
+msgstr ""
+">>> r.headers['Content-Type']\n"
+"'application/json'\n"
+"\n"
+">>> r.headers.get('content-type')\n"
+"'application/json'"
+
+#: ../../../user/quickstart.rst:435
+msgid ""
+"It is also special in that the server could have sent the same header "
+"multiple times with different values, but requests combines them so they can "
+"be represented in the dictionary within a single mapping, as per `RFC 7230 "
+"<https://tools.ietf.org/html/rfc7230#section-3.2>`_:"
+msgstr ""
+
+#: ../../../user/quickstart.rst:440
+msgid ""
+"A recipient MAY combine multiple header fields with the same field name into "
+"one \"field-name: field-value\" pair, without changing the semantics of the "
+"message, by appending each subsequent field value to the combined field "
+"value in order, separated by a comma."
+msgstr ""
+
+#: ../../../user/quickstart.rst:446
+msgid "Cookies"
+msgstr ""
+
+#: ../../../user/quickstart.rst:448
+msgid "If a response contains some Cookies, you can quickly access them::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:450
+msgid ""
+">>> url = 'http://example.com/some/cookie/setting/url'\n"
+">>> r = requests.get(url)\n"
+"\n"
+">>> r.cookies['example_cookie_name']\n"
+"'example_cookie_value'"
+msgstr ""
+">>> url = 'http://example.com/some/cookie/setting/url'\n"
+">>> r = requests.get(url)\n"
+"\n"
+">>> r.cookies['example_cookie_name']\n"
+"'example_cookie_value'"
+
+#: ../../../user/quickstart.rst:456
+msgid ""
+"To send your own cookies to the server, you can use the ``cookies`` "
+"parameter::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:459
+msgid ""
+">>> url = 'https://httpbin.org/cookies'\n"
+">>> cookies = dict(cookies_are='working')\n"
+"\n"
+">>> r = requests.get(url, cookies=cookies)\n"
+">>> r.text\n"
+"'{\"cookies\": {\"cookies_are\": \"working\"}}'"
+msgstr ""
+">>> url = 'https://httpbin.org/cookies'\n"
+">>> cookies = dict(cookies_are='working')\n"
+"\n"
+">>> r = requests.get(url, cookies=cookies)\n"
+">>> r.text\n"
+"'{\"cookies\": {\"cookies_are\": \"working\"}}'"
+
+#: ../../../user/quickstart.rst:466
+msgid ""
+"Cookies are returned in a :class:`~requests.cookies.RequestsCookieJar`, "
+"which acts like a ``dict`` but also offers a more complete interface, "
+"suitable for use over multiple domains or paths.  Cookie jars can also be "
+"passed in to requests::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:471
+msgid ""
+">>> jar = requests.cookies.RequestsCookieJar()\n"
+">>> jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')\n"
+">>> jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/"
+"elsewhere')\n"
+">>> url = 'https://httpbin.org/cookies'\n"
+">>> r = requests.get(url, cookies=jar)\n"
+">>> r.text\n"
+"'{\"cookies\": {\"tasty_cookie\": \"yum\"}}'"
+msgstr ""
+">>> jar = requests.cookies.RequestsCookieJar()\n"
+">>> jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')\n"
+">>> jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/"
+"elsewhere')\n"
+">>> url = 'https://httpbin.org/cookies'\n"
+">>> r = requests.get(url, cookies=jar)\n"
+">>> r.text\n"
+"'{\"cookies\": {\"tasty_cookie\": \"yum\"}}'"
+
+#: ../../../user/quickstart.rst:481
+msgid "Redirection and History"
+msgstr ""
+
+#: ../../../user/quickstart.rst:483
+msgid ""
+"By default Requests will perform location redirection for all verbs except "
+"HEAD."
+msgstr ""
+
+#: ../../../user/quickstart.rst:486
+msgid ""
+"We can use the ``history`` property of the Response object to track "
+"redirection."
+msgstr ""
+
+#: ../../../user/quickstart.rst:488
+msgid ""
+"The :attr:`Response.history <requests.Response.history>` list contains the :"
+"class:`Response <requests.Response>` objects that were created in order to "
+"complete the request. The list is sorted from the oldest to the most recent "
+"response."
+msgstr ""
+
+#: ../../../user/quickstart.rst:493
+msgid "For example, GitHub redirects all HTTP requests to HTTPS::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:495
+msgid ""
+">>> r = requests.get('http://github.com/')\n"
+"\n"
+">>> r.url\n"
+"'https://github.com/'\n"
+"\n"
+">>> r.status_code\n"
+"200\n"
+"\n"
+">>> r.history\n"
+"[<Response [301]>]"
+msgstr ""
+">>> r = requests.get('http://github.com/')\n"
+"\n"
+">>> r.url\n"
+"'https://github.com/'\n"
+"\n"
+">>> r.status_code\n"
+"200\n"
+"\n"
+">>> r.history\n"
+"[<Response [301]>]"
+
+#: ../../../user/quickstart.rst:507
+msgid ""
+"If you're using GET, OPTIONS, POST, PUT, PATCH or DELETE, you can disable "
+"redirection handling with the ``allow_redirects`` parameter::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:510
+msgid ""
+">>> r = requests.get('http://github.com/', allow_redirects=False)\n"
+"\n"
+">>> r.status_code\n"
+"301\n"
+"\n"
+">>> r.history\n"
+"[]"
+msgstr ""
+">>> r = requests.get('http://github.com/', allow_redirects=False)\n"
+"\n"
+">>> r.status_code\n"
+"301\n"
+"\n"
+">>> r.history\n"
+"[]"
+
+#: ../../../user/quickstart.rst:518
+msgid "If you're using HEAD, you can enable redirection as well::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:520
+msgid ""
+">>> r = requests.head('http://github.com/', allow_redirects=True)\n"
+"\n"
+">>> r.url\n"
+"'https://github.com/'\n"
+"\n"
+">>> r.history\n"
+"[<Response [301]>]"
+msgstr ""
+">>> r = requests.head('http://github.com/', allow_redirects=True)\n"
+"\n"
+">>> r.url\n"
+"'https://github.com/'\n"
+"\n"
+">>> r.history\n"
+"[<Response [301]>]"
+
+#: ../../../user/quickstart.rst:530
+msgid "Timeouts"
+msgstr ""
+
+#: ../../../user/quickstart.rst:532
+msgid ""
+"You can tell Requests to stop waiting for a response after a given number of "
+"seconds with the ``timeout`` parameter. Nearly all production code should "
+"use this parameter in nearly all requests. Failure to do so can cause your "
+"program to hang indefinitely::"
+msgstr ""
+
+#: ../../../user/quickstart.rst:537
+msgid ""
+">>> requests.get('https://github.com/', timeout=0.001)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"requests.exceptions.Timeout: HTTPConnectionPool(host='github.com', port=80): "
+"Request timed out. (timeout=0.001)"
+msgstr ""
+">>> requests.get('https://github.com/', timeout=0.001)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"requests.exceptions.Timeout: HTTPConnectionPool(host='github.com', port=80): "
+"Request timed out. (timeout=0.001)"
+
+#: ../../../user/quickstart.rst:543
+msgid "Note"
+msgstr ""
+
+#: ../../../user/quickstart.rst:545
+msgid ""
+"``timeout`` is not a time limit on the entire response download; rather, an "
+"exception is raised if the server has not issued a response for ``timeout`` "
+"seconds (more precisely, if no bytes have been received on the underlying "
+"socket for ``timeout`` seconds). If no timeout is specified explicitly, "
+"requests do not time out."
+msgstr ""
+
+#: ../../../user/quickstart.rst:553
+msgid "Errors and Exceptions"
+msgstr ""
+
+#: ../../../user/quickstart.rst:555
+msgid ""
+"In the event of a network problem (e.g. DNS failure, refused connection, "
+"etc), Requests will raise a :exc:`~requests.exceptions.ConnectionError` "
+"exception."
+msgstr ""
+
+#: ../../../user/quickstart.rst:558
+msgid ""
+":meth:`Response.raise_for_status() <requests.Response.raise_for_status>` "
+"will raise an :exc:`~requests.exceptions.HTTPError` if the HTTP request "
+"returned an unsuccessful status code."
+msgstr ""
+
+#: ../../../user/quickstart.rst:562
+msgid ""
+"If a request times out, a :exc:`~requests.exceptions.Timeout` exception is "
+"raised."
+msgstr ""
+
+#: ../../../user/quickstart.rst:565
+msgid ""
+"If a request exceeds the configured number of maximum redirections, a :exc:"
+"`~requests.exceptions.TooManyRedirects` exception is raised."
+msgstr ""
+
+#: ../../../user/quickstart.rst:568
+msgid ""
+"All exceptions that Requests explicitly raises inherit from :exc:`requests."
+"exceptions.RequestException`."
+msgstr ""
+
+#: ../../../user/quickstart.rst:573
+msgid "Ready for more? Check out the :ref:`advanced <advanced>` section."
+msgstr ""

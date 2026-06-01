@@ -1,0 +1,815 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) MMXVIX. A Kenneth Reitz Project
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/authors.rst:2
+msgid "Authors"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:1
+msgid "Requests was lovingly created by Kenneth Reitz."
+msgstr ""
+
+#: ../../../../AUTHORS.rst:4
+msgid "Requests Maintainers"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:6
+msgid ""
+"Ian Stapleton Cordasco <graffatcolmingov@gmail.com> `@sigmavirus24 <https://"
+"github.com/sigmavirus24>`_."
+msgstr ""
+
+#: ../../../../AUTHORS.rst:7
+msgid "Nate Prewitt `@nateprewitt <https://github.com/nateprewitt>`_."
+msgstr ""
+
+#: ../../../../AUTHORS.rst:10
+msgid "Previous Maintainers"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:12
+msgid ""
+"Kenneth Reitz <me@kennethreitz.org> `@kennethreitz <https://github.com/"
+"kennethreitz>`_, reluctant Keeper of the Master Crystal."
+msgstr ""
+
+#: ../../../../AUTHORS.rst:13
+msgid ""
+"Cory Benfield <cory@lukasa.co.uk> `@lukasa <https://github.com/lukasa>`_"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:14
+msgid "Seth M. Larson `@sethmlarson <https://github.com/sethmlarson>`_."
+msgstr ""
+
+#: ../../../../AUTHORS.rst:17
+msgid "Patches and Suggestions"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:19
+msgid "Various Pocoo Members"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:20
+msgid "Chris Adams"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:21
+msgid "Flavio Percoco Premoli"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:22
+msgid "Dj Gilcrease"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:23
+msgid "Justin Murphy"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:24
+msgid "Rob Madole"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:25
+msgid "Aram Dulyan"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:26
+msgid "Johannes Gorset"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:27
+msgid "村山めがね (Megane Murayama)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:28
+msgid "James Rowe"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:29
+msgid "Daniel Schauenberg"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:30
+msgid "Zbigniew Siciarz"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:31
+msgid "Daniele Tricoli 'Eriol'"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:32
+msgid "Richard Boulton"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:33
+msgid "Miguel Olivares <miguel@moliware.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:34
+msgid "Alberto Paro"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:35
+msgid "Jérémy Bethmont"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:36
+msgid "潘旭 (Xu Pan)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:37
+msgid "Tamás Gulácsi"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:38
+msgid "Rubén Abad"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:39
+msgid "Peter Manser"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:40
+msgid "Jeremy Selier"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:41
+msgid "Jens Diemer"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:42
+msgid "Alex (`@alopatin <https://github.com/alopatin>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:43
+msgid "Tom Hogans <tomhsx@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:44
+msgid "Armin Ronacher"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:45
+msgid "Shrikant Sharat Kandula"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:46
+msgid "Mikko Ohtamaa"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:47
+msgid "Den Shabalin"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:48
+msgid "Daniel Miller <danielm@vs-networks.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:49
+msgid "Alejandro Giacometti"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:50
+msgid "Rick Mak"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:51
+msgid "Johan Bergström"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:52
+msgid "Josselin Jacquard"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:53
+msgid "Travis N. Vaught"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:54
+msgid "Fredrik Möllerstrand"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:55
+msgid "Daniel Hengeveld"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:56
+msgid "Dan Head"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:57
+msgid "Bruno Renié"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:58
+msgid "David Fischer"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:59
+msgid "Joseph McCullough"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:60
+msgid "Juergen Brendel"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:61
+msgid "Juan Riaza"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:62
+msgid "Ryan Kelly"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:63
+msgid "Rolando Espinoza La fuente"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:64
+msgid "Robert Gieseke"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:65
+msgid "Idan Gazit"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:66
+msgid "Ed Summers"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:67
+msgid "Chris Van Horne"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:68
+msgid "Christopher Davis"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:69
+msgid "Ori Livneh"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:70
+msgid "Jason Emerick"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:71
+msgid "Bryan Helmig"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:72
+msgid "Jonas Obrist"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:73
+msgid "Lucian Ursu"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:74
+msgid "Tom Moertel"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:75
+msgid "Frank Kumro Jr"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:76
+msgid "Chase Sterling"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:77
+msgid "Marty Alchin"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:78
+msgid "takluyver"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:79
+msgid "Ben Toews (`@mastahyeti <https://github.com/mastahyeti>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:80
+msgid "David Kemp"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:81
+msgid "Brendon Crawford"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:82
+msgid "Denis (`@Telofy <https://github.com/Telofy>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:83
+msgid "Matt Giuca"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:84
+msgid "Adam Tauber"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:85
+msgid "Honza Javorek"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:86
+msgid "Brendan Maguire <maguire.brendan@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:87
+msgid "Chris Dary"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:88
+msgid "Danver Braganza <danverbraganza@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:89
+msgid "Max Countryman"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:90
+msgid "Nick Chadwick"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:91
+msgid "Jonathan Drosdeck"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:92
+msgid "Jiri Machalek"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:93
+msgid "Steve Pulec"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:94
+msgid "Michael Kelly"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:95
+msgid "Michael Newman <newmaniese@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:96
+msgid "Jonty Wareing <jonty@jonty.co.uk>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:97
+msgid "Shivaram Lingamneni"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:98
+msgid "Miguel Turner"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:99
+msgid "Rohan Jain (`@crodjer <https://github.com/crodjer>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:100
+msgid "Justin Barber <barber.justin@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:101
+msgid "Roman Haritonov (`@reclosedev <https://github.com/reclosedev>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:102
+msgid "Josh Imhoff <joshimhoff13@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:103
+msgid "Arup Malakar <amalakar@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:104
+msgid "Danilo Bargen (`@dbrgn <https://github.com/dbrgn>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:105
+msgid "Torsten Landschoff"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:106
+msgid "Michael Holler (`@apotheos <https://github.com/apotheos>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:107
+msgid "Timnit Gebru"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:108
+msgid "Sarah Gonzalez"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:109
+msgid "Victoria Mo"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:110
+msgid "Leila Muhtasib"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:111
+msgid "Matthias Rahlf <matthias@webding.de>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:112
+msgid "Jakub Roztocil <jakub@roztocil.name>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:113
+msgid "Rhys Elsmore"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:114
+msgid "André Graf (`@dergraf <https://github.com/dergraf>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:115
+msgid "Stephen Zhuang (`@everbird <https://github.com/everbird>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:116
+msgid "Martijn Pieters"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:117
+msgid "Jonatan Heyman"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:118
+msgid ""
+"David Bonner <dbonner@gmail.com> (`@rascalking <https://github.com/"
+"rascalking>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:119
+msgid "Vinod Chandru"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:120
+msgid "Johnny Goodnow <j.goodnow29@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:121
+msgid "Denis Ryzhkov <denisr@denisr.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:122
+msgid "Wilfred Hughes <me@wilfred.me.uk>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:123
+msgid "Dmitry Medvinsky <me@dmedvinsky.name>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:124
+msgid "Bryce Boe <bbzbryce@gmail.com> (`@bboe <https://github.com/bboe>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:125
+msgid ""
+"Colin Dunklau <colin.dunklau@gmail.com> (`@cdunklau <https://github.com/"
+"cdunklau>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:126
+msgid ""
+"Bob Carroll <bob.carroll@alum.rit.edu> (`@rcarz <https://github.com/rcarz>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:127
+msgid ""
+"Hugo Osvaldo Barrera <hugo@barrera.io> (`@hobarrera <https://github.com/"
+"hobarrera>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:128
+msgid "Łukasz Langa <lukasz@langa.pl>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:129
+msgid "Dave Shawley <daveshawley@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:130
+msgid "James Clarke (`@jam <https://github.com/jam>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:131
+msgid "Kevin Burke <kev@inburke.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:132
+msgid "Flavio Curella"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:133
+msgid ""
+"David Pursehouse <david.pursehouse@gmail.com> (`@dpursehouse <https://github."
+"com/dpursehouse>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:134
+msgid "Jon Parise (`@jparise <https://github.com/jparise>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:135
+msgid "Alexander Karpinsky (`@homm86 <https://twitter.com/homm86>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:136
+msgid "Marc Schlaich (`@schlamar <https://github.com/schlamar>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:137
+msgid ""
+"Park Ilsu <daftonshady@gmail.com> (`@daftshady <https://github.com/"
+"daftshady>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:138
+msgid "Matt Spitz (`@mattspitz <https://github.com/mattspitz>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:139
+msgid "Vikram Oberoi (`@voberoi <https://github.com/voberoi>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:140
+msgid ""
+"Can Ibanoglu <can.ibanoglu@gmail.com> (`@canibanoglu <https://github.com/"
+"canibanoglu>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:141
+msgid ""
+"Thomas Weißschuh <thomas@t-8ch.de> (`@t-8ch <https://github.com/t-8ch>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:142
+msgid "Jayson Vantuyl <jayson@aggressive.ly>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:143
+msgid "Pengfei.X <pengphy@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:144
+msgid "Kamil Madac <kamil.madac@gmail.com>"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:145
+msgid ""
+"Michael Becker <mike@beckerfuffle.com> (`@beckerfuffle <https://twitter.com/"
+"beckerfuffle>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:146
+msgid ""
+"Erik Wickstrom <erik@erikwickstrom.com> (`@erikwickstrom <https://github.com/"
+"erikwickstrom>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:147
+msgid "Константин Подшумок (`@podshumok <https://github.com/podshumok>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:148
+msgid "Ben Bass (`@codedstructure <https://github.com/codedstructure>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:149
+msgid ""
+"Jonathan Wong <evolutionace@gmail.com> (`@ContinuousFunction <https://github."
+"com/ContinuousFunction>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:150
+msgid "Martin Jul (`@mjul <https://github.com/mjul>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:151
+msgid "Joe Alcorn (`@buttscicles <https://github.com/buttscicles>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:152
+msgid ""
+"Syed Suhail Ahmed <ssuhail.ahmed93@gmail.com> (`@syedsuhail <https://github."
+"com/syedsuhail>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:153
+msgid "Scott Sadler (`@ssadler <https://github.com/ssadler>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:154
+msgid "Arthur Darcet (`@arthurdarcet <https://github.com/arthurdarcet>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:155
+msgid "Ulrich Petri (`@ulope <https://github.com/ulope>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:156
+msgid ""
+"Muhammad Yasoob Ullah Khalid <yasoob.khld@gmail.com> (`@yasoob <https://"
+"github.com/yasoob>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:157
+msgid ""
+"Paul van der Linden (`@pvanderlinden <https://github.com/pvanderlinden>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:158
+msgid "Colin Dickson (`@colindickson <https://github.com/colindickson>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:159
+msgid "Smiley Barry (`@smiley <https://github.com/smiley>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:160
+msgid "Shagun Sodhani (`@shagunsodhani <https://github.com/shagunsodhani>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:161
+msgid "Robin Linderborg (`@vienno <https://github.com/vienno>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:162
+msgid "Brian Samek (`@bsamek <https://github.com/bsamek>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:163
+msgid "Dmitry Dygalo (`@Stranger6667 <https://github.com/Stranger6667>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:164
+msgid "piotrjurkiewicz"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:165
+msgid ""
+"Jesse Shapiro <jesse@jesseshapiro.net> (`@haikuginger <https://github.com/"
+"haikuginger>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:166
+msgid ""
+"Nate Prewitt <nate.prewitt@gmail.com> (`@nateprewitt <https://github.com/"
+"nateprewitt>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:167
+msgid "Maik Himstedt"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:168
+msgid "Michael Hunsinger"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:169
+msgid ""
+"Brian Bamsch <bbamsch32@gmail.com> (`@bbamsch <https://github.com/bbamsch>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:170
+msgid ""
+"Om Prakash Kumar <omprakash070@gmail.com> (`@iamprakashom <https://github."
+"com/iamprakashom>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:171
+msgid ""
+"Philipp Konrad <gardiac2002@gmail.com> (`@gardiac2002 <https://github.com/"
+"gardiac2002>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:172
+msgid ""
+"Hussain Tamboli <hussaintamboli18@gmail.com> (`@hussaintamboli <https://"
+"github.com/hussaintamboli>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:173
+msgid "Casey Davidson (`@davidsoncasey <https://github.com/davidsoncasey>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:174
+msgid ""
+"Andrii Soldatenko (`@a_soldatenko <https://github.com/andriisoldatenko>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:175
+msgid ""
+"Moinuddin Quadri <moin18@gmail.com> (`@moin18 <https://github.com/moin18>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:176
+msgid "Matt Kohl (`@mattkohl <https://github.com/mattkohl>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:177
+msgid "Jonathan Vanasco (`@jvanasco <https://github.com/jvanasco>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:178
+msgid "David Fontenot (`@davidfontenot <https://github.com/davidfontenot>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:179
+msgid "Shmuel Amar (`@shmuelamar <https://github.com/shmuelamar>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:180
+msgid "Gary Wu (`@garywu <https://github.com/garywu>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:181
+msgid "Ryan Pineo (`@ryanpineo <https://github.com/ryanpineo>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:182
+msgid "Ed Morley (`@edmorley <https://github.com/edmorley>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:183
+msgid "Matt Liu <liumatt@gmail.com> (`@mlcrazy <https://github.com/mlcrazy>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:184
+msgid ""
+"Taylor Hoff <primdevs@protonmail.com> (`@PrimordialHelios <https://github."
+"com/PrimordialHelios>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:185
+msgid "Arthur Vigil (`@ahvigil <https://github.com/ahvigil>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:186
+msgid "Nehal J Wani (`@nehaljwani <https://github.com/nehaljwani>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:187
+msgid ""
+"Demetrios Bairaktaris (`@DemetriosBairaktaris <https://github.com/"
+"demetriosbairaktaris>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:188
+msgid "Darren Dormer (`@ddormer <https://github.com/ddormer>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:189
+msgid "Rajiv Mayani (`@mayani <https://github.com/mayani>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:190
+msgid "Antti Kaihola (`@akaihola <https://github.com/akaihola>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:191
+msgid ""
+"\"Dull Bananas\" <dull.bananas0@gmail.com> (`@dullbananas <https://github."
+"com/dullbananas>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:192
+msgid "Alessio Izzo (`@aless10 <https://github.com/aless10>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:193
+msgid "Sylvain Marié (`@smarie <https://github.com/smarie>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:194
+msgid "Hod Bin Noon (`@hodbn <https://github.com/hodbn>`_)"
+msgstr ""
+
+#: ../../../../AUTHORS.rst:195
+msgid "Mike Fiedler (`@miketheman <https://github.com/miketheman>`_)"
+msgstr ""

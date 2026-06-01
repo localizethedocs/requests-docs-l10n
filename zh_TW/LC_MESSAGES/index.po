@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) MMXVIX. A Kenneth Reitz Project
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:7
+msgid "Requests: HTTP for Humans™"
+msgstr ""
+
+#: ../../../index.rst:9
+msgid "Release v\\ |version|. (:ref:`Installation <install>`)"
+msgstr ""
+
+#: ../../../index.rst:-1
+msgid "Requests Downloads Per Month Badge"
+msgstr ""
+
+#: ../../../index.rst:-1
+msgid "License Badge"
+msgstr "授權條款徽章"
+
+#: ../../../index.rst:-1
+msgid "Wheel Support Badge"
+msgstr ""
+
+#: ../../../index.rst:-1
+msgid "Python Version Support Badge"
+msgstr ""
+
+#: ../../../index.rst:28
+msgid ""
+"**Requests** is an elegant and simple HTTP library for Python, built for "
+"human beings."
+msgstr "**Requests** 是一個優雅而簡單的 Python HTTP 程式庫，專為人類設計。"
+
+#: ../../../index.rst:32
+msgid "**Behold, the power of Requests**::"
+msgstr "**請看，這就是 Requests 的力量**：\\ ::"
+
+#: ../../../index.rst:34
+msgid ""
+">>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))\n"
+">>> r.status_code\n"
+"200\n"
+">>> r.headers['content-type']\n"
+"'application/json; charset=utf8'\n"
+">>> r.encoding\n"
+"'utf-8'\n"
+">>> r.text\n"
+"'{\"type\":\"User\"...'\n"
+">>> r.json()\n"
+"{'private_gists': 419, 'total_private_repos': 77, ...}"
+msgstr ""
+">>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))\n"
+">>> r.status_code\n"
+"200\n"
+">>> r.headers['content-type']\n"
+"'application/json; charset=utf8'\n"
+">>> r.encoding\n"
+"'utf-8'\n"
+">>> r.text\n"
+"'{\"type\":\"User\"...'\n"
+">>> r.json()\n"
+"{'private_gists': 419, 'total_private_repos': 77, ...}"
+
+#: ../../../index.rst:46
+msgid "See `similar code, sans Requests <https://gist.github.com/973705>`_."
+msgstr ""
+
+#: ../../../index.rst:49
+msgid ""
+"**Requests** allows you to send HTTP/1.1 requests extremely easily. There's "
+"no need to manually add query strings to your URLs, or to form-encode your "
+"POST data. Keep-alive and HTTP connection pooling are 100% automatic, thanks "
+"to `urllib3 <https://github.com/urllib3/urllib3>`_."
+msgstr ""
+
+#: ../../../index.rst:55
+msgid "Beloved Features"
+msgstr ""
+
+#: ../../../index.rst:57
+msgid "Requests is ready for today's web."
+msgstr ""
+
+#: ../../../index.rst:59
+msgid "Keep-Alive & Connection Pooling"
+msgstr ""
+
+#: ../../../index.rst:60
+msgid "International Domains and URLs"
+msgstr ""
+
+#: ../../../index.rst:61
+msgid "Sessions with Cookie Persistence"
+msgstr ""
+
+#: ../../../index.rst:62
+msgid "Browser-style SSL Verification"
+msgstr ""
+
+#: ../../../index.rst:63
+msgid "Automatic Content Decoding"
+msgstr "自動內容解碼"
+
+#: ../../../index.rst:64
+msgid "Basic/Digest Authentication"
+msgstr ""
+
+#: ../../../index.rst:65
+msgid "Elegant Key/Value Cookies"
+msgstr ""
+
+#: ../../../index.rst:66
+msgid "Automatic Decompression"
+msgstr "自動解壓縮"
+
+#: ../../../index.rst:67
+msgid "Unicode Response Bodies"
+msgstr ""
+
+#: ../../../index.rst:68
+msgid "HTTP(S) Proxy Support"
+msgstr ""
+
+#: ../../../index.rst:69
+msgid "Multipart File Uploads"
+msgstr "多部份檔案上傳"
+
+#: ../../../index.rst:70
+msgid "Streaming Downloads"
+msgstr ""
+
+#: ../../../index.rst:71
+msgid "Connection Timeouts"
+msgstr ""
+
+#: ../../../index.rst:72
+msgid "Chunked Requests"
+msgstr ""
+
+#: ../../../index.rst:73
+msgid "``.netrc`` Support"
+msgstr "``.netrc`` 支援"
+
+#: ../../../index.rst:75
+msgid "Requests officially supports Python 3.9+, and runs great on PyPy."
+msgstr ""
+
+#: ../../../index.rst:79
+msgid "The User Guide"
+msgstr "使用者指南"
+
+#: ../../../index.rst:81
+msgid ""
+"This part of the documentation, which is mostly prose, begins with some "
+"background information about Requests, then focuses on step-by-step "
+"instructions for getting the most out of Requests."
+msgstr ""
+
+#: ../../../index.rst:95
+msgid "The Community Guide"
+msgstr "社群指南"
+
+#: ../../../index.rst:97
+msgid ""
+"This part of the documentation, which is mostly prose, details the Requests "
+"ecosystem and community."
+msgstr ""
+
+#: ../../../index.rst:116
+msgid "The API Documentation / Guide"
+msgstr "API 文件/指南"
+
+#: ../../../index.rst:118
+msgid ""
+"If you are looking for information on a specific function, class, or method, "
+"this part of the documentation is for you."
+msgstr ""
+
+#: ../../../index.rst:128
+msgid "The Contributor Guide"
+msgstr "貢獻者指南"
+
+#: ../../../index.rst:130
+msgid ""
+"If you want to contribute to the project, this part of the documentation is "
+"for you."
+msgstr ""
+
+#: ../../../index.rst:139
+msgid "There are no more guides. You are now guideless. Good luck."
+msgstr ""

@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) MMXVIX. A Kenneth Reitz Project
+# This file is distributed under the same license as the Requests package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Requests stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../community/recommended.rst:4
+msgid "Recommended Packages and Extensions"
+msgstr ""
+
+#: ../../../community/recommended.rst:6
+msgid ""
+"Requests has a great variety of powerful and useful third-party extensions. "
+"This page provides an overview of some of the best of them."
+msgstr ""
+
+#: ../../../community/recommended.rst:10
+msgid "Certifi CA Bundle"
+msgstr ""
+
+#: ../../../community/recommended.rst:12
+msgid ""
+"`Certifi`_ is a carefully curated collection of Root Certificates for "
+"validating the trustworthiness of SSL certificates while verifying the "
+"identity of TLS hosts. It has been extracted from the Requests project."
+msgstr ""
+
+#: ../../../community/recommended.rst:19
+msgid "CacheControl"
+msgstr ""
+
+#: ../../../community/recommended.rst:21
+msgid ""
+"`CacheControl`_ is an extension that adds a full HTTP cache to Requests. "
+"This makes your web requests substantially more efficient, and should be "
+"used whenever you're making a lot of web requests."
+msgstr ""
+
+#: ../../../community/recommended.rst:28
+msgid "Requests-Toolbelt"
+msgstr ""
+
+#: ../../../community/recommended.rst:30
+msgid ""
+"`Requests-Toolbelt`_ is a collection of utilities that some users of "
+"Requests may desire, but do not belong in Requests proper. This library is "
+"actively maintained by members of the Requests core team, and reflects the "
+"functionality most requested by users within the community."
+msgstr ""
+
+#: ../../../community/recommended.rst:39
+msgid "Requests-Threads"
+msgstr ""
+
+#: ../../../community/recommended.rst:41
+msgid ""
+"`Requests-Threads`_ is a Requests session that returns the amazing Twisted's "
+"awaitable Deferreds instead of Response objects. This allows the use of "
+"``async``/``await`` keyword usage on Python 3, or Twisted's style of "
+"programming, if desired."
+msgstr ""
+
+#: ../../../community/recommended.rst:46
+msgid "Requests-OAuthlib"
+msgstr ""
+
+#: ../../../community/recommended.rst:48
+msgid ""
+"`requests-oauthlib`_ makes it possible to do the OAuth dance from Requests "
+"automatically. This is useful for the large number of websites that use "
+"OAuth to provide authentication. It also provides a lot of tweaks that "
+"handle ways that specific OAuth providers differ from the standard "
+"specifications."
+msgstr ""
+
+#: ../../../community/recommended.rst:57
+msgid "Betamax"
+msgstr ""
+
+#: ../../../community/recommended.rst:59
+msgid ""
+"`Betamax`_ records your HTTP interactions so the NSA does not have to. A VCR "
+"imitation designed only for Python-Requests."
+msgstr ""
