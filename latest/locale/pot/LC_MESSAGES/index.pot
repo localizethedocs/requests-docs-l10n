@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Requests latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"POT-Creation-Date: 2026-06-01 14:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,32 +26,36 @@ msgid "Release v\\ |version|. (:ref:`Installation <install>`)"
 msgstr ""
 
 #: ../../../index.rst:-1
-msgid "Requests Downloads Per Month Badge"
+msgid "PyPI Version Badge"
 msgstr ""
 
 #: ../../../index.rst:-1
-msgid "License Badge"
+msgid "Supported Versions Badge"
 msgstr ""
 
 #: ../../../index.rst:-1
-msgid "Wheel Support Badge"
+msgid "Downloads Per Month Badge"
 msgstr ""
 
 #: ../../../index.rst:-1
-msgid "Python Version Support Badge"
+msgid "Contributors Badge"
 msgstr ""
 
-#: ../../../index.rst:28
+#: ../../../index.rst:-1
+msgid "Documentation Badge"
+msgstr ""
+
+#: ../../../index.rst:32
 msgid ""
 "**Requests** is an elegant and simple HTTP library for Python, built for "
 "human beings."
 msgstr ""
 
-#: ../../../index.rst:32
+#: ../../../index.rst:36
 msgid "**Behold, the power of Requests**::"
 msgstr ""
 
-#: ../../../index.rst:34
+#: ../../../index.rst:38
 msgid ""
 ">>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))\n"
 ">>> r.status_code\n"
@@ -65,11 +70,11 @@ msgid ""
 "{'private_gists': 419, 'total_private_repos': 77, ...}"
 msgstr ""
 
-#: ../../../index.rst:46
+#: ../../../index.rst:50
 msgid "See `similar code, sans Requests <https://gist.github.com/973705>`_."
 msgstr ""
 
-#: ../../../index.rst:49
+#: ../../../index.rst:53
 msgid ""
 "**Requests** allows you to send HTTP/1.1 requests extremely easily. There's "
 "no need to manually add query strings to your URLs, or to form-encode your "
@@ -77,119 +82,119 @@ msgid ""
 "to `urllib3 <https://github.com/urllib3/urllib3>`_."
 msgstr ""
 
-#: ../../../index.rst:55
+#: ../../../index.rst:59
 msgid "Beloved Features"
 msgstr ""
 
-#: ../../../index.rst:57
+#: ../../../index.rst:61
 msgid "Requests is ready for today's web."
 msgstr ""
 
-#: ../../../index.rst:59
+#: ../../../index.rst:63
 msgid "Keep-Alive & Connection Pooling"
 msgstr ""
 
-#: ../../../index.rst:60
+#: ../../../index.rst:64
 msgid "International Domains and URLs"
 msgstr ""
 
-#: ../../../index.rst:61
+#: ../../../index.rst:65
 msgid "Sessions with Cookie Persistence"
 msgstr ""
 
-#: ../../../index.rst:62
+#: ../../../index.rst:66
 msgid "Browser-style SSL Verification"
 msgstr ""
 
-#: ../../../index.rst:63
+#: ../../../index.rst:67
 msgid "Automatic Content Decoding"
 msgstr ""
 
-#: ../../../index.rst:64
+#: ../../../index.rst:68
 msgid "Basic/Digest Authentication"
 msgstr ""
 
-#: ../../../index.rst:65
+#: ../../../index.rst:69
 msgid "Elegant Key/Value Cookies"
 msgstr ""
 
-#: ../../../index.rst:66
+#: ../../../index.rst:70
 msgid "Automatic Decompression"
 msgstr ""
 
-#: ../../../index.rst:67
+#: ../../../index.rst:71
 msgid "Unicode Response Bodies"
 msgstr ""
 
-#: ../../../index.rst:68
+#: ../../../index.rst:72
 msgid "HTTP(S) Proxy Support"
 msgstr ""
 
-#: ../../../index.rst:69
+#: ../../../index.rst:73
 msgid "Multipart File Uploads"
 msgstr ""
 
-#: ../../../index.rst:70
+#: ../../../index.rst:74
 msgid "Streaming Downloads"
 msgstr ""
 
-#: ../../../index.rst:71
+#: ../../../index.rst:75
 msgid "Connection Timeouts"
 msgstr ""
 
-#: ../../../index.rst:72
+#: ../../../index.rst:76
 msgid "Chunked Requests"
 msgstr ""
 
-#: ../../../index.rst:73
+#: ../../../index.rst:77
 msgid "``.netrc`` Support"
 msgstr ""
 
-#: ../../../index.rst:75
-msgid "Requests officially supports Python 3.9+, and runs great on PyPy."
+#: ../../../index.rst:79
+msgid "Requests officially supports Python 3.10+, and runs great on PyPy."
 msgstr ""
 
-#: ../../../index.rst:79
+#: ../../../index.rst:83
 msgid "The User Guide"
 msgstr ""
 
-#: ../../../index.rst:81
+#: ../../../index.rst:85
 msgid ""
 "This part of the documentation, which is mostly prose, begins with some "
 "background information about Requests, then focuses on step-by-step "
 "instructions for getting the most out of Requests."
 msgstr ""
 
-#: ../../../index.rst:95
+#: ../../../index.rst:99
 msgid "The Community Guide"
 msgstr ""
 
-#: ../../../index.rst:97
+#: ../../../index.rst:101
 msgid ""
 "This part of the documentation, which is mostly prose, details the Requests "
 "ecosystem and community."
 msgstr ""
 
-#: ../../../index.rst:116
+#: ../../../index.rst:120
 msgid "The API Documentation / Guide"
 msgstr ""
 
-#: ../../../index.rst:118
+#: ../../../index.rst:122
 msgid ""
 "If you are looking for information on a specific function, class, or method, "
 "this part of the documentation is for you."
 msgstr ""
 
-#: ../../../index.rst:128
+#: ../../../index.rst:132
 msgid "The Contributor Guide"
 msgstr ""
 
-#: ../../../index.rst:130
+#: ../../../index.rst:134
 msgid ""
 "If you want to contribute to the project, this part of the documentation is "
 "for you."
 msgstr ""
 
-#: ../../../index.rst:139
+#: ../../../index.rst:143
 msgid "There are no more guides. You are now guideless. Good luck."
 msgstr ""

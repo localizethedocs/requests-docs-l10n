@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Requests latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"POT-Creation-Date: 2026-06-01 14:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -98,6 +99,8 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.get:4 requests.api.request:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
+#: requests.sessions.Session.get:4
 msgid ""
 "(optional) Dictionary, list of tuples or bytes to send in the query string "
 "for the :class:`Request`."
@@ -288,7 +291,7 @@ msgstr ""
 #: of requests.api.delete:4 requests.api.get:6 requests.api.patch:7
 #: requests.api.post:7 requests.api.put:7
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
-#: requests.sessions.Session.delete:4 requests.sessions.Session.get:4
+#: requests.sessions.Session.delete:4 requests.sessions.Session.get:6
 #: requests.sessions.Session.head:4 requests.sessions.Session.options:4
 #: requests.sessions.Session.patch:6 requests.sessions.Session.post:7
 #: requests.sessions.Session.put:6
@@ -874,8 +877,10 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
 #: of requests.models.Response.iter_content:13
 msgid ""
-"If decode_unicode is True, content will be decoded using the best available "
-"encoding based on the response."
+"If decode_unicode is True, content will be decoded using encoding "
+"information from the response. If no encoding information is available, "
+"bytes will be returned. This can be bypassed by manually setting `encoding` "
+"on the response."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
@@ -888,6 +893,13 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
 #: of requests.models.Response.iter_lines:5
+msgid ""
+"The decode_unicode param works the same as in `iter_content`, with the same "
+"caveats."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/requests/models.py:docstring
+#: of requests.models.Response.iter_lines:8
 msgid "This method is not reentrant safe."
 msgstr ""
 
@@ -1298,7 +1310,7 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
 #: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:29
-msgid "The PreparedReqest being sent over the connection."
+msgid "The PreparedRequest being sent over the connection."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
