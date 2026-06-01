@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Requests stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 12:54+0000\n"
+"POT-Creation-Date: 2026-06-01 13:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -717,17 +718,18 @@ msgstr ""
 msgid ""
 ">>> r = requests.get('https://httpbin.org/', hooks={'response': [print_url, "
 "record_hook]})\n"
+"https://httpbin.org/\n"
 ">>> r.hook_called\n"
 "True"
 msgstr ""
 
-#: ../../../user/advanced.rst:473
+#: ../../../user/advanced.rst:474
 msgid ""
 "You can also add hooks to a ``Session`` instance.  Any hooks you add will "
 "then be called on every request made to the session.  For example::"
 msgstr ""
 
-#: ../../../user/advanced.rst:476
+#: ../../../user/advanced.rst:477
 msgid ""
 ">>> s = requests.Session()\n"
 ">>> s.hooks['response'].append(print_url)\n"
@@ -736,27 +738,27 @@ msgid ""
 " <Response [200]>"
 msgstr ""
 
-#: ../../../user/advanced.rst:482
+#: ../../../user/advanced.rst:483
 msgid ""
 "A ``Session`` can have multiple hooks, which will be called in the order "
 "they are added."
 msgstr ""
 
-#: ../../../user/advanced.rst:488
+#: ../../../user/advanced.rst:489
 msgid "Custom Authentication"
 msgstr ""
 
-#: ../../../user/advanced.rst:490
+#: ../../../user/advanced.rst:491
 msgid "Requests allows you to specify your own authentication mechanism."
 msgstr ""
 
-#: ../../../user/advanced.rst:492
+#: ../../../user/advanced.rst:493
 msgid ""
 "Any callable which is passed as the ``auth`` argument to a request method "
 "will have the opportunity to modify the request before it is dispatched."
 msgstr ""
 
-#: ../../../user/advanced.rst:495
+#: ../../../user/advanced.rst:496
 msgid ""
 "Authentication implementations are subclasses of :class:`AuthBase <requests."
 "auth.AuthBase>`, and are easy to define. Requests provides two common "
@@ -765,13 +767,13 @@ msgid ""
 "<requests.auth.HTTPDigestAuth>`."
 msgstr ""
 
-#: ../../../user/advanced.rst:500
+#: ../../../user/advanced.rst:501
 msgid ""
 "Let's pretend that we have a web service that will only respond if the ``X-"
 "Pizza`` header is set to a password value. Unlikely, but just go with it."
 msgstr ""
 
-#: ../../../user/advanced.rst:505
+#: ../../../user/advanced.rst:506
 msgid ""
 "from requests.auth import AuthBase\n"
 "\n"
@@ -788,21 +790,21 @@ msgid ""
 "        return r"
 msgstr ""
 
-#: ../../../user/advanced.rst:518
+#: ../../../user/advanced.rst:519
 msgid "Then, we can make a request using our Pizza Auth::"
 msgstr ""
 
-#: ../../../user/advanced.rst:520
+#: ../../../user/advanced.rst:521
 msgid ""
 ">>> requests.get('http://pizzabin.org/admin', auth=PizzaAuth('kenneth'))\n"
 "<Response [200]>"
 msgstr ""
 
-#: ../../../user/advanced.rst:526
+#: ../../../user/advanced.rst:527
 msgid "Streaming Requests"
 msgstr ""
 
-#: ../../../user/advanced.rst:528
+#: ../../../user/advanced.rst:529
 msgid ""
 "With :meth:`Response.iter_lines() <requests.Response.iter_lines>` you can "
 "easily iterate over streaming APIs such as the `Twitter Streaming API "
@@ -811,7 +813,7 @@ msgid ""
 "iter_lines()`::"
 msgstr ""
 
-#: ../../../user/advanced.rst:534
+#: ../../../user/advanced.rst:535
 msgid ""
 "import json\n"
 "import requests\n"
@@ -826,7 +828,7 @@ msgid ""
 "        print(json.loads(decoded_line))"
 msgstr ""
 
-#: ../../../user/advanced.rst:546
+#: ../../../user/advanced.rst:547
 msgid ""
 "When using `decode_unicode=True` with :meth:`Response.iter_lines() <requests."
 "Response.iter_lines>` or :meth:`Response.iter_content() <requests.Response."
@@ -834,7 +836,7 @@ msgid ""
 "server doesn't provide one::"
 msgstr ""
 
-#: ../../../user/advanced.rst:551
+#: ../../../user/advanced.rst:552
 msgid ""
 "r = requests.get('https://httpbin.org/stream/20', stream=True)\n"
 "\n"
@@ -846,7 +848,7 @@ msgid ""
 "        print(json.loads(line))"
 msgstr ""
 
-#: ../../../user/advanced.rst:562
+#: ../../../user/advanced.rst:563
 msgid ""
 ":meth:`~requests.Response.iter_lines()` is not reentrant safe. Calling this "
 "method multiple times causes some of the received data being lost. In case "
@@ -854,7 +856,7 @@ msgid ""
 "instead::"
 msgstr ""
 
-#: ../../../user/advanced.rst:567
+#: ../../../user/advanced.rst:568
 msgid ""
 "lines = r.iter_lines()\n"
 "# Save the first line for later or just skip it\n"
@@ -865,17 +867,17 @@ msgid ""
 "    print(line)"
 msgstr ""
 
-#: ../../../user/advanced.rst:578
+#: ../../../user/advanced.rst:579
 msgid "Proxies"
 msgstr ""
 
-#: ../../../user/advanced.rst:580
+#: ../../../user/advanced.rst:581
 msgid ""
 "If you need to use a proxy, you can configure individual requests with the "
 "``proxies`` argument to any request method::"
 msgstr ""
 
-#: ../../../user/advanced.rst:583
+#: ../../../user/advanced.rst:584
 msgid ""
 "import requests\n"
 "\n"
@@ -887,13 +889,13 @@ msgid ""
 "requests.get('http://example.org', proxies=proxies)"
 msgstr ""
 
-#: ../../../user/advanced.rst:592
+#: ../../../user/advanced.rst:593
 msgid ""
 "Alternatively you can configure it once for an entire :class:`Session "
 "<requests.Session>`::"
 msgstr ""
 
-#: ../../../user/advanced.rst:595
+#: ../../../user/advanced.rst:596
 msgid ""
 "import requests\n"
 "\n"
@@ -907,7 +909,7 @@ msgid ""
 "session.get('http://example.org')"
 msgstr ""
 
-#: ../../../user/advanced.rst:606
+#: ../../../user/advanced.rst:607
 msgid ""
 "Setting ``session.proxies`` may behave differently than expected. Values "
 "provided will be overwritten by environmental proxies (those returned by "
@@ -917,11 +919,11 @@ msgid ""
 "argument on all individual requests as initially explained above."
 msgstr ""
 
-#: ../../../user/advanced.rst:613
+#: ../../../user/advanced.rst:614
 msgid "See `#2018 <https://github.com/psf/requests/issues/2018>`_ for details."
 msgstr ""
 
-#: ../../../user/advanced.rst:615
+#: ../../../user/advanced.rst:616
 msgid ""
 "When the proxies configuration is not overridden per request as shown above, "
 "Requests relies on the proxy configuration defined by standard environment "
@@ -930,7 +932,7 @@ msgid ""
 "set them to configure Requests (only set the ones relevant to your needs)::"
 msgstr ""
 
-#: ../../../user/advanced.rst:622
+#: ../../../user/advanced.rst:623
 msgid ""
 "$ export HTTP_PROXY=\"http://10.10.1.10:3128\"\n"
 "$ export HTTPS_PROXY=\"http://10.10.1.10:1080\"\n"
@@ -941,13 +943,13 @@ msgid ""
 ">>> requests.get('http://example.org')"
 msgstr ""
 
-#: ../../../user/advanced.rst:630
+#: ../../../user/advanced.rst:631
 msgid ""
 "To use HTTP Basic Auth with your proxy, use the `http://user:password@host/` "
 "syntax in any of the above configuration entries::"
 msgstr ""
 
-#: ../../../user/advanced.rst:633
+#: ../../../user/advanced.rst:634
 msgid ""
 "$ export HTTPS_PROXY=\"http://user:pass@10.10.1.10:1080\"\n"
 "\n"
@@ -955,49 +957,49 @@ msgid ""
 ">>> proxies = {'http': 'http://user:pass@10.10.1.10:3128/'}"
 msgstr ""
 
-#: ../../../user/advanced.rst:638
+#: ../../../user/advanced.rst:639
 msgid ""
 "Storing sensitive username and password information in an environment "
 "variable or a version-controlled file is a security risk and is highly "
 "discouraged."
 msgstr ""
 
-#: ../../../user/advanced.rst:642
+#: ../../../user/advanced.rst:643
 msgid ""
 "To give a proxy for a specific scheme and host, use the `scheme://hostname` "
 "form for the key.  This will match for any request to the given scheme and "
 "exact hostname."
 msgstr ""
 
-#: ../../../user/advanced.rst:648
+#: ../../../user/advanced.rst:649
 msgid "proxies = {'http://10.20.1.128': 'http://10.10.1.10:5323'}"
 msgstr ""
 
-#: ../../../user/advanced.rst:650
+#: ../../../user/advanced.rst:651
 msgid "Note that proxy URLs must include the scheme."
 msgstr ""
 
-#: ../../../user/advanced.rst:652
+#: ../../../user/advanced.rst:653
 msgid ""
 "Finally, note that using a proxy for https connections typically requires "
 "your local machine to trust the proxy's root certificate. By default the "
 "list of certificates trusted by Requests can be found with::"
 msgstr ""
 
-#: ../../../user/advanced.rst:656
+#: ../../../user/advanced.rst:657
 msgid ""
 "from requests.utils import DEFAULT_CA_BUNDLE_PATH\n"
 "print(DEFAULT_CA_BUNDLE_PATH)"
 msgstr ""
 
-#: ../../../user/advanced.rst:659
+#: ../../../user/advanced.rst:660
 msgid ""
 "You override this default certificate bundle by setting the "
 "``REQUESTS_CA_BUNDLE`` (or ``CURL_CA_BUNDLE``) environment variable to "
 "another file path::"
 msgstr ""
 
-#: ../../../user/advanced.rst:662
+#: ../../../user/advanced.rst:663
 msgid ""
 "$ export REQUESTS_CA_BUNDLE=\"/usr/local/myproxy_info/cacert.pem\"\n"
 "$ export https_proxy=\"http://10.10.1.10:1080\"\n"
@@ -1007,32 +1009,32 @@ msgid ""
 ">>> requests.get('https://example.org')"
 msgstr ""
 
-#: ../../../user/advanced.rst:672
+#: ../../../user/advanced.rst:673
 msgid "SOCKS"
 msgstr ""
 
-#: ../../../user/advanced.rst:676
+#: ../../../user/advanced.rst:677
 msgid ""
 "In addition to basic HTTP proxies, Requests also supports proxies using the "
 "SOCKS protocol. This is an optional feature that requires that additional "
 "third-party libraries be installed before use."
 msgstr ""
 
-#: ../../../user/advanced.rst:680
+#: ../../../user/advanced.rst:681
 msgid "You can get the dependencies for this feature from ``pip``::"
 msgstr ""
 
-#: ../../../user/advanced.rst:682
+#: ../../../user/advanced.rst:683
 msgid "$ python -m pip install 'requests[socks]'"
 msgstr ""
 
-#: ../../../user/advanced.rst:684
+#: ../../../user/advanced.rst:685
 msgid ""
 "Once you've installed those dependencies, using a SOCKS proxy is just as "
 "easy as using a HTTP one::"
 msgstr ""
 
-#: ../../../user/advanced.rst:687
+#: ../../../user/advanced.rst:688
 msgid ""
 "proxies = {\n"
 "    'http': 'socks5://user:pass@host:port',\n"
@@ -1040,7 +1042,7 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../user/advanced.rst:692
+#: ../../../user/advanced.rst:693
 msgid ""
 "Using the scheme ``socks5`` causes the DNS resolution to happen on the "
 "client, rather than on the proxy server. This is in line with curl, which "
@@ -1049,11 +1051,11 @@ msgid ""
 "``socks5h`` as the scheme."
 msgstr ""
 
-#: ../../../user/advanced.rst:697
+#: ../../../user/advanced.rst:698
 msgid "Compliance"
 msgstr ""
 
-#: ../../../user/advanced.rst:699
+#: ../../../user/advanced.rst:700
 msgid ""
 "Requests is intended to be compliant with all relevant specifications and "
 "RFCs where that compliance will not cause difficulties for users. This "
@@ -1061,11 +1063,11 @@ msgid ""
 "unusual to those not familiar with the relevant specification."
 msgstr ""
 
-#: ../../../user/advanced.rst:705
+#: ../../../user/advanced.rst:706
 msgid "Encodings"
 msgstr ""
 
-#: ../../../user/advanced.rst:707
+#: ../../../user/advanced.rst:708
 msgid ""
 "When you receive a response, Requests makes a guess at the encoding to use "
 "for decoding the response when you access the :attr:`Response.text <requests."
@@ -1075,7 +1077,7 @@ msgid ""
 "chardet/chardet>`_ to attempt to guess the encoding."
 msgstr ""
 
-#: ../../../user/advanced.rst:715
+#: ../../../user/advanced.rst:716
 msgid ""
 "If ``chardet`` is installed, ``requests`` uses it, however for python3 "
 "``chardet`` is no longer a mandatory dependency. The ``chardet`` library is "
@@ -1083,14 +1085,14 @@ msgid ""
 "mandatory LGPL-licensed dependencies."
 msgstr ""
 
-#: ../../../user/advanced.rst:720
+#: ../../../user/advanced.rst:721
 msgid ""
 "When you install ``requests`` without specifying ``[use_chardet_on_py3]`` "
 "extra, and ``chardet`` is not already installed, ``requests`` uses ``charset-"
 "normalizer`` (MIT-licensed) to guess the encoding."
 msgstr ""
 
-#: ../../../user/advanced.rst:724
+#: ../../../user/advanced.rst:725
 msgid ""
 "The only time Requests will not guess the encoding is if no explicit charset "
 "is present in the HTTP headers **and** the ``Content-Type`` header contains "
@@ -1102,18 +1104,18 @@ msgid ""
 "`Response.content <requests.Response.content>`."
 msgstr ""
 
-#: ../../../user/advanced.rst:736
+#: ../../../user/advanced.rst:737
 msgid "HTTP Verbs"
 msgstr ""
 
-#: ../../../user/advanced.rst:738
+#: ../../../user/advanced.rst:739
 msgid ""
 "Requests provides access to almost the full range of HTTP verbs: GET, "
 "OPTIONS, HEAD, POST, PUT, PATCH and DELETE. The following provides detailed "
 "examples of using these various verbs in Requests, using the GitHub API."
 msgstr ""
 
-#: ../../../user/advanced.rst:742
+#: ../../../user/advanced.rst:743
 msgid ""
 "We will begin with the verb most commonly used: GET. HTTP GET is an "
 "idempotent method that returns a resource from a given URL. As a result, it "
@@ -1123,20 +1125,20 @@ msgid ""
 "Requests. We would get it like so::"
 msgstr ""
 
-#: ../../../user/advanced.rst:749
+#: ../../../user/advanced.rst:750
 msgid ""
 ">>> import requests\n"
 ">>> r = requests.get('https://api.github.com/repos/psf/requests/git/commits/"
 "a050faf084662f3a352dd1a941f2c7c9f886d4ad')"
 msgstr ""
 
-#: ../../../user/advanced.rst:752
+#: ../../../user/advanced.rst:753
 msgid ""
 "We should confirm that GitHub responded correctly. If it has, we want to "
 "work out what type of content it is. Do this like so::"
 msgstr ""
 
-#: ../../../user/advanced.rst:755
+#: ../../../user/advanced.rst:756
 msgid ""
 ">>> if r.status_code == requests.codes.ok:\n"
 "...     print(r.headers['content-type'])\n"
@@ -1144,13 +1146,13 @@ msgid ""
 "application/json; charset=utf-8"
 msgstr ""
 
-#: ../../../user/advanced.rst:760
+#: ../../../user/advanced.rst:761
 msgid ""
 "So, GitHub returns JSON. That's great, we can use the :meth:`r.json "
 "<requests.Response.json>` method to parse it into Python objects."
 msgstr ""
 
-#: ../../../user/advanced.rst:765
+#: ../../../user/advanced.rst:766
 msgid ""
 ">>> commit_data = r.json()\n"
 "\n"
@@ -1165,7 +1167,7 @@ msgid ""
 "makin' history"
 msgstr ""
 
-#: ../../../user/advanced.rst:776
+#: ../../../user/advanced.rst:777
 msgid ""
 "So far, so simple. Well, let's investigate the GitHub API a little bit. Now, "
 "we could look at the documentation, but we might have a little more fun if "
@@ -1173,14 +1175,14 @@ msgid ""
 "to see what kinds of HTTP methods are supported on the url we just used."
 msgstr ""
 
-#: ../../../user/advanced.rst:783
+#: ../../../user/advanced.rst:784
 msgid ""
 ">>> verbs = requests.options(r.url)\n"
 ">>> verbs.status_code\n"
 "500"
 msgstr ""
 
-#: ../../../user/advanced.rst:787
+#: ../../../user/advanced.rst:788
 msgid ""
 "Uh, what? That's unhelpful! Turns out GitHub, like many API providers, don't "
 "actually implement the OPTIONS method. This is an annoying oversight, but "
@@ -1189,14 +1191,14 @@ msgid ""
 "headers, e.g."
 msgstr ""
 
-#: ../../../user/advanced.rst:795
+#: ../../../user/advanced.rst:796
 msgid ""
 ">>> verbs = requests.options('http://a-good-website.com/api/cats')\n"
 ">>> print(verbs.headers['allow'])\n"
 "GET,HEAD,POST,OPTIONS"
 msgstr ""
 
-#: ../../../user/advanced.rst:799
+#: ../../../user/advanced.rst:800
 msgid ""
 "Turning to the documentation, we see that the only other method allowed for "
 "commits is POST, which creates a new commit. As we're using the Requests "
@@ -1204,14 +1206,14 @@ msgid ""
 "play with the Issues feature of GitHub."
 msgstr ""
 
-#: ../../../user/advanced.rst:804
+#: ../../../user/advanced.rst:805
 msgid ""
 "This documentation was added in response to `Issue #482 <https://github.com/"
 "psf/requests/issues/482>`_. Given that this issue already exists, we will "
 "use it as an example. Let's start by getting it."
 msgstr ""
 
-#: ../../../user/advanced.rst:810
+#: ../../../user/advanced.rst:811
 msgid ""
 ">>> r = requests.get('https://api.github.com/repos/psf/requests/"
 "issues/482')\n"
@@ -1227,11 +1229,11 @@ msgid ""
 "3"
 msgstr ""
 
-#: ../../../user/advanced.rst:822
+#: ../../../user/advanced.rst:823
 msgid "Cool, we have three comments. Let's take a look at the last of them."
 msgstr ""
 
-#: ../../../user/advanced.rst:826
+#: ../../../user/advanced.rst:827
 msgid ""
 ">>> r = requests.get(r.url + '/comments')\n"
 ">>> r.status_code\n"
@@ -1246,26 +1248,26 @@ msgid ""
 "Probably in the \"advanced\" section"
 msgstr ""
 
-#: ../../../user/advanced.rst:838
+#: ../../../user/advanced.rst:839
 msgid ""
 "Well, that seems like a silly place. Let's post a comment telling the poster "
 "that he's silly. Who is the poster, anyway?"
 msgstr ""
 
-#: ../../../user/advanced.rst:843
+#: ../../../user/advanced.rst:844
 msgid ""
 ">>> print(comments[2]['user']['login'])\n"
 "kennethreitz"
 msgstr ""
 
-#: ../../../user/advanced.rst:846
+#: ../../../user/advanced.rst:847
 msgid ""
 "OK, so let's tell this Kenneth guy that we think this example should go in "
 "the quickstart guide instead. According to the GitHub API doc, the way to do "
 "this is to POST to the thread. Let's do it."
 msgstr ""
 
-#: ../../../user/advanced.rst:852
+#: ../../../user/advanced.rst:853
 msgid ""
 ">>> body = json.dumps({u\"body\": u\"Sounds great! I'll get right on it!"
 "\"})\n"
@@ -1277,14 +1279,14 @@ msgid ""
 "404"
 msgstr ""
 
-#: ../../../user/advanced.rst:859
+#: ../../../user/advanced.rst:860
 msgid ""
 "Huh, that's weird. We probably need to authenticate. That'll be a pain, "
 "right? Wrong. Requests makes it easy to use many forms of authentication, "
 "including the very common Basic Auth."
 msgstr ""
 
-#: ../../../user/advanced.rst:865
+#: ../../../user/advanced.rst:866
 msgid ""
 ">>> from requests.auth import HTTPBasicAuth\n"
 ">>> auth = HTTPBasicAuth('fake@example.com', 'not_a_real_password')\n"
@@ -1298,7 +1300,7 @@ msgid ""
 "Sounds great! I'll get right on it."
 msgstr ""
 
-#: ../../../user/advanced.rst:876
+#: ../../../user/advanced.rst:877
 msgid ""
 "Brilliant. Oh, wait, no! I meant to add that it would take me a while, "
 "because I had to go feed my cat. If only I could edit this comment! Happily, "
@@ -1306,7 +1308,7 @@ msgid ""
 "Let's do that."
 msgstr ""
 
-#: ../../../user/advanced.rst:883
+#: ../../../user/advanced.rst:884
 msgid ""
 ">>> print(content[u\"id\"])\n"
 "5804413\n"
@@ -1321,7 +1323,7 @@ msgid ""
 "200"
 msgstr ""
 
-#: ../../../user/advanced.rst:893
+#: ../../../user/advanced.rst:894
 msgid ""
 "Excellent. Now, just to torture this Kenneth guy, I've decided to let him "
 "sweat and not tell him that I'm working on this. That means I want to delete "
@@ -1329,7 +1331,7 @@ msgid ""
 "named DELETE method. Let's get rid of it."
 msgstr ""
 
-#: ../../../user/advanced.rst:900
+#: ../../../user/advanced.rst:901
 msgid ""
 ">>> r = requests.delete(url=url, auth=auth)\n"
 ">>> r.status_code\n"
@@ -1338,7 +1340,7 @@ msgid ""
 "'204 No Content'"
 msgstr ""
 
-#: ../../../user/advanced.rst:906
+#: ../../../user/advanced.rst:907
 msgid ""
 "Excellent. All gone. The last thing I want to know is how much of my "
 "ratelimit I've used. Let's find out. GitHub sends that information in the "
@@ -1346,7 +1348,7 @@ msgid ""
 "get the headers."
 msgstr ""
 
-#: ../../../user/advanced.rst:913
+#: ../../../user/advanced.rst:914
 msgid ""
 ">>> r = requests.head(url=url, auth=auth)\n"
 ">>> print(r.headers)\n"
@@ -1356,17 +1358,17 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../../user/advanced.rst:920
+#: ../../../user/advanced.rst:921
 msgid ""
 "Excellent. Time to write a Python program that abuses the GitHub API in all "
 "kinds of exciting ways, 4995 more times."
 msgstr ""
 
-#: ../../../user/advanced.rst:926
+#: ../../../user/advanced.rst:927
 msgid "Custom Verbs"
 msgstr ""
 
-#: ../../../user/advanced.rst:928
+#: ../../../user/advanced.rst:929
 msgid ""
 "From time to time you may be working with a server that, for whatever "
 "reason, allows use or even requires use of HTTP verbs not covered above. One "
@@ -1375,35 +1377,35 @@ msgid ""
 "``.request`` method. For example::"
 msgstr ""
 
-#: ../../../user/advanced.rst:934
+#: ../../../user/advanced.rst:935
 msgid ""
 ">>> r = requests.request('MKCOL', url, data=data)\n"
 ">>> r.status_code\n"
 "200 # Assuming your call was correct"
 msgstr ""
 
-#: ../../../user/advanced.rst:938
+#: ../../../user/advanced.rst:939
 msgid ""
 "Utilising this, you can make use of any method verb that your server allows."
 msgstr ""
 
-#: ../../../user/advanced.rst:944
+#: ../../../user/advanced.rst:945
 msgid "Link Headers"
 msgstr ""
 
-#: ../../../user/advanced.rst:946
+#: ../../../user/advanced.rst:947
 msgid ""
 "Many HTTP APIs feature Link headers. They make APIs more self describing and "
 "discoverable."
 msgstr ""
 
-#: ../../../user/advanced.rst:949
+#: ../../../user/advanced.rst:950
 msgid ""
 "GitHub uses these for `pagination <https://docs.github.com/en/rest/guides/"
 "using-pagination-in-the-rest-api>`_ in their API, for example::"
 msgstr ""
 
-#: ../../../user/advanced.rst:952
+#: ../../../user/advanced.rst:953
 msgid ""
 ">>> url = 'https://api.github.com/users/kennethreitz/repos?"
 "page=1&per_page=10'\n"
@@ -1414,13 +1416,13 @@ msgid ""
 "page=6&per_page=10>; rel=\"last\"'"
 msgstr ""
 
-#: ../../../user/advanced.rst:957
+#: ../../../user/advanced.rst:958
 msgid ""
 "Requests will automatically parse these link headers and make them easily "
 "consumable::"
 msgstr ""
 
-#: ../../../user/advanced.rst:959
+#: ../../../user/advanced.rst:960
 msgid ""
 ">>> r.links[\"next\"]\n"
 "{'url': 'https://api.github.com/users/kennethreitz/repos?"
@@ -1431,11 +1433,11 @@ msgid ""
 "page=7&per_page=10', 'rel': 'last'}"
 msgstr ""
 
-#: ../../../user/advanced.rst:968
+#: ../../../user/advanced.rst:969
 msgid "Transport Adapters"
 msgstr ""
 
-#: ../../../user/advanced.rst:970
+#: ../../../user/advanced.rst:971
 msgid ""
 "As of v1.0.0, Requests has moved to a modular internal design using "
 "Transport Adapters. These objects provide a mechanism to define interaction "
@@ -1443,7 +1445,7 @@ msgid ""
 "service configuration."
 msgstr ""
 
-#: ../../../user/advanced.rst:974
+#: ../../../user/advanced.rst:975
 msgid ""
 "Requests ships with a single Transport Adapter, the :class:`HTTPAdapter "
 "<requests.adapters.HTTPAdapter>`. This adapter provides the default Requests "
@@ -1453,7 +1455,7 @@ msgid ""
 "HTTP, and one for HTTPS."
 msgstr ""
 
-#: ../../../user/advanced.rst:981
+#: ../../../user/advanced.rst:982
 msgid ""
 "Requests enables users to create and use their own Transport Adapters that "
 "provide specific functionality. Once created, a Transport Adapter can be "
@@ -1461,20 +1463,20 @@ msgid ""
 "it should apply to."
 msgstr ""
 
-#: ../../../user/advanced.rst:988
+#: ../../../user/advanced.rst:989
 msgid ""
 ">>> s = requests.Session()\n"
 ">>> s.mount('https://github.com/', MyAdapter())"
 msgstr ""
 
-#: ../../../user/advanced.rst:991
+#: ../../../user/advanced.rst:992
 msgid ""
 "The mount call registers a specific instance of a Transport Adapter to a "
 "prefix. Once mounted, any HTTP request made using that session whose URL "
 "starts with the given prefix will use the given Transport Adapter."
 msgstr ""
 
-#: ../../../user/advanced.rst:995
+#: ../../../user/advanced.rst:996
 msgid ""
 "The adapter will be chosen based on a longest prefix match. Be mindful "
 "prefixes such as ``http://localhost`` will also match ``http://localhost."
@@ -1482,7 +1484,7 @@ msgid ""
 "full hostnames with a ``/``."
 msgstr ""
 
-#: ../../../user/advanced.rst:999
+#: ../../../user/advanced.rst:1000
 msgid ""
 "Many of the details of implementing a Transport Adapter are beyond the scope "
 "of this documentation, but take a look at the next example for a simple SSL "
@@ -1490,11 +1492,11 @@ msgid ""
 "`BaseAdapter <requests.adapters.BaseAdapter>`."
 msgstr ""
 
-#: ../../../user/advanced.rst:1005
+#: ../../../user/advanced.rst:1006
 msgid "Example: Specific SSL Version"
 msgstr ""
 
-#: ../../../user/advanced.rst:1007
+#: ../../../user/advanced.rst:1008
 msgid ""
 "The Requests team has made a specific choice to use whatever SSL version is "
 "default in the underlying library (`urllib3`_). Normally this is fine, but "
@@ -1502,7 +1504,7 @@ msgid ""
 "endpoint that uses a version that isn't compatible with the default."
 msgstr ""
 
-#: ../../../user/advanced.rst:1012
+#: ../../../user/advanced.rst:1013
 msgid ""
 "You can use Transport Adapters for this by taking most of the existing "
 "implementation of HTTPAdapter, and adding a parameter *ssl_version* that "
@@ -1510,7 +1512,7 @@ msgid ""
 "instructs the library to use SSLv3::"
 msgstr ""
 
-#: ../../../user/advanced.rst:1017
+#: ../../../user/advanced.rst:1018
 msgid ""
 "import ssl\n"
 "from urllib3.poolmanager import PoolManager\n"
@@ -1527,11 +1529,11 @@ msgid ""
 "            block=block, ssl_version=ssl.PROTOCOL_SSLv3)"
 msgstr ""
 
-#: ../../../user/advanced.rst:1032
+#: ../../../user/advanced.rst:1033
 msgid "Example: Automatic Retries"
 msgstr ""
 
-#: ../../../user/advanced.rst:1034
+#: ../../../user/advanced.rst:1035
 msgid ""
 "By default, Requests does not retry failed connections. However, it is "
 "possible to implement automatic retries with a powerful array of features, "
@@ -1539,7 +1541,7 @@ msgid ""
 "using the `urllib3.util.Retry`_ class::"
 msgstr ""
 
-#: ../../../user/advanced.rst:1039
+#: ../../../user/advanced.rst:1040
 msgid ""
 "from urllib3.util import Retry\n"
 "from requests import Session\n"
@@ -1555,11 +1557,11 @@ msgid ""
 "s.mount('https://', HTTPAdapter(max_retries=retries))"
 msgstr ""
 
-#: ../../../user/advanced.rst:1058
+#: ../../../user/advanced.rst:1059
 msgid "Blocking Or Non-Blocking?"
 msgstr ""
 
-#: ../../../user/advanced.rst:1060
+#: ../../../user/advanced.rst:1061
 msgid ""
 "With the default Transport Adapter in place, Requests does not provide any "
 "kind of non-blocking IO. The :attr:`Response.content <requests.Response."
@@ -1569,7 +1571,7 @@ msgid ""
 "response at a time. However, these calls will still block."
 msgstr ""
 
-#: ../../../user/advanced.rst:1067
+#: ../../../user/advanced.rst:1068
 msgid ""
 "If you are concerned about the use of blocking IO, there are lots of "
 "projects out there that combine Requests with one of Python's asynchronicity "
@@ -1577,11 +1579,11 @@ msgid ""
 "`requests-futures`_, and `httpx`_."
 msgstr ""
 
-#: ../../../user/advanced.rst:1077
+#: ../../../user/advanced.rst:1078
 msgid "Header Ordering"
 msgstr ""
 
-#: ../../../user/advanced.rst:1079
+#: ../../../user/advanced.rst:1080
 msgid ""
 "In unusual circumstances you may want to provide headers in an ordered "
 "manner. If you pass an ``OrderedDict`` to the ``headers`` keyword argument, "
@@ -1591,7 +1593,7 @@ msgid ""
 "appear out of order compared to other headers in that keyword argument."
 msgstr ""
 
-#: ../../../user/advanced.rst:1081
+#: ../../../user/advanced.rst:1082
 msgid ""
 "If this is problematic, users should consider setting the default headers on "
 "a :class:`Session <requests.Session>` object, by setting :attr:`Session."
@@ -1599,11 +1601,11 @@ msgid ""
 "ordering will always be preferred."
 msgstr ""
 
-#: ../../../user/advanced.rst:1086
+#: ../../../user/advanced.rst:1087
 msgid "Timeouts"
 msgstr ""
 
-#: ../../../user/advanced.rst:1088
+#: ../../../user/advanced.rst:1089
 msgid ""
 "Most requests to external servers should have a timeout attached, in case "
 "the server is not responding in a timely manner. By default, requests do not "
@@ -1611,7 +1613,7 @@ msgid ""
 "code may hang for minutes or more."
 msgstr ""
 
-#: ../../../user/advanced.rst:1093
+#: ../../../user/advanced.rst:1094
 msgid ""
 "The **connect** timeout is the number of seconds Requests will wait for your "
 "client to establish a connection to a remote machine (corresponding to the "
@@ -1621,7 +1623,7 @@ msgid ""
 "rfc2988>`_."
 msgstr ""
 
-#: ../../../user/advanced.rst:1099
+#: ../../../user/advanced.rst:1100
 msgid ""
 "Once your client has connected to the server and sent the HTTP request, the "
 "**read** timeout is the number of seconds the client will wait for the "
@@ -1630,36 +1632,36 @@ msgid ""
 "cases, this is the time before the server sends the first byte)."
 msgstr ""
 
-#: ../../../user/advanced.rst:1105
+#: ../../../user/advanced.rst:1106
 msgid "If you specify a single value for the timeout, like this::"
 msgstr ""
 
-#: ../../../user/advanced.rst:1107
+#: ../../../user/advanced.rst:1108
 msgid "r = requests.get('https://github.com', timeout=5)"
 msgstr ""
 
-#: ../../../user/advanced.rst:1109
+#: ../../../user/advanced.rst:1110
 msgid ""
 "The timeout value will be applied to both the ``connect`` and the ``read`` "
 "timeouts. Specify a tuple if you would like to set the values separately::"
 msgstr ""
 
-#: ../../../user/advanced.rst:1112
+#: ../../../user/advanced.rst:1113
 msgid "r = requests.get('https://github.com', timeout=(3.05, 27))"
 msgstr ""
 
-#: ../../../user/advanced.rst:1114
+#: ../../../user/advanced.rst:1115
 msgid ""
 "If the remote server is very slow, you can tell Requests to wait forever for "
 "a response, by passing None as a timeout value and then retrieving a cup of "
 "coffee."
 msgstr ""
 
-#: ../../../user/advanced.rst:1120
+#: ../../../user/advanced.rst:1121
 msgid "r = requests.get('https://github.com', timeout=None)"
 msgstr ""
 
-#: ../../../user/advanced.rst:1122
+#: ../../../user/advanced.rst:1123
 msgid ""
 "The connect timeout applies to each connection attempt to an IP address. If "
 "multiple addresses exist for a domain name, the underlying ``urllib3`` will "
@@ -1670,7 +1672,7 @@ msgid ""
 "account when setting the connection timeout."
 msgstr ""
 
-#: ../../../user/advanced.rst:1129
+#: ../../../user/advanced.rst:1130
 msgid ""
 "Neither the connect nor read timeouts are `wall clock`_. This means that if "
 "you start a request, and look at the time, and then look at the time when "
