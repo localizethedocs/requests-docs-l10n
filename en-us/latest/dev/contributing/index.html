@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en-US" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contributor’s Guide &#8212; Requests 2.33.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=6625fa76" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=1fe5e9f7" />
+    <script src="../../_static/documentation_options.js?v=0d815c20"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://projects.localizethedocs.org/requests-docs-l10n/dev/contributing.html" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Authors" href="../authors/" />
+    <link rel="prev" title="Developer Interface" href="../../api/" />
+
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+<script type="text/javascript" src="../../ltd-provenance.js"></script>
+<script type="text/javascript" src="../../ltd-current.js"></script>
+<script type="text/javascript" src="../../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../../ltd-flyout.js"></script>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="contributor-s-guide">
+<span id="contributing"></span><h1>Contributor’s Guide<a class="headerlink" href="#contributor-s-guide" title="Link to this heading">¶</a></h1>
+<p>If you’re reading this, you’re probably interested in contributing to Requests.
+Thank you very much! Open source projects live-and-die based on the support
+they receive from others, and the fact that you’re even considering
+contributing to the Requests project is <em>very</em> generous of you.</p>
+<p>This document lays out guidelines and advice for contributing to this project.
+If you’re thinking of contributing, please start by reading this document and
+getting a feel for how contributing to this project works. If you have any
+questions, feel free to reach out to either <a class="reference external" href="https://www.nateprewitt.com/">Nate Prewitt</a>, <a class="reference external" href="http://www.coglib.com/~icordasc/">Ian Cordasco</a>,
+or <a class="reference external" href="https://sethmlarson.dev/">Seth Michael Larson</a>, the primary maintainers.</p>
+<p>The guide is split into sections based on the type of contribution you’re
+thinking of making, with a section that covers general guidelines for all
+contributors.</p>
+<section id="code-of-conduct">
+<h2>Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Link to this heading">¶</a></h2>
+<p>The Python community is made up of members from around the globe with a diverse
+set of skills, personalities, and experiences. It is through these differences
+that our community experiences great successes and continued growth. When you’re
+working with members of the community, follow the
+<a class="reference external" href="https://policies.python.org/python.org/code-of-conduct/">Python Software Foundation Code of Conduct</a> to help steer your interactions
+and keep Python a positive, successful, and growing community.</p>
+</section>
+<section id="get-early-feedback">
+<span id="early-feedback"></span><h2>Get Early Feedback<a class="headerlink" href="#get-early-feedback" title="Link to this heading">¶</a></h2>
+<p>If you are contributing, do not feel the need to sit on your contribution until
+it is perfectly polished and complete. It helps everyone involved for you to
+seek feedback as early as you possibly can. Submitting an early, unfinished
+version of your contribution for feedback in no way prejudices your chances of
+getting that contribution accepted, and can save you from putting a lot of work
+into a contribution that is not suitable for the project.</p>
+</section>
+<section id="contribution-suitability">
+<h2>Contribution Suitability<a class="headerlink" href="#contribution-suitability" title="Link to this heading">¶</a></h2>
+<p>Our project maintainers have the last word on whether or not a contribution is
+suitable for Requests. All contributions will be considered carefully, but from
+time to time, contributions will be rejected because they do not suit the
+current goals or needs of the project.</p>
+<p>If your contribution is rejected, don’t despair! As long as you followed these
+guidelines, you will have a much better chance of getting your next
+contribution accepted.</p>
+</section>
+<section id="code-contributions">
+<h2>Code Contributions<a class="headerlink" href="#code-contributions" title="Link to this heading">¶</a></h2>
+<section id="steps-for-submitting-code">
+<h3>Steps for Submitting Code<a class="headerlink" href="#steps-for-submitting-code" title="Link to this heading">¶</a></h3>
+<p>When contributing code, you’ll want to follow this checklist:</p>
+<ol class="arabic simple">
+<li><p>Fork the repository on GitHub.</p></li>
+<li><p>Run the tests to confirm they all pass on your system. If they don’t, you’ll
+need to investigate why they fail. If you’re unable to diagnose this
+yourself, raise it as a bug report by following the guidelines in this
+document: <a class="reference internal" href="#bug-reports"><span class="std std-ref">Bug Reports</span></a>.</p></li>
+<li><p>Write tests that demonstrate your bug or feature. Ensure that they fail.</p></li>
+<li><p>Make your change.</p></li>
+<li><p>Run the entire test suite again, confirming that all tests pass <em>including
+the ones you just added</em>.</p></li>
+<li><p>Send a GitHub Pull Request to the main repository’s <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.
+GitHub Pull Requests are the expected method of code collaboration on this
+project.</p></li>
+</ol>
+<p>The following sub-sections go into more detail on some of the points above.</p>
+</section>
+<section id="code-review">
+<h3>Code Review<a class="headerlink" href="#code-review" title="Link to this heading">¶</a></h3>
+<p>Contributions will not be merged until they’ve been code reviewed. You should
+implement any code review feedback unless you strongly object to it. In the
+event that you object to the code review feedback, you should make your case
+clearly and calmly. If, after doing so, the feedback is judged to still apply,
+you must either apply the feedback or withdraw your contribution.</p>
+</section>
+<section id="code-style">
+<h3>Code Style<a class="headerlink" href="#code-style" title="Link to this heading">¶</a></h3>
+<p>Requests uses a collection of tools to ensure the code base has a consistent
+style as it grows. We have these orchestrated using a tool called
+<a class="reference external" href="https://pre-commit.com/">pre-commit</a>. This can be installed locally and run over your changes prior
+to opening a PR, and will also be run as part of the CI approval process
+before a change is merged.</p>
+<p>You can find the full list of formatting requirements specified in the
+<a class="reference external" href="https://github.com/psf/requests/blob/main/.pre-commit-config.yaml">.pre-commit-config.yaml</a> at the top level directory of Requests.</p>
+</section>
+<section id="new-contributors">
+<h3>New Contributors<a class="headerlink" href="#new-contributors" title="Link to this heading">¶</a></h3>
+<p>If you are new or relatively new to Open Source, welcome! Requests aims to
+be a gentle introduction to the world of Open Source. If you’re concerned about
+how best to contribute, please consider mailing a maintainer (listed above) and
+asking for help.</p>
+<p>Please also check the <a class="reference internal" href="#early-feedback"><span class="std std-ref">Get Early Feedback</span></a> section.</p>
+</section>
+</section>
+<section id="documentation-contributions">
+<h2>Documentation Contributions<a class="headerlink" href="#documentation-contributions" title="Link to this heading">¶</a></h2>
+<p>Documentation improvements are always welcome! The documentation files live in
+the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory of the codebase. They’re written in
+<a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>, and use <a class="reference external" href="http://sphinx-doc.org/index.html">Sphinx</a> to generate the full suite of
+documentation.</p>
+<p>When contributing documentation, please do your best to follow the style of the
+documentation files. This means a soft-limit of 79 characters wide in your text
+files and a semi-formal, yet friendly and approachable, prose style.</p>
+<p>When presenting Python code, use single-quoted strings (<code class="docutils literal notranslate"><span class="pre">'hello'</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code>).</p>
+</section>
+<section id="bug-reports">
+<span id="id1"></span><h2>Bug Reports<a class="headerlink" href="#bug-reports" title="Link to this heading">¶</a></h2>
+<p>Bug reports are hugely important! Before you raise one, though, please check
+through the <a class="reference external" href="https://github.com/psf/requests/issues">GitHub issues</a>, <strong>both open and closed</strong>, to confirm that the bug
+hasn’t been reported before. Duplicate bug reports are a huge drain on the time
+of other contributors, and should be avoided as much as possible.</p>
+</section>
+<section id="feature-requests">
+<h2>Feature Requests<a class="headerlink" href="#feature-requests" title="Link to this heading">¶</a></h2>
+<p>Requests is in a perpetual feature freeze, only the BDFL can add or approve of
+new features. The maintainers believe that Requests is a feature-complete
+piece of software at this time.</p>
+<p>One of the most important skills to have while maintaining a largely-used
+open source project is learning the ability to say “no” to suggested changes,
+while keeping an open ear and mind.</p>
+<p>If you believe there is a feature missing, feel free to raise a feature
+request, but please do be aware that the overwhelming likelihood is that your
+feature request will not be accepted.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="logo">
+  <a href="../../">
+    <img class="logo" src="../../_static/requests-sidebar.png" alt="Requests logo" />
+  </a>
+</p>
+
+<p>
+  <iframe src="https://ghbtns.com/github-btn.html?user=psf&repo=requests&type=watch&count=true&size=large"
+    allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+<p>
+  Requests is an elegant and simple HTTP library for Python, built for human beings.
+</p>
+
+<h3>Useful Links</h3>
+<ul>
+  <li><a href="../../user/quickstart/">Quickstart</a></li>
+  <li><a href="../../user/advanced/">Advanced Usage</a></li>
+  <li><a href="../../api/">API Reference</a></li>
+  <li><a href="../../community/updates/#release-history">Release History</a></li>
+  <li><a href="#">Contributors Guide</a></li>
+
+  <p></p>
+
+  <li><a href="../../community/recommended/">Recommended Packages and Extensions</a></li>
+
+  <p></p>
+
+  <li><a href="https://github.com/psf/requests">Requests @ GitHub</a></li>
+  <li><a href="https://pypi.org/project/requests/">Requests @ PyPI</a></li>
+  <li><a href="https://github.com/psf/requests/issues">Issue Tracker</a></li>
+</ul>
+  <div>
+    <h3><a href="../../">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Contributor’s Guide</a><ul>
+<li><a class="reference internal" href="#code-of-conduct">Code of Conduct</a></li>
+<li><a class="reference internal" href="#get-early-feedback">Get Early Feedback</a></li>
+<li><a class="reference internal" href="#contribution-suitability">Contribution Suitability</a></li>
+<li><a class="reference internal" href="#code-contributions">Code Contributions</a><ul>
+<li><a class="reference internal" href="#steps-for-submitting-code">Steps for Submitting Code</a></li>
+<li><a class="reference internal" href="#code-review">Code Review</a></li>
+<li><a class="reference internal" href="#code-style">Code Style</a></li>
+<li><a class="reference internal" href="#new-contributors">New Contributors</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation-contributions">Documentation Contributions</a></li>
+<li><a class="reference internal" href="#bug-reports">Bug Reports</a></li>
+<li><a class="reference internal" href="#feature-requests">Feature Requests</a></li>
+</ul>
+</li>
+</ul>
+
+  </div><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../">Documentation overview</a><ul>
+      <li>Previous: <a href="../../api/" title="previous chapter">Developer Interface</a></li>
+      <li>Next: <a href="../authors/" title="next chapter">Authors</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;Kenneth Reitz and contributors.
+      
+    </div>
+
+    
+    <a href="https://github.com/psf/requests" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
