@@ -157,7 +157,7 @@ The goal of this project is to translate The Requests Documentation into multipl
     </tr>
     <tr>
       <th rowspan="1" colspan="1" align="center" style="text-align: center;"><div>状态</div></th>
-      <th rowspan="1" colspan="1" align="center" style="text-align: center;"><div>描述</div></th>
+      <th rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Description</div></th>
     </tr>
   </thead>
   <tbody>
