@@ -16,9 +16,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-11 19:05:37 -0500",
-        "hash" : "4b0b1a3e9f2fc21b9dcd8b906f2ff02645aa697e",
-        "title" : "Update pre-commit versions (#7348)"
+        "date" : "2026-06-04 14:43:21 -0700",
+        "hash" : "1190afd14fca74292946d62c4c8169880a47ff67",
+        "title" : "Add type annotation for `Request.hooks` (#7498)"
       }
     },
     "zh_TW" : 
@@ -26,9 +26,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-11 19:05:37 -0500",
-        "hash" : "4b0b1a3e9f2fc21b9dcd8b906f2ff02645aa697e",
-        "title" : "Update pre-commit versions (#7348)"
+        "date" : "2026-06-04 14:43:21 -0700",
+        "hash" : "1190afd14fca74292946d62c4c8169880a47ff67",
+        "title" : "Add type annotation for `Request.hooks` (#7498)"
       }
     }
   },
