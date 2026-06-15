@@ -209,6 +209,3 @@ msgstr ""
 #: ../../../index.rst:143
 msgid "There are no more guides. You are now guideless. Good luck."
 msgstr ""
-
-#~ msgid "License Badge"
-#~ msgstr "授權條款徽章"
