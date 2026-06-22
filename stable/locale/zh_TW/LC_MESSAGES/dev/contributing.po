@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/contributing.rst:4
 msgid "Contributor's Guide"
-msgstr ""
+msgstr "貢獻者指南"
 
 #: ../../../dev/contributing.rst:6
 msgid ""
@@ -37,6 +37,9 @@ msgid ""
 "you have any questions, feel free to reach out to either `Nate Prewitt`_, "
 "`Ian Cordasco`_, or `Seth Michael Larson`_, the primary maintainers."
 msgstr ""
+"本文件闡述了對本專案做出貢獻的準則與建議。若您有意貢獻，請先閱讀本文件，了解"
+"對本專案貢獻的大致運作方式。如有任何疑問，歡迎聯繫主要維護者 `Nate "
+"Prewitt`_、`Ian Cordasco`_ 或 `Seth Michael Larson`_。"
 
 #: ../../../dev/contributing.rst:21
 msgid ""
@@ -47,7 +50,7 @@ msgstr ""
 
 #: ../../../dev/contributing.rst:26
 msgid "Code of Conduct"
-msgstr ""
+msgstr "行為守則"
 
 #: ../../../dev/contributing.rst:28
 msgid ""
@@ -178,7 +181,7 @@ msgstr ""
 
 #: ../../../dev/contributing.rst:110
 msgid "New Contributors"
-msgstr ""
+msgstr "新的貢獻者"
 
 #: ../../../dev/contributing.rst:112
 msgid ""
@@ -254,3 +257,5 @@ msgid ""
 "request, but please do be aware that the overwhelming likelihood is that "
 "your feature request will not be accepted."
 msgstr ""
+"如果您認為缺少某項功能，歡迎隨時提出功能請求，但請務必知悉，極大的可能性是您"
+"的功能請求將不會被採納。"

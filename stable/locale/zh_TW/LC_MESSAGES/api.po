@@ -76,7 +76,7 @@ msgstr ""
 #: requests.utils.get_encodings_from_content:0
 #: requests.utils.get_unicode_from_response:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.request:3
@@ -302,26 +302,26 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.post:1
 msgid "Sends a POST request."
-msgstr ""
+msgstr "發送一個 POST 請求。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.put:1
 msgid "Sends a PUT request."
-msgstr ""
+msgstr "發送一個 PUT 請求。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.patch:1
 msgid "Sends a PATCH request."
-msgstr ""
+msgstr "發送一個 PATCH 請求。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.delete:1
 msgid "Sends a DELETE request."
-msgstr ""
+msgstr "發送一個 DELETE 請求。"
 
 #: ../../../api.rst:29
 msgid "Exceptions"
-msgstr ""
+msgstr "例外"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
 #: of requests.exceptions.RequestException:1
@@ -1924,7 +1924,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
 #: of requests.cookies.RequestsCookieJar.values:4
 msgid "keys() and items()."
-msgstr ""
+msgstr "keys() 和 items()。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
 #: of requests.cookies.CookieConflictError:1
@@ -1992,22 +1992,22 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:19
 msgid "100: ``continue``"
-msgstr ""
+msgstr "100：``continue``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:20
 msgid "101: ``switching_protocols``"
-msgstr ""
+msgstr "101：``switching_protocols``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:21
 msgid "102: ``processing``, ``early-hints``"
-msgstr ""
+msgstr "102：``processing``、``early-hints``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:22
 msgid "103: ``checkpoint``"
-msgstr ""
+msgstr "103：``checkpoint``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:23
@@ -2076,7 +2076,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:35
 msgid "301: ``moved_permanently``, ``moved``, ``\\o-``"
-msgstr ""
+msgstr "301：``moved_permanently``、``moved``、``\\o-``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:36
@@ -2281,7 +2281,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:75
 msgid "499: ``client_closed_request``"
-msgstr ""
+msgstr "499：``client_closed_request``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:76
@@ -2291,17 +2291,17 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:77
 msgid "501: ``not_implemented``"
-msgstr ""
+msgstr "501：``not_implemented``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:78
 msgid "502: ``bad_gateway``"
-msgstr ""
+msgstr "502：``bad_gateway``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:79
 msgid "503: ``service_unavailable``, ``unavailable``"
-msgstr ""
+msgstr "503：``service_unavailable``、``unavailable``"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:80
@@ -2342,7 +2342,7 @@ msgstr ""
 
 #: ../../../api.rst:117
 msgid "Migrating to 1.x"
-msgstr ""
+msgstr "遷移至 1.x"
 
 #: ../../../api.rst:119
 msgid ""
@@ -2452,7 +2452,7 @@ msgstr ""
 
 #: ../../../api.rst:206
 msgid "Migrating to 2.x"
-msgstr ""
+msgstr "遷移至 2.x"
 
 #: ../../../api.rst:209
 msgid ""
