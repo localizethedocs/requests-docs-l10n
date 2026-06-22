@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../community/faq.rst:4
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "常見問題"
 
 #: ../../../community/faq.rst:6
 msgid "This part of the documentation answers common questions about Requests."
@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../../community/faq.rst:30
 msgid "Why not Httplib2?"
-msgstr ""
+msgstr "為什麼不使用 Httplib2？"
 
 #: ../../../community/faq.rst:32
 msgid ""

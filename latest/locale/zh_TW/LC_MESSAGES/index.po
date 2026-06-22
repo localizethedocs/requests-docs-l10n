@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../index.rst:-1
 msgid "Contributors Badge"
-msgstr ""
+msgstr "貢獻者指南"
 
 #: ../../../index.rst:-1
 msgid "Documentation Badge"
