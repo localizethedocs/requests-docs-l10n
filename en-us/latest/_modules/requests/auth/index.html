@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="en-US" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>requests.auth &#8212; Requests 2.34.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=6625fa76" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=1fe5e9f7" />
+    <script src="../../../_static/documentation_options.js?v=945fad72"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://projects.localizethedocs.org/requests-docs-l10n/_modules/requests/auth.html" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+<script type="text/javascript" src="../../../ltd-provenance.js"></script>
+<script type="text/javascript" src="../../../ltd-current.js"></script>
+<script type="text/javascript" src="../../../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../../../ltd-flyout.js"></script>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for requests.auth</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""</span>
+<span class="sd">requests.auth</span>
+<span class="sd">~~~~~~~~~~~~~</span>
+
+<span class="sd">This module contains the authentication handlers for Requests.</span>
+<span class="sd">"""</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">base64</span><span class="w"> </span><span class="kn">import</span> <span class="n">b64encode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Final</span><span class="p">,</span> <span class="n">cast</span><span class="p">,</span> <span class="n">overload</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">._internal_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">to_native_string</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.compat</span><span class="w"> </span><span class="kn">import</span> <span class="n">basestring</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">urlparse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.cookies</span><span class="w"> </span><span class="kn">import</span> <span class="n">extract_cookies_to_jar</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">parse_dict_header</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">http.cookiejar</span><span class="w"> </span><span class="kn">import</span> <span class="n">CookieJar</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PreparedRequest</span><span class="p">,</span> <span class="n">Response</span>
+
+<span class="n">CONTENT_TYPE_FORM_URLENCODED</span><span class="p">:</span> <span class="n">Final</span> <span class="o">=</span> <span class="s2">"application/x-www-form-urlencoded"</span>
+<span class="n">CONTENT_TYPE_MULTI_PART</span><span class="p">:</span> <span class="n">Final</span> <span class="o">=</span> <span class="s2">"multipart/form-data"</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_basic_auth_str</span><span class="p">(</span><span class="n">username</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Returns a Basic Auth string."""</span>
+
+    <span class="c1"># "I want us to put a big-ol' comment on top of it that</span>
+    <span class="c1"># says that this behaviour is dumb but we need to preserve</span>
+    <span class="c1"># it because people are relying on it."</span>
+    <span class="c1">#    - Lukasa</span>
+    <span class="c1">#</span>
+    <span class="c1"># These are here solely to maintain backwards compatibility</span>
+    <span class="c1"># for things like ints. This will be removed in 3.0.0.</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">basestring</span><span class="p">):</span>  <span class="c1"># type: ignore[reportUnnecessaryIsInstance]  # runtime guard for non-str/bytes</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s2">"Non-string usernames will no longer be supported in Requests "</span>
+            <span class="sa">f</span><span class="s2">"3.0.0. Please convert the object you've passed in (</span><span class="si">{</span><span class="n">username</span><span class="si">!r}</span><span class="s2">) to "</span>
+            <span class="s2">"a string or bytes object in the near future to avoid "</span>
+            <span class="s2">"problems."</span><span class="p">,</span>
+            <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">basestring</span><span class="p">):</span>  <span class="c1"># type: ignore[reportUnnecessaryIsInstance]  # runtime guard for non-str/bytes</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s2">"Non-string passwords will no longer be supported in Requests "</span>
+            <span class="sa">f</span><span class="s2">"3.0.0. Please convert the object you've passed in (</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">password</span><span class="p">)</span><span class="si">!r}</span><span class="s2">) to "</span>
+            <span class="s2">"a string or bytes object in the near future to avoid "</span>
+            <span class="s2">"problems."</span><span class="p">,</span>
+            <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+    <span class="c1"># -- End Removal --</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">username</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"latin1"</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"latin1"</span><span class="p">)</span>
+
+    <span class="n">authstr</span> <span class="o">=</span> <span class="s2">"Basic "</span> <span class="o">+</span> <span class="n">to_native_string</span><span class="p">(</span>
+        <span class="n">b64encode</span><span class="p">(</span><span class="sa">b</span><span class="s2">":"</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">authstr</span>
+
+
+<div class="viewcode-block" id="AuthBase">
+<a class="viewcode-back" href="../../../api/#requests.auth.AuthBase">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AuthBase</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Base class that all auth implementations derive from"""</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">PreparedRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PreparedRequest</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Auth hooks must be callable."</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="HTTPBasicAuth">
+<a class="viewcode-back" href="../../../api/#requests.auth.HTTPBasicAuth">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">HTTPBasicAuth</span><span class="p">(</span><span class="n">AuthBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Attaches HTTP Basic Authentication to the given Request object."""</span>
+
+    <span class="n">username</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span>
+    <span class="n">password</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span>
+
+    <span class="nd">@overload</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="o">...</span>
+    <span class="nd">@overload</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="o">...</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="s2">"username"</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="s2">"password"</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">PreparedRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PreparedRequest</span><span class="p">:</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">"Authorization"</span><span class="p">]</span> <span class="o">=</span> <span class="n">_basic_auth_str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">r</span></div>
+
+
+
+<div class="viewcode-block" id="HTTPProxyAuth">
+<a class="viewcode-back" href="../../../api/#requests.auth.HTTPProxyAuth">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">HTTPProxyAuth</span><span class="p">(</span><span class="n">HTTPBasicAuth</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Attaches HTTP Proxy Authentication to a given Request object."""</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">PreparedRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PreparedRequest</span><span class="p">:</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">"Proxy-Authorization"</span><span class="p">]</span> <span class="o">=</span> <span class="n">_basic_auth_str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">r</span></div>
+
+
+
+<div class="viewcode-block" id="HTTPDigestAuth">
+<a class="viewcode-back" href="../../../api/#requests.auth.HTTPDigestAuth">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">HTTPDigestAuth</span><span class="p">(</span><span class="n">AuthBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Attaches HTTP Digest Authentication to the given Request object."""</span>
+
+    <span class="n">username</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span>
+    <span class="n">password</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span>
+    <span class="n">_thread_local</span><span class="p">:</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span>
+    <span class="n">last_nonce</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">nonce_count</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">chal</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="n">pos</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">num_401_calls</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+
+    <span class="nd">@overload</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="o">...</span>
+    <span class="nd">@overload</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="o">...</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+        <span class="c1"># Keep state in per-thread local storage</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">init_per_thread_state</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Ensure state is initialized just once per-thread</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="p">,</span> <span class="s2">"init"</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">last_nonce</span> <span class="o">=</span> <span class="s2">""</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">nonce_count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">chal</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">num_401_calls</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">build_digest_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        """</span>
+
+        <span class="n">realm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">chal</span><span class="p">[</span><span class="s2">"realm"</span><span class="p">]</span>
+        <span class="n">nonce</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">chal</span><span class="p">[</span><span class="s2">"nonce"</span><span class="p">]</span>
+        <span class="n">qop</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">chal</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"qop"</span><span class="p">)</span>
+        <span class="n">algorithm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">chal</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"algorithm"</span><span class="p">)</span>
+        <span class="n">opaque</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">chal</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"opaque"</span><span class="p">)</span>
+        <span class="n">hash_utf8</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">algorithm</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_algorithm</span> <span class="o">=</span> <span class="s2">"MD5"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_algorithm</span> <span class="o">=</span> <span class="n">algorithm</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="c1"># lambdas assume digest modules are imported at the top level</span>
+        <span class="k">if</span> <span class="n">_algorithm</span> <span class="o">==</span> <span class="s2">"MD5"</span> <span class="ow">or</span> <span class="n">_algorithm</span> <span class="o">==</span> <span class="s2">"MD5-SESS"</span><span class="p">:</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">md5_utf8</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">usedforsecurity</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+            <span class="n">hash_utf8</span> <span class="o">=</span> <span class="n">md5_utf8</span>
+        <span class="k">elif</span> <span class="n">_algorithm</span> <span class="o">==</span> <span class="s2">"SHA"</span><span class="p">:</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">sha_utf8</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">usedforsecurity</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+            <span class="n">hash_utf8</span> <span class="o">=</span> <span class="n">sha_utf8</span>
+        <span class="k">elif</span> <span class="n">_algorithm</span> <span class="o">==</span> <span class="s2">"SHA-256"</span><span class="p">:</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">sha256_utf8</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">usedforsecurity</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+            <span class="n">hash_utf8</span> <span class="o">=</span> <span class="n">sha256_utf8</span>
+        <span class="k">elif</span> <span class="n">_algorithm</span> <span class="o">==</span> <span class="s2">"SHA-512"</span><span class="p">:</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">sha512_utf8</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha512</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">usedforsecurity</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+            <span class="n">hash_utf8</span> <span class="o">=</span> <span class="n">sha512_utf8</span>
+
+        <span class="k">if</span> <span class="n">hash_utf8</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">KD</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">hash_utf8</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+        <span class="c1"># XXX not implemented yet</span>
+        <span class="n">entdig</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">p_parsed</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="c1">#: path is request-uri defined in RFC 2616 which should not be empty</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">p_parsed</span><span class="o">.</span><span class="n">path</span> <span class="ow">or</span> <span class="s2">"/"</span>
+        <span class="k">if</span> <span class="n">p_parsed</span><span class="o">.</span><span class="n">query</span><span class="p">:</span>
+            <span class="n">path</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"?</span><span class="si">{</span><span class="n">p_parsed</span><span class="o">.</span><span class="n">query</span><span class="si">}</span><span class="s2">"</span>
+
+        <span class="n">A1</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">realm</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="si">}</span><span class="s2">"</span>
+        <span class="n">A2</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">"</span>
+
+        <span class="n">HA1</span> <span class="o">=</span> <span class="n">hash_utf8</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+        <span class="n">HA2</span> <span class="o">=</span> <span class="n">hash_utf8</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">nonce</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">last_nonce</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">nonce_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">nonce_count</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">ncvalue</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">nonce_count</span><span class="si">:</span><span class="s2">08x</span><span class="si">}</span><span class="s2">"</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">nonce_count</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">nonce</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+
+        <span class="n">cnonce</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">usedforsecurity</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()[:</span><span class="mi">16</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">_algorithm</span> <span class="o">==</span> <span class="s2">"MD5-SESS"</span><span class="p">:</span>
+            <span class="n">HA1</span> <span class="o">=</span> <span class="n">hash_utf8</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">HA1</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">nonce</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">cnonce</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># type: ignore[reportConstantRedefinition]  # RFC 2617 terminology</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">qop</span><span class="p">:</span>
+            <span class="n">respdig</span> <span class="o">=</span> <span class="n">KD</span><span class="p">(</span><span class="n">HA1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nonce</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">HA2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">qop</span> <span class="o">==</span> <span class="s2">"auth"</span> <span class="ow">or</span> <span class="s2">"auth"</span> <span class="ow">in</span> <span class="n">qop</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">","</span><span class="p">):</span>
+            <span class="n">noncebit</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nonce</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">ncvalue</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">cnonce</span><span class="si">}</span><span class="s2">:auth:</span><span class="si">{</span><span class="n">HA2</span><span class="si">}</span><span class="s2">"</span>
+            <span class="n">respdig</span> <span class="o">=</span> <span class="n">KD</span><span class="p">(</span><span class="n">HA1</span><span class="p">,</span> <span class="n">noncebit</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># XXX handle auth-int.</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">last_nonce</span> <span class="o">=</span> <span class="n">nonce</span>
+
+        <span class="c1"># XXX should the partial digests be encoded too?</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s1">'username="</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s1">", realm="</span><span class="si">{</span><span class="n">realm</span><span class="si">}</span><span class="s1">", nonce="</span><span class="si">{</span><span class="n">nonce</span><span class="si">}</span><span class="s1">", '</span>
+            <span class="sa">f</span><span class="s1">'uri="</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s1">", response="</span><span class="si">{</span><span class="n">respdig</span><span class="si">}</span><span class="s1">"'</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">opaque</span><span class="p">:</span>
+            <span class="n">base</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">', opaque="</span><span class="si">{</span><span class="n">opaque</span><span class="si">}</span><span class="s1">"'</span>
+        <span class="k">if</span> <span class="n">algorithm</span><span class="p">:</span>
+            <span class="n">base</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">', algorithm="</span><span class="si">{</span><span class="n">algorithm</span><span class="si">}</span><span class="s1">"'</span>
+        <span class="k">if</span> <span class="n">entdig</span><span class="p">:</span>
+            <span class="n">base</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">', digest="</span><span class="si">{</span><span class="n">entdig</span><span class="si">}</span><span class="s1">"'</span>
+        <span class="k">if</span> <span class="n">qop</span><span class="p">:</span>
+            <span class="n">base</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">', qop="auth", nc=</span><span class="si">{</span><span class="n">ncvalue</span><span class="si">}</span><span class="s1">, cnonce="</span><span class="si">{</span><span class="n">cnonce</span><span class="si">}</span><span class="s1">"'</span>
+
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Digest </span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">handle_redirect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">Response</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Reset num_401_calls counter on redirects."""</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">is_redirect</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">num_401_calls</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">handle_401</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">Response</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Takes the given response and tries digest-auth, if needed.</span>
+
+<span class="sd">        :rtype: requests.Response</span>
+<span class="sd">        """</span>
+
+        <span class="c1"># If response is not 4xx, do not auth</span>
+        <span class="c1"># See https://github.com/psf/requests/issues/3772</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="mi">400</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">num_401_calls</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">r</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">pos</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Rewind the file position indicator of the body to where</span>
+            <span class="c1"># it was to resend the request.</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">seek</span> <span class="o">:=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span> <span class="s2">"seek"</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">seek</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">pos</span><span class="p">)</span>
+        <span class="n">s_auth</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"www-authenticate"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">"digest"</span> <span class="ow">in</span> <span class="n">s_auth</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">num_401_calls</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">num_401_calls</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">pat</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"digest "</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">chal</span> <span class="o">=</span> <span class="n">parse_dict_header</span><span class="p">(</span><span class="n">pat</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">s_auth</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+            <span class="c1"># Consume content and release the original connection</span>
+            <span class="c1"># to allow our new request to reuse the same one.</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">content</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">prep</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">cookie_jar</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s2">"CookieJar"</span><span class="p">,</span> <span class="n">prep</span><span class="o">.</span><span class="n">_cookies</span><span class="p">)</span>  <span class="c1"># type: ignore[reportPrivateUsage]</span>
+            <span class="n">extract_cookies_to_jar</span><span class="p">(</span><span class="n">cookie_jar</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
+            <span class="n">prep</span><span class="o">.</span><span class="n">prepare_cookies</span><span class="p">(</span><span class="n">cookie_jar</span><span class="p">)</span>
+
+            <span class="n">_digest_auth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">build_digest_header</span><span class="p">(</span>
+                <span class="n">cast</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">prep</span><span class="o">.</span><span class="n">method</span><span class="p">),</span> <span class="n">cast</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">prep</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">_digest_auth</span><span class="p">:</span>
+                <span class="n">prep</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">"Authorization"</span><span class="p">]</span> <span class="o">=</span> <span class="n">_digest_auth</span>
+            <span class="n">_r</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="n">_r</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="n">_r</span><span class="o">.</span><span class="n">request</span> <span class="o">=</span> <span class="n">prep</span>
+
+            <span class="k">return</span> <span class="n">_r</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">num_401_calls</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">r</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">PreparedRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PreparedRequest</span><span class="p">:</span>
+        <span class="c1"># Initialize per-thread state, if needed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_per_thread_state</span><span class="p">()</span>
+        <span class="c1"># If we have a saved nonce, skip the 401</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">last_nonce</span><span class="p">:</span>
+            <span class="n">_digest_auth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">build_digest_header</span><span class="p">(</span>
+                <span class="n">cast</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">method</span><span class="p">),</span> <span class="n">cast</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">_digest_auth</span><span class="p">:</span>
+                <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">"Authorization"</span><span class="p">]</span> <span class="o">=</span> <span class="n">_digest_auth</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">tell</span> <span class="o">:=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">body</span><span class="p">,</span> <span class="s2">"tell"</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">tell</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># In the case of HTTPDigestAuth being reused and the body of</span>
+            <span class="c1"># the previous request was a file-like object, pos has the</span>
+            <span class="c1"># file position of the previous body. Ensure it's set to</span>
+            <span class="c1"># None.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">register_hook</span><span class="p">(</span><span class="s2">"response"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_401</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">register_hook</span><span class="p">(</span><span class="s2">"response"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_redirect</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_thread_local</span><span class="o">.</span><span class="n">num_401_calls</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">r</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="s2">"username"</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="s2">"password"</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="logo">
+  <a href="../../../">
+    <img class="logo" src="../../../_static/requests-sidebar.png" alt="Requests logo" />
+  </a>
+</p>
+
+<p>
+  <iframe src="https://ghbtns.com/github-btn.html?user=psf&repo=requests&type=watch&count=true&size=large"
+    allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+<p>
+  Requests is an elegant and simple HTTP library for Python, built for human beings.
+</p>
+
+<h3>Useful Links</h3>
+<ul>
+  <li><a href="../../../user/quickstart/">Quickstart</a></li>
+  <li><a href="../../../user/advanced/">Advanced Usage</a></li>
+  <li><a href="../../../api/">API Reference</a></li>
+  <li><a href="../../../community/updates/#release-history">Release History</a></li>
+  <li><a href="../../../dev/contributing/">Contributors Guide</a></li>
+
+  <p></p>
+
+  <li><a href="../../../community/recommended/">Recommended Packages and Extensions</a></li>
+
+  <p></p>
+
+  <li><a href="https://github.com/psf/requests">Requests @ GitHub</a></li>
+  <li><a href="https://pypi.org/project/requests/">Requests @ PyPI</a></li>
+  <li><a href="https://github.com/psf/requests/issues">Issue Tracker</a></li>
+</ul><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../">Documentation overview</a><ul>
+  <li><a href="../../">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;Kenneth Reitz and contributors.
+      
+    </div>
+
+    
+    <a href="https://github.com/psf/requests" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
