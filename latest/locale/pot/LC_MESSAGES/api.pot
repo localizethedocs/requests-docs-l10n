@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Requests latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 12:34+0000\n"
+"POT-Creation-Date: 2026-09-07 14:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1848,7 +1848,8 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
 #: of collections.abc.MutableMapping.pop:1
 msgid ""
-"If key is not found, d is returned if given, otherwise KeyError is raised."
+"value.  If key is not found, d is returned if given, otherwise KeyError is "
+"raised."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/cookies.py:docstring
