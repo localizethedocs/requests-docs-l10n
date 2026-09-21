@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-04 14:43:21 -0700",
-      "hash" : "1190afd14fca74292946d62c4c8169880a47ff67",
-      "title" : "Add type annotation for `Request.hooks` (#7498)"
+      "date" : "2026-09-02 12:15:52 -0600",
+      "hash" : "dae7ef63b4df6eded86637f251fc4e3a06c3b479",
+      "title" : "Bump https://github.com/astral-sh/ruff-pre-commit (#7616)"
     }
   },
   "type" : "branch",
