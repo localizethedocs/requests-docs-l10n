@@ -56,8 +56,8 @@ msgstr ""
 #: ../../../../HISTORY.md:12
 msgid ""
 "Moved `headers` input type back to `Mapping` to avoid invariance issues with "
-"`MutableMapping` and inferred dict types. Users calling `Request.headers."
-"update()` may need to narrow typing in their code. (#7441)"
+"`MutableMapping` and inferred dict types. Users calling "
+"`Request.headers.update()` may need to narrow typing in their code. (#7441)"
 msgstr ""
 
 #: ../../../../HISTORY.md:18
@@ -387,9 +387,9 @@ msgstr ""
 msgid ""
 "Requests now supports optional use of character detection (`chardet` or "
 "`charset_normalizer`) when repackaged or vendored. This enables `pip` and "
-"other projects to minimize their vendoring surface area. The `Response."
-"text()` and `apparent_encoding` APIs will default to `utf-8` if neither "
-"library is present. (#6702)"
+"other projects to minimize their vendoring surface area. The "
+"`Response.text()` and `apparent_encoding` APIs will default to `utf-8` if "
+"neither library is present. (#6702)"
 msgstr ""
 
 #: ../../../../HISTORY.md:179
@@ -497,8 +497,8 @@ msgstr ""
 
 #: ../../../../HISTORY.md:228
 msgid ""
-"Full details can be read in our [Github Security Advisory](https://github."
-"com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q) and "
+"Full details can be read in our [Github Security Advisory](https://"
+"github.com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q) and "
 "[CVE-2023-32681](https://nvd.nist.gov/vuln/detail/CVE-2023-32681)."
 msgstr ""
 
@@ -728,8 +728,9 @@ msgstr ""
 
 #: ../../../../HISTORY.md:350
 msgid ""
-"Fixed idna exception leak, wrapping `UnicodeError` with `requests.exceptions."
-"InvalidURL` for URLs with a leading dot (.) in the domain. (#5414)"
+"Fixed idna exception leak, wrapping `UnicodeError` with "
+"`requests.exceptions.InvalidURL` for URLs with a leading dot (.) in the "
+"domain. (#5414)"
 msgstr ""
 
 #: ../../../../HISTORY.md:356
@@ -1075,8 +1076,8 @@ msgstr ""
 
 #: ../../../../HISTORY.md:589
 msgid ""
-"`requests.help` no longer fails on Python 2.6 due to the absence of `ssl."
-"OPENSSL_VERSION_NUMBER`."
+"`requests.help` no longer fails on Python 2.6 due to the absence of "
+"`ssl.OPENSSL_VERSION_NUMBER`."
 msgstr ""
 
 #: ../../../../HISTORY.md:594
@@ -1297,9 +1298,9 @@ msgstr ""
 msgid ""
 "The behavior of `SessionRedirectMixin` was slightly altered. "
 "`resolve_redirects` will now detect a redirect by calling "
-"`get_redirect_target(response)` instead of directly querying `Response."
-"is_redirect` and `Response.headers['location']`. Advanced users will be able "
-"to process malformed redirects more easily."
+"`get_redirect_target(response)` instead of directly querying "
+"`Response.is_redirect` and `Response.headers['location']`. Advanced users "
+"will be able to process malformed redirects more easily."
 msgstr ""
 
 #: ../../../../HISTORY.md:758
@@ -2015,15 +2016,15 @@ msgstr ""
 
 #: ../../../../HISTORY.md:1159
 msgid ""
-"Improve the performance of headers. ([shazow/urllib3\\#544](https://github."
-"com/shazow/urllib3/pull/544))"
+"Improve the performance of headers. ([shazow/urllib3\\#544](https://"
+"github.com/shazow/urllib3/pull/544))"
 msgstr ""
 
 #: ../../../../HISTORY.md:1164
 msgid ""
-"Copy pip's import machinery. When downstream redistributors remove requests."
-"packages.urllib3 the import machinery will continue to let those same "
-"symbols work. Example usage in requests' documentation and 3rd-party "
+"Copy pip's import machinery. When downstream redistributors remove "
+"requests.packages.urllib3 the import machinery will continue to let those "
+"same symbols work. Example usage in requests' documentation and 3rd-party "
 "libraries relying on the vendored copies of urllib3 will work without having "
 "to fallback to the system urllib3."
 msgstr ""
@@ -2308,8 +2309,8 @@ msgstr ""
 
 #: ../../../../HISTORY.md:1301
 msgid ""
-"Refactored settings loading from environment -- new Session."
-"merge\\_environment\\_settings."
+"Refactored settings loading from environment -- new "
+"Session.merge\\_environment\\_settings."
 msgstr ""
 
 #: ../../../../HISTORY.md:1303
@@ -2422,8 +2423,8 @@ msgstr ""
 
 #: ../../../../HISTORY.md:1357
 msgid ""
-"Avoid crashing when attempting to get authentication credentials from \\~/."
-"netrc when running as a user without a home directory."
+"Avoid crashing when attempting to get authentication credentials from "
+"\\~/.netrc when running as a user without a home directory."
 msgstr ""
 
 #: ../../../../HISTORY.md:1359
@@ -2452,8 +2453,8 @@ msgstr ""
 
 #: ../../../../HISTORY.md:1368
 msgid ""
-"Cookies set on individual Requests through a `Session` (e.g. via `Session."
-"get()`) are no longer persisted to the `Session`."
+"Cookies set on individual Requests through a `Session` (e.g. via "
+"`Session.get()`) are no longer persisted to the `Session`."
 msgstr ""
 
 #: ../../../../HISTORY.md:1370
@@ -2807,8 +2808,8 @@ msgstr ""
 
 #: ../../../../HISTORY.md:1499
 msgid ""
-"Allow keyword arguments to be passed to `json.loads()` via the `Response."
-"json()` method"
+"Allow keyword arguments to be passed to `json.loads()` via the "
+"`Response.json()` method"
 msgstr ""
 
 #: ../../../../HISTORY.md:1501
@@ -3464,8 +3465,8 @@ msgstr ""
 
 #: ../../../../HISTORY.md:1770
 msgid ""
-"If no `Response.encoding` is specified and `chardet` is available, `Response."
-"text` will guess an encoding."
+"If no `Response.encoding` is specified and `chardet` is available, "
+"`Response.text` will guess an encoding."
 msgstr ""
 
 #: ../../../../HISTORY.md:1772

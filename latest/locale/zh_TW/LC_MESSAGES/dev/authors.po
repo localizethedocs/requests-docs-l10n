@@ -527,8 +527,8 @@ msgstr ""
 
 #: ../../../../AUTHORS.rst:133
 msgid ""
-"David Pursehouse <david.pursehouse@gmail.com> (`@dpursehouse <https://github."
-"com/dpursehouse>`_)"
+"David Pursehouse <david.pursehouse@gmail.com> (`@dpursehouse <https://"
+"github.com/dpursehouse>`_)"
 msgstr ""
 
 #: ../../../../AUTHORS.rst:134
@@ -602,8 +602,8 @@ msgstr ""
 
 #: ../../../../AUTHORS.rst:149
 msgid ""
-"Jonathan Wong <evolutionace@gmail.com> (`@ContinuousFunction <https://github."
-"com/ContinuousFunction>`_)"
+"Jonathan Wong <evolutionace@gmail.com> (`@ContinuousFunction <https://"
+"github.com/ContinuousFunction>`_)"
 msgstr ""
 
 #: ../../../../AUTHORS.rst:150
@@ -616,8 +616,8 @@ msgstr ""
 
 #: ../../../../AUTHORS.rst:152
 msgid ""
-"Syed Suhail Ahmed <ssuhail.ahmed93@gmail.com> (`@syedsuhail <https://github."
-"com/syedsuhail>`_)"
+"Syed Suhail Ahmed <ssuhail.ahmed93@gmail.com> (`@syedsuhail <https://"
+"github.com/syedsuhail>`_)"
 msgstr ""
 
 #: ../../../../AUTHORS.rst:153
@@ -698,8 +698,8 @@ msgstr ""
 
 #: ../../../../AUTHORS.rst:170
 msgid ""
-"Om Prakash Kumar <omprakash070@gmail.com> (`@iamprakashom <https://github."
-"com/iamprakashom>`_)"
+"Om Prakash Kumar <omprakash070@gmail.com> (`@iamprakashom <https://"
+"github.com/iamprakashom>`_)"
 msgstr ""
 
 #: ../../../../AUTHORS.rst:171
@@ -762,8 +762,8 @@ msgstr ""
 
 #: ../../../../AUTHORS.rst:184
 msgid ""
-"Taylor Hoff <primdevs@protonmail.com> (`@PrimordialHelios <https://github."
-"com/PrimordialHelios>`_)"
+"Taylor Hoff <primdevs@protonmail.com> (`@PrimordialHelios <https://"
+"github.com/PrimordialHelios>`_)"
 msgstr ""
 
 #: ../../../../AUTHORS.rst:185
@@ -794,8 +794,8 @@ msgstr ""
 
 #: ../../../../AUTHORS.rst:191
 msgid ""
-"\"Dull Bananas\" <dull.bananas0@gmail.com> (`@dullbananas <https://github."
-"com/dullbananas>`_)"
+"\"Dull Bananas\" <dull.bananas0@gmail.com> (`@dullbananas <https://"
+"github.com/dullbananas>`_)"
 msgstr ""
 
 #: ../../../../AUTHORS.rst:192
