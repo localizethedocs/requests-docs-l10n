@@ -119,8 +119,8 @@ msgstr ""
 #: of requests.api.patch:6 requests.api.post:6 requests.api.put:6
 #: requests.api.request:9
 msgid ""
-"(optional) A JSON serializable Python object to send in the body of the :"
-"class:`Request`."
+"(optional) A JSON serializable Python object to send in the body of "
+"the :class:`Request`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
@@ -280,8 +280,8 @@ msgstr ""
 #: of requests.api.head:4
 msgid ""
 "Optional arguments that ``request`` takes. If `allow_redirects` is not "
-"provided, it will be set to `False` (as opposed to the default :meth:"
-"`request` behavior)."
+"provided, it will be set to `False` (as opposed to the "
+"default :meth:`request` behavior)."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
@@ -367,8 +367,9 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
 #: of requests.exceptions.Timeout:3
 msgid ""
-"Catching this error will catch both :exc:`~requests.exceptions."
-"ConnectTimeout` and :exc:`~requests.exceptions.ReadTimeout` errors."
+"Catching this error will catch "
+"both :exc:`~requests.exceptions.ConnectTimeout` "
+"and :exc:`~requests.exceptions.ReadTimeout` errors."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
@@ -432,8 +433,8 @@ msgstr ""
 
 #: ../../../docstring of requests.Session.cert:1
 msgid ""
-"SSL client certificate default, if String, path to ssl client cert file (."
-"pem). If Tuple, ('cert', 'key') pair."
+"SSL client certificate default, if String, path to ssl client cert file "
+"(.pem). If Tuple, ('cert', 'key') pair."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
@@ -444,9 +445,9 @@ msgstr ""
 #: ../../../docstring of requests.Session.cookies:1
 msgid ""
 "A CookieJar containing all currently outstanding cookies set on this "
-"session. By default it is a :class:`RequestsCookieJar <requests.cookies."
-"RequestsCookieJar>`, but may be any other ``cookielib.CookieJar`` compatible "
-"object."
+"session. By default it is a :class:`RequestsCookieJar "
+"<requests.cookies.RequestsCookieJar>`, but may be any other "
+"``cookielib.CookieJar`` compatible object."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
@@ -498,9 +499,9 @@ msgstr ""
 
 #: ../../../docstring of requests.Session.max_redirects:1
 msgid ""
-"Maximum number of redirects allowed. If the request exceeds this limit, a :"
-"class:`TooManyRedirects` exception is raised. This defaults to requests."
-"models.DEFAULT_REDIRECT_LIMIT, which is 30."
+"Maximum number of redirects allowed. If the request exceeds this limit, "
+"a :class:`TooManyRedirects` exception is raised. This defaults to "
+"requests.models.DEFAULT_REDIRECT_LIMIT, which is 30."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
@@ -549,8 +550,8 @@ msgstr ""
 #: of requests.sessions.Session.prepare_request:1
 msgid ""
 "Constructs a :class:`PreparedRequest <PreparedRequest>` for transmission and "
-"returns it. The :class:`PreparedRequest` has settings merged from the :class:"
-"`Request <Request>` instance and those of the :class:`Session`."
+"returns it. The :class:`PreparedRequest` has settings merged from "
+"the :class:`Request <Request>` instance and those of the :class:`Session`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
@@ -560,9 +561,9 @@ msgstr ""
 
 #: ../../../docstring of requests.Session.proxies:1
 msgid ""
-"Dictionary mapping protocol or protocol and host to the URL of the proxy (e."
-"g. {'http': 'foo.bar:3128', 'http://host.name': 'foo.bar:4012'}) to be used "
-"on each :class:`Request <Request>`."
+"Dictionary mapping protocol or protocol and host to the URL of the proxy "
+"(e.g. {'http': 'foo.bar:3128', 'http://host.name': 'foo.bar:4012'}) to be "
+"used on each :class:`Request <Request>`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
@@ -603,8 +604,8 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
 #: of requests.sessions.Session.request:1
 msgid ""
-"Constructs a :class:`Request <Request>`, prepares it and sends it. Returns :"
-"class:`Response <Response>` object."
+"Constructs a :class:`Request <Request>`, prepares it and sends it. "
+"Returns :class:`Response <Response>` object."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
@@ -615,8 +616,8 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
 #: of requests.sessions.Session.request:6
 msgid ""
-"(optional) Dictionary or bytes to be sent in the query string for the :class:"
-"`Request`."
+"(optional) Dictionary or bytes to be sent in the query string for "
+"the :class:`Request`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/sessions.py:docstring
@@ -1023,8 +1024,8 @@ msgstr ""
 msgid ""
 "The encoding of the response content is determined based solely on HTTP "
 "headers, following RFC 2616 to the letter. If you can take advantage of non-"
-"HTTP knowledge to make a better guess at the encoding, you should set ``r."
-"encoding`` appropriately before accessing this property."
+"HTTP knowledge to make a better guess at the encoding, you should set "
+"``r.encoding`` appropriately before accessing this property."
 msgstr ""
 
 #: ../../../docstring of requests.Response.url:1
@@ -1262,8 +1263,8 @@ msgstr ""
 #: of requests.adapters.HTTPAdapter.add_headers:1
 msgid ""
 "Add any headers needed by the connection. As of v2.0 this does nothing by "
-"default, but is left for overriding by users that subclass the :class:"
-"`HTTPAdapter <requests.adapters.HTTPAdapter>`."
+"default, but is left for overriding by users that subclass "
+"the :class:`HTTPAdapter <requests.adapters.HTTPAdapter>`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
@@ -1323,8 +1324,8 @@ msgstr ""
 #: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:15
 msgid ""
 "If ``verify`` is a string, (i.e., it is a user-specified trust bundle) "
-"``\"ca_certs\"`` will be set if the string is not a directory recognized by :"
-"py:func:`os.path.isdir`, otherwise ``\"ca_cert_dir\"`` will be set."
+"``\"ca_certs\"`` will be set if the string is not a directory recognized "
+"by :py:func:`os.path.isdir`, otherwise ``\"ca_cert_dir\"`` will be set."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
@@ -1362,10 +1363,10 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
 #: of requests.adapters.HTTPAdapter.build_connection_pool_key_attributes:37
 msgid ""
-"(optional) Any user-provided SSL certificate for client authentication (a.k."
-"a., mTLS). This may be a string (i.e., just the path to a file which holds "
-"both certificate and key) or a tuple of length 2 with the certificate file "
-"path and key file path."
+"(optional) Any user-provided SSL certificate for client authentication "
+"(a.k.a., mTLS). This may be a string (i.e., just the path to a file which "
+"holds both certificate and key) or a tuple of length 2 with the certificate "
+"file path and key file path."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
@@ -1449,8 +1450,8 @@ msgstr ""
 #: of requests.adapters.HTTPAdapter.get_connection:4
 msgid ""
 "Returns a urllib3 connection for the given URL. This should not be called "
-"from user code, and is only exposed for use when subclassing the :class:"
-"`HTTPAdapter <requests.adapters.HTTPAdapter>`."
+"from user code, and is only exposed for use when subclassing "
+"the :class:`HTTPAdapter <requests.adapters.HTTPAdapter>`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
@@ -1985,8 +1986,8 @@ msgstr ""
 #: of requests.status_codes:15
 msgid ""
 "Some codes have multiple names, and both upper- and lower-case versions of "
-"the names are allowed. For example, ``codes.ok``, ``codes.OK``, and ``codes."
-"okay`` all correspond to the HTTP status code 200."
+"the names are allowed. For example, ``codes.ok``, ``codes.OK``, and "
+"``codes.okay`` all correspond to the HTTP status code 200."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring

@@ -64,8 +64,8 @@ msgstr ""
 
 #: ../../../community/faq.rst:32
 msgid ""
-"Chris Adams gave an excellent summary on `Hacker News <https://news."
-"ycombinator.com/item?id=2884406>`_:"
+"Chris Adams gave an excellent summary on `Hacker News <https://"
+"news.ycombinator.com/item?id=2884406>`_:"
 msgstr ""
 
 #: ../../../community/faq.rst:35
@@ -114,8 +114,8 @@ msgstr ""
 msgid ""
 "No! As of Requests 2.28.0, Requests no longer supports Python 2.7. Users who "
 "have been unable to migrate should pin to `requests<2.28`. Full information "
-"can be found in `psf/requests#6023 <https://github.com/psf/requests/"
-"issues/6023>`_."
+"can be found in `psf/requests#6023 <https://github.com/psf/requests/issues/"
+"6023>`_."
 msgstr ""
 
 #: ../../../community/faq.rst:68

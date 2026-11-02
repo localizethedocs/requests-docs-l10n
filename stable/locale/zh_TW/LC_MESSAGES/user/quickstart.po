@@ -221,13 +221,13 @@ msgstr ""
 
 #: ../../../user/quickstart.rst:108
 msgid ""
-"If you change the encoding, Requests will use the new value of ``r."
-"encoding`` whenever you call ``r.text``. You might want to do this in any "
-"situation where you can apply special logic to work out what the encoding of "
-"the content will be. For example, HTML and XML have the ability to specify "
-"their encoding in their body. In situations like this, you should use ``r."
-"content`` to find the encoding, and then set ``r.encoding``. This will let "
-"you use ``r.text`` with the correct encoding."
+"If you change the encoding, Requests will use the new value of "
+"``r.encoding`` whenever you call ``r.text``. You might want to do this in "
+"any situation where you can apply special logic to work out what the "
+"encoding of the content will be. For example, HTML and XML have the ability "
+"to specify their encoding in their body. In situations like this, you should "
+"use ``r.content`` to find the encoding, and then set ``r.encoding``. This "
+"will let you use ``r.text`` with the correct encoding."
 msgstr ""
 
 #: ../../../user/quickstart.rst:116
@@ -312,10 +312,10 @@ msgstr ""
 msgid ""
 "In case the JSON decoding fails, ``r.json()`` raises an exception. For "
 "example, if the response gets a 204 (No Content), or if the response "
-"contains invalid JSON, attempting ``r.json()`` raises ``requests.exceptions."
-"JSONDecodeError``. This wrapper exception provides interoperability for "
-"multiple exceptions that may be thrown by different python versions and json "
-"serialization libraries."
+"contains invalid JSON, attempting ``r.json()`` raises "
+"``requests.exceptions.JSONDecodeError``. This wrapper exception provides "
+"interoperability for multiple exceptions that may be thrown by different "
+"python versions and json serialization libraries."
 msgstr ""
 
 #: ../../../user/quickstart.rst:160
@@ -323,8 +323,8 @@ msgid ""
 "It should be noted that the success of the call to ``r.json()`` does **not** "
 "indicate the success of the response. Some servers may return a JSON object "
 "in a failed response (e.g. error details with HTTP 500). Such JSON will be "
-"decoded and returned. To check that a request is successful, use ``r."
-"raise_for_status()`` or check ``r.status_code`` is what you expect."
+"decoded and returned. To check that a request is successful, use "
+"``r.raise_for_status()`` or check ``r.status_code`` is what you expect."
 msgstr ""
 
 #: ../../../user/quickstart.rst:168
@@ -380,11 +380,11 @@ msgstr ""
 
 #: ../../../user/quickstart.rst:197
 msgid ""
-"An important note about using ``Response.iter_content`` versus ``Response."
-"raw``. ``Response.iter_content`` will automatically decode the ``gzip`` and "
-"``deflate`` transfer-encodings.  ``Response.raw`` is a raw stream of bytes "
-"-- it does not transform the response content.  If you really need access to "
-"the bytes as they were returned, use ``Response.raw``."
+"An important note about using ``Response.iter_content`` versus "
+"``Response.raw``. ``Response.iter_content`` will automatically decode the "
+"``gzip`` and ``deflate`` transfer-encodings.  ``Response.raw`` is a raw "
+"stream of bytes -- it does not transform the response content.  If you "
+"really need access to the bytes as they were returned, use ``Response.raw``."
 msgstr ""
 
 #: ../../../user/quickstart.rst:207
@@ -670,8 +670,8 @@ msgstr ""
 #: ../../../user/quickstart.rst:340
 msgid ""
 ">>> url = 'https://httpbin.org/post'\n"
-">>> files = {'file': ('report.csv', 'some,data,to,send\\nanother,row,to,"
-"send\\n')}\n"
+">>> files = {'file': ('report.csv', "
+"'some,data,to,send\\nanother,row,to,send\\n')}\n"
 "\n"
 ">>> r = requests.post(url, files=files)\n"
 ">>> r.text\n"
@@ -684,8 +684,8 @@ msgid ""
 "}"
 msgstr ""
 ">>> url = 'https://httpbin.org/post'\n"
-">>> files = {'file': ('report.csv', 'some,data,to,send\\nanother,row,to,"
-"send\\n')}\n"
+">>> files = {'file': ('report.csv', "
+"'some,data,to,send\\nanother,row,to,send\\n')}\n"
 "\n"
 ">>> r = requests.post(url, files=files)\n"
 ">>> r.text\n"
@@ -702,8 +702,8 @@ msgid ""
 "In the event you are posting a very large file as a ``multipart/form-data`` "
 "request, you may want to stream the request. By default, ``requests`` does "
 "not support this, but there is a separate package which does - ``requests-"
-"toolbelt``. You should read `the toolbelt's documentation <https://toolbelt."
-"readthedocs.io>`_ for more details about how to use it."
+"toolbelt``. You should read `the toolbelt's documentation <https://"
+"toolbelt.readthedocs.io>`_ for more details about how to use it."
 msgstr ""
 
 #: ../../../user/quickstart.rst:359
@@ -755,8 +755,8 @@ msgstr ""
 #: ../../../user/quickstart.rst:384
 msgid ""
 "If we made a bad request (a 4XX client error or 5XX server error response), "
-"we can raise it with :meth:`Response.raise_for_status() <requests.Response."
-"raise_for_status>`::"
+"we can raise it with :meth:`Response.raise_for_status() "
+"<requests.Response.raise_for_status>`::"
 msgstr ""
 
 #: ../../../user/quickstart.rst:388
@@ -962,10 +962,10 @@ msgstr ""
 
 #: ../../../user/quickstart.rst:488
 msgid ""
-"The :attr:`Response.history <requests.Response.history>` list contains the :"
-"class:`Response <requests.Response>` objects that were created in order to "
-"complete the request. The list is sorted from the oldest to the most recent "
-"response."
+"The :attr:`Response.history <requests.Response.history>` list contains "
+"the :class:`Response <requests.Response>` objects that were created in order "
+"to complete the request. The list is sorted from the oldest to the most "
+"recent response."
 msgstr ""
 
 #: ../../../user/quickstart.rst:493
@@ -1107,14 +1107,14 @@ msgstr ""
 
 #: ../../../user/quickstart.rst:565
 msgid ""
-"If a request exceeds the configured number of maximum redirections, a :exc:"
-"`~requests.exceptions.TooManyRedirects` exception is raised."
+"If a request exceeds the configured number of maximum redirections, "
+"a :exc:`~requests.exceptions.TooManyRedirects` exception is raised."
 msgstr ""
 
 #: ../../../user/quickstart.rst:568
 msgid ""
-"All exceptions that Requests explicitly raises inherit from :exc:`requests."
-"exceptions.RequestException`."
+"All exceptions that Requests explicitly raises inherit "
+"from :exc:`requests.exceptions.RequestException`."
 msgstr ""
 
 #: ../../../user/quickstart.rst:573
