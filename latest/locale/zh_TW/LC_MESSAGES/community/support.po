@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../../community/support.rst:9
 msgid "Stack Overflow"
-msgstr ""
+msgstr "Stack Overflow"
 
 #: ../../../community/support.rst:11
 msgid ""

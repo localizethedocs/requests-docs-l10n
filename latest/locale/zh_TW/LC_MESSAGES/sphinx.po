@@ -1970,7 +1970,7 @@ msgstr ""
 #: sphinx/domains/c.py:3364 sphinx/domains/javascript.py:261
 #: sphinx/domains/python.py:696
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: sphinx/domains/c.py:3730 sphinx/domains/cpp.py:7909
 msgid "member"

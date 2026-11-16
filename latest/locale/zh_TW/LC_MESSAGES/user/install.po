@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../user/install.rst:18
 msgid "Get the Source Code"
-msgstr ""
+msgstr "取得來源碼"
 
 #: ../../../user/install.rst:20
 msgid ""
