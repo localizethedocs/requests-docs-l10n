@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../community/updates.rst:5
 msgid "Community Updates"
-msgstr ""
+msgstr "社群更新"
 
 #: ../../../community/updates.rst:7
 msgid ""

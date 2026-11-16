@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../api.rst:4
 msgid "Developer Interface"
-msgstr ""
+msgstr "開發者介面"
 
 #: ../../../api.rst:8
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 #: requests.sessions.Session.patch:3 requests.sessions.Session.post:3
 #: requests.sessions.Session.put:3 requests.sessions.Session.request:5
 msgid "URL for the new :class:`Request` object."
-msgstr ""
+msgstr "新 :class:`Request` 物件的網址。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.get:4 requests.api.request:5
@@ -215,7 +215,7 @@ msgstr ""
 #: requests.api.patch:8 requests.api.post:8 requests.api.put:8
 #: requests.api.request:30
 msgid ":class:`Response <Response>` object"
-msgstr ""
+msgstr ":class:`Response <Response>` 物件"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
 #: of requests.adapters.HTTPAdapter.build_response:0
@@ -247,7 +247,7 @@ msgstr ""
 #: requests.utils.get_encoding_from_headers:0
 #: requests.utils.get_unicode_from_response:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/adapters.py:docstring
 #: of requests.adapters.HTTPAdapter:19
@@ -274,7 +274,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.head:1
 msgid "Sends a HEAD request."
-msgstr ""
+msgstr "發送一個 HEAD 請求。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.head:4
@@ -287,7 +287,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.get:1
 msgid "Sends a GET request."
-msgstr ""
+msgstr "發送一個 GET 請求。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/api.py:docstring
 #: of requests.api.delete:4 requests.api.get:6 requests.api.patch:7
@@ -342,7 +342,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
 #: of requests.exceptions.TooManyRedirects:1
 msgid "Too many redirects."
-msgstr ""
+msgstr "重新導向次數過多。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
 #: of requests.exceptions.ConnectTimeout:1
@@ -362,7 +362,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
 #: of requests.exceptions.Timeout:1
 msgid "The request timed out."
-msgstr ""
+msgstr "請求逾時。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/exceptions.py:docstring
 #: of requests.exceptions.Timeout:3
@@ -1961,7 +1961,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:5
 msgid "Example::"
-msgstr ""
+msgstr "範例：\\ ::"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/requests/status_codes.py:docstring
 #: of requests.status_codes:7
@@ -2353,7 +2353,7 @@ msgstr ""
 
 #: ../../../api.rst:124 ../../../api.rst:221
 msgid "API Changes"
-msgstr ""
+msgstr "API 變更"
 
 #: ../../../api.rst:126
 msgid "``Response.json`` is now a callable and not a property of a response."
